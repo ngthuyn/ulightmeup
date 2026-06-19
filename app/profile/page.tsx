@@ -1,76 +1,165 @@
-import Navbar from "@/components/Navbar";
+"use client";
 
-const basicInfo = [
-  ["Họ tên", "Đỗ Minh Tân"],
-  ["Stage name", "lighT (lai-Ti)"],
-  ["Nickname", "tin · hoàng tử lai · minhtin"],
-  ["D.O.B", "29.08.2004"],
-  ["Cung hoàng đạo", "Xử Nữ"],
-  ["Chiều cao", "1m77"],
-  ["Quê quán", "TP Hồ Chí Minh"],
-  ["Emoji", "🐵 ✨"],
-];
+import { useState } from "react";
+import Link from "next/link";
+
 
 export default function ProfilePage() {
+  const [page, setPage] = useState(0);
+
+  const pages = [
+    "/images/profile1.jpg",
+    "/images/profile2.jpg",
+    "/images/profile3.jpg",
+  ];
+
+  const nextPage = () => {
+    setPage((prev) =>
+      prev === pages.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevPage = () => {
+    setPage((prev) =>
+      prev === 0 ? pages.length - 1 : prev - 1
+    );
+  };
+
   return (
-    <>
-      <Navbar />
+    
+      <main
+  className="relative min-h-screen overflow-hidden"
+  style={{
+    backgroundImage: "url('/images/bg.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    
+  }}
+>
 
-      <main className="min-h-screen bg-[#f7f8fc] px-4 py-10 text-zinc-900 sm:px-6 md:px-12 lg:px-20">
-        <div className="mx-auto w-full max-w-screen-2xl">
-          <div className="mb-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-sky-600 lg:text-sm">
-              Profile
-            </p>
-            <h1 className="mt-2 text-5xl font-black md:text-6xl xl:text-7xl">
-              Thông tin cơ bản của lighT
-            </h1>
+
+
+
+
+        {/* HOME */}
+        <Link
+  href="/"
+  className="
+    absolute
+    left-6
+    top-6
+    z-50
+    flex
+    h-12
+    w-12
+    items-center
+    justify-center
+    rounded-full
+    border
+    border-white/15
+    bg-black/10
+    text-xl
+    text-white
+    backdrop-blur-xl
+    transition-all
+    duration-300
+    hover:scale-110
+  "
+>
+  🏠
+</Link>
+
+        {/* DESKTOP */}
+        <div className="hidden lg:flex min-h-screen items-center justify-center px-8">
+
+          <div
+              className="
+                flex
+                w-[95vw]
+                max-w-[1800px]
+                overflow-hidden
+                rounded-[2rem]
+              "
+              style={{
+                boxShadow: "0 0 30px rgba(96,165,250,.15)",
+              }}
+            >
+            <img
+              src={pages[0]}
+              alt="page1"
+             className="w-1/3 h-auto object-contain"
+            />
+
+            <img
+              src={pages[1]}
+              alt="page2"
+              className="w-1/3 h-auto object-contain"
+            />
+
+            <img
+              src={pages[2]}
+              alt="page3"
+              className="w-1/3 h-auto object-contain"
+            />
+
           </div>
 
-          <div className="grid gap-8 xl:grid-cols-[1fr_1fr]">
-            <div className="rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-zinc-100 md:p-8">
-              <div className="grid grid-cols-2 gap-4">
-                {basicInfo.map(([label, value]) => (
-                  <div key={label} className="rounded-3xl bg-zinc-50 p-5">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-zinc-400 sm:text-xs lg:text-sm">
-                      {label}
-                    </p>
-                    <p className="mt-3 text-sm font-semibold sm:text-base lg:text-lg">
-                      {value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[2rem] bg-gradient-to-br from-sky-50 to-white p-6 shadow-sm ring-1 ring-zinc-100 md:p-8">
-              <p className="text-xs uppercase tracking-[0.3em] text-sky-600 lg:text-sm">
-                About
-              </p>
-
-              <h2 className="mt-2 text-4xl font-black xl:text-5xl">
-                u lighT me up! ✨
-              </h2>
-
-              <p className="mt-5 text-base leading-8 text-zinc-600 lg:text-lg lg:leading-9">
-                Đỗ Minh Tân, nghệ danh lighT, là một trong những gương mặt nổi
-                bật được khán giả yêu mến nhờ tính cách thân thiện, năng lượng
-                tích cực và khả năng trình diễn cuốn hút.
-              </p>
-
-              <div className="mt-8 rounded-3xl bg-white p-6 shadow-sm ring-1 ring-zinc-100">
-                <p className="text-sm text-zinc-500 lg:text-base">
-                  Fan note
-                </p>
-                <p className="mt-2 text-base font-medium text-zinc-800 lg:text-lg">
-                  “Minhtin hát hay, nhảy giỏi và luôn mang lại năng lượng tích
-                  cực.”
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
+
+{/* MOBILE + TABLET */}
+<div className="lg:hidden flex min-h-screen flex-col items-center justify-center px-4">
+
+  <img
+  key={page}
+  src={pages[page]}
+  alt={`page-${page + 1}`}
+  onClick={nextPage}
+  className="cursor-pointer h-auto w-[95vw] object-contain"
+/>
+
+  <div className="mt-6 flex items-center gap-4">
+
+    <button
+      onClick={prevPage}
+      className="
+  rounded-full
+  border
+  border-white/15
+  bg-black/10
+  px-4
+  py-2
+  text-white
+  backdrop-blur-xl
+"
+    >
+      ◀
+    </button>
+
+    <span className="font-semibold text-white">
+      {page + 1} / {pages.length}
+    </span>
+
+    <button
+      onClick={nextPage}
+      className="
+  rounded-full
+  border
+  border-white/15
+  bg-black/10
+  px-4
+  py-2
+  text-white
+  backdrop-blur-xl
+"
+    >
+      ▶
+    </button>
+
+  </div>
+
+</div>
+
       </main>
-    </>
+    
   );
 }
