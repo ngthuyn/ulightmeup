@@ -90,25 +90,52 @@ return ( <main
   🏠
 </Link>
     </div>
- <div className="text-center">
-    <p className="text-xs uppercase tracking-[0.35em] text-sky-200">
-      Messages
-    </p>
+<div className="mx-auto mt-16 md:mt-4 max-w-4xl">
+  <div className="flex items-center justify-between gap-4">
+    
+    <div className="flex-1">
+      <p className="text-xs uppercase tracking-[0.35em] text-sky-200">
+        Messages
+      </p>
 
-    <h2
-      className="mt-3 text-3xl font-black"
-      style={{
-        textShadow:
-          "0 0 12px rgba(255,255,255,.25)",
-      }}
+      <h2
+        className="mt-2 text-2xl font-black sm:text-3xl md:text-4xl"
+        style={{
+          textShadow:
+            "0 0 12px rgba(255,255,255,.25)",
+        }}
+      >
+        💌 from tinies
+      </h2>
+
+      <p className="mt-2 text-sm text-white/70 sm:text-base">
+        👇 Leave a message ✨
+      </p>
+    </div>
+
+    <div
+      className="
+        shrink-0
+        rounded-2xl
+        border border-white/10
+        bg-black/15
+        backdrop-blur-xl
+        p-2
+      "
     >
-      💌 from tinies
-    </h2>
-
-    <p className="mt-3 text-white/70">
-      👇 Leave a message for lighT below ✨
-    </p>
+      <img
+        src="/images/lighT_.jpg"
+        alt="lighT"
+        className="
+          w-[120px]
+          sm:w-[140px]
+          md:w-[180px]
+          rounded-xl
+        "
+      />
+    </div>
   </div>
+</div>
    {/* <div className="mt-10 text-center">
       <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
         TMI
@@ -126,67 +153,12 @@ return ( <main
       </p>
     </div>*/}
 
-<div className="hidden lg:block relative mx-auto mt-12 max-w-6xl">
-  {/* HERO PHOTO */}
-  <div className="mx-auto w-fit rotate-[-3deg] rounded-2xl
-border
-border-white/10
-bg-black/15
-backdrop-blur-xl
-p-3">
-    <img
-      src="/images/lighT_.jpg"
-      alt="lighT"
-      className="h-[320px] object-cover"
-    />
-
-   
-  </div>
-
- 
-
-  {/* STICKERS 
-  <div className="absolute left-[22%] top-[10%] text-4xl">
-    ✨
-  </div>
-
-  <div className="absolute right-[20%] top-[25%] text-4xl">
-    🐵
-  </div>
-
-  <div className="absolute left-[18%] bottom-[25%] text-4xl">
-    💙
-  </div>
-
-  <div className="absolute right-[25%] bottom-[20%] text-4xl">
-    🎤
-  </div>
-*/}
-</div>
 
 
-<div className="lg:hidden mt-10 space-y-5">
-  <div className="rotate-[-2deg] rounded-3xl rounded-2xl
-border
-border-white/10
-bg-black/15
-backdrop-blur-xl
-p-3">
-  <img
-    src="/images/lighT_.jpg"
-    alt="lighT"
-    className="w-full rounded-2xl"
-  />
 
-  
-</div>
-
-
-</div>
 
   {/* MESSAGES FROM TINIES */}
-<div className="mt-24 mx-auto max-w-3xl">
- 
+<div className="mt-8 md:mt-10 mx-auto max-w-3xl">
 {/* FORM */}
   <div
     className="
@@ -215,7 +187,7 @@ p-3">
     />
 
     <textarea
-      rows={4}
+      rows={3}
       value={message}
       onChange={(e) => setMessage(e.target.value)}
       placeholder="Write your message for lighT..."
@@ -268,7 +240,7 @@ p-3">
     px-6
     py-3
     font-semibold
-    text-black
+    text-white
     transition
     hover:scale-105
   "
@@ -279,7 +251,7 @@ p-3">
 
   </div>
   <h3 className="mt-12 mb-4 text-xl font-bold text-white">
-  Recent Messages 💙
+  Recent Messages
 </h3>
   {/* COMMENTS */}
   <div className="mt-8 space-y-4">
@@ -291,7 +263,7 @@ p-3">
           border border-white/10
           bg-black/15
           backdrop-blur-xl
-          p-5
+           p-5 md:p-6
         "
       >
         <p className="font-semibold text-sky-200">
