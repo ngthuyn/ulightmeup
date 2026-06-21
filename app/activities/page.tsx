@@ -76,7 +76,7 @@ export default function ActivitiesPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 rounded-full px-4 py-3">
             <Link
-  href="/"
+  href="/home"
   className="
     fixed
     left-6

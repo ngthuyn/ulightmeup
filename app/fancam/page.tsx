@@ -13,6 +13,13 @@ type VideoItem = {
 
 const videos: VideoItem[] = [
   {
+    title: "Đi đu đưa đi",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7648345317116595474",
+    image: "/images/lighT_SunSong3.jpg",
+    preview: "/videos/lighT_ss_preview.mp4",
+  },
+  {
+
     title: "Chuyện đôi ta",
     url: "https://www.tiktok.com/@tincredible_allforlight/video/7646159440785181959?_r=1&_t=ZS-96s7XaVJNPF",
     image: "/images/lighT_ssdd.jpg",
@@ -23,6 +30,12 @@ const videos: VideoItem[] = [
     url: "https://www.tiktok.com/@tincredible_allforlight/video/7645868133881810184",
     image: "/images/lighT_tamh2.jpg",
     preview: "/videos/lighT_tamh_preview.mp4",
+  },
+  {
+    title: "Đại lộ mặt trời",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7646324668034583816",
+    image: "/images/lighT_tamh.jpg",
+    preview: "/videos/lighT_tamh_preview2.mp4",
   },
   {
     title: "Tôi người Việt Nam",
@@ -36,9 +49,34 @@ const videos: VideoItem[] = [
     image: "/images/lighT_TrungVuong.jpg",
     preview: "/videos/lighT_TrungVuong_preview.mp4",
   },
+  {
+    title: "SHOW ME",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7589311310429506834",
+    image: "/images/lighT_tthssv_showme.jpg",
+    preview: "/videos/lighT_tthssv_showme_preview.mp4",
+  },
+  {
+    title: "TAKE A SHOT",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7588970584634084626",
+    image: "/images/lighT_tthssv_takeashot.jpg",
+    preview: "/videos/lighT_tthssv_takeashot_preview.mp4",
+  },
+  {
+    title: "Một vòng Việt Nam",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7587461359969914120",
+    image: "/images/lighT_ycc_mvvn.jpg",
+    preview: "/videos/lighT_ycc_mvvn.mp4",
+  },
+  {
+    title: "Không cần nói nhiều",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7586312075387964690",
+    image: "/images/lighT_YCC_kcnn.jpg",
+    preview: "/videos/lighT_ycc_kcnn_preview.mp4",
+  },
 ];
 
 export default function FancamPage() {
+
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const activeIndexRef = useRef<number | null>(null);
   const soundIndexRef = useRef<number | null>(null);
@@ -47,7 +85,28 @@ export default function FancamPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [soundIndex, setSoundIndex] = useState<number | null>(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [offset, setOffset] = useState(0);
+  const [paused, setPaused] = useState(false);
+ const popupVideoRef =
+  useRef<HTMLVideoElement>(null);
+  
+  const [selectedVideo, setSelectedVideo] =
+    useState<VideoItem | null>(null);
+  
+    useEffect(() => {
+  if (popupVideoRef.current) {
+    popupVideoRef.current.volume = 0.15;
+  }
+}, [selectedVideo]);
+  useEffect(() => {
+    if (paused) return;
 
+    const id = setInterval(() => {
+      setOffset((v) => v + 0.003);
+    }, 16);
+
+    return () => clearInterval(id);
+  }, [paused]);
   useEffect(() => {
     activeIndexRef.current = activeIndex;
   }, [activeIndex]);
@@ -181,7 +240,6 @@ export default function FancamPage() {
   };
 
   const togglePreview = async (index: number) => {
-
     if (soundIndexRef.current === index) return;
 
     if (activeIndexRef.current === index) {
@@ -253,21 +311,21 @@ export default function FancamPage() {
   };
 
   return (
-    
-<main
-  className="relative min-h-[100svh] overflow-hidden text-white"
-  style={{
-    backgroundImage: "url('/images/bg.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="h-16">
-            <Link
-  href="/"
-  className="
+    <main
+      className="relative min-h-[100svh] overflow-hidden text-white"
+      style={{
+        backgroundImage: "url('/images/bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div className="h-16">
+          <Link
+            href="/home"
+            className="
     fixed
     left-6
     top-6
@@ -288,144 +346,254 @@ export default function FancamPage() {
     duration-300
     hover:scale-110
   "
->
-  🏠
-</Link>
+          >
+            🏠
+          </Link>
 
-           
-          </div>
 
-          <div className="mt-10 text-center">
-            <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
-  FANCAM
-</p>
-            <h1
-  className="mt-3 text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
-  style={{
-    textShadow: "0 0 15px rgba(255,255,255,.2)",
-  }}
->
-              Fancam Collection
-            </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-              {
-                "Chạm vào card để xem preview. Bấm 🔊 để bật âm thanh. Bấm ↗ để mở TikTok."
-                          }
-                                      </p>
-          </div>
+        </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 text-center">
+          <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
+            FANCAM
+          </p>
+          <h1
+            className="mt-3 text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
+            style={{
+              textShadow: "0 0 15px rgba(255,255,255,.2)",
+            }}
+          >
+            Fancam Collection
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
+            {
+              "Tap a card for a quick preview, or click ↗ to watch the full video on TikTok."
+            }
+          </p>
+        </div>
+
+        <div className="relative mt-6 h-[600px] overflow-visible perspective-[1000px]">
+          <div
+            className="absolute left-1/2 top-[25%]"
+            style={{
+              transformStyle: "preserve-3d",
+              transform: "translate(-50%, -50%) translateX(-80px)",
+            }}
+          >
             {videos.map((video, index) => {
-              const isActive = activeIndex === index;
-              const isSoundOn = soundIndex === index;
+              const realIndex = index % videos.length;
+              const isActive = activeIndex === realIndex;
 
+              const isSoundOn = soundIndex === realIndex;
+              const totalCards = videos.length;
+
+              const virtualIndex =
+                (index + offset) % totalCards;
+
+              const angle =
+                (virtualIndex - (totalCards - 1) / 2) * 16;
+              const depth =
+                Math.cos((angle * Math.PI) / 180);
+
+              const scale =
+                0.8 + depth * 0.15;
+
+              const opacity =
+                0.25 + depth * 0.75;
+
+
+
+              if (depth < 0) return null;
               return (
-                <article
+                <div
                   key={video.url}
-                  className="overflow-hidden rounded-[2rem] border border-black/10 bg-white/75 shadow-[0_18px_40px_rgba(0,0,0,0.08)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/85 hover:shadow-2xl"
-                  onMouseEnter={() => {
-                    if (!isTouchDevice) {
-                      startPreview(index, soundIndexRef.current === index);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (!isTouchDevice) {
-                      stopPreview(index);
-                    }
+                  className="absolute"
+                  style={{
+                    transform: `
+    rotateY(${angle}deg)
+    translateZ(500px)
+    scale(${scale})
+  `,
+                    opacity,
+                    zIndex: Math.round(depth * 100),
                   }}
                 >
-                  <div className="relative overflow-hidden">
-                  <button
-  type="button"
-  onClick={() => togglePreview(index)}
-  className="group relative block w-full touch-manipulation"
-  aria-label={`Preview ${video.title}`}
->
-  <img
-    src={video.image}
-    alt={video.title}
-    className="aspect-[9/16] w-full object-cover"
-    draggable={false}
-  />
+                  <article
 
-  <video
-    ref={(el) => {
-      videoRefs.current[index] = el;
-    }}
-    muted={!isSoundOn}
-    loop
-    playsInline
-    preload="auto"
-    poster={video.image}
-    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
-      isActive ? "opacity-100" : "opacity-0"
-    }`}
-  >
-    <source src={video.preview} type="video/mp4" />
-  </video>
-
-  <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/10" />
-
-  <div className="absolute bottom-4 right-4 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
-    {isActive
-      ? isSoundOn
-        ? "Preview + sound"
-        : "Preview"
-      : "Tap preview"}
-  </div>
-</button>
-
-                    {
+                    className="w-[120px] md:w-[140px] overflow-hidden border border-black/10 bg-white/75 shadow-[0_18px_40px_rgba(0,0,0,0.08)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/85 hover:shadow-2xl"
+                    onMouseEnter={() => {
+                      if (!isTouchDevice) {
+                        startPreview(realIndex, soundIndexRef.current === realIndex);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (!isTouchDevice) {
+                        stopPreview(realIndex);
+                      }
+                    }}
+                  >
+                    <div className="relative overflow-hidden">
                       <button
                         type="button"
-                        onMouseDown={(e) => {
-                          e.stopPropagation();
+                        onClick={() => {
+                          setPaused(true);
+                          setSelectedVideo(video);
                         }}
-                        onClick={(e) => toggleSound(index, e)}
-                        className="absolute right-4 top-4 z-10 rounded-full bg-black/65 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur transition hover:bg-black/80"
-                        aria-label={
-                          isSoundOn
-                            ? `Mute ${video.title}`
-                            : `Enable sound for ${video.title}`
-                        }
+                        className="group relative block w-full touch-manipulation"
+                        aria-label={`Preview ${video.title}`}
                       >
-                        {isSoundOn ? "🔇 Mute" : "🔊 Sound"}
+                        <img
+                          src={video.image}
+                          alt={video.title}
+                          className="aspect-[3/4] w-full object-cover"
+                          draggable={false}
+                        />
+
+                        <video
+                          ref={(el) => {
+                            videoRefs.current[realIndex] = el;
+                          }}
+                          muted={!isSoundOn}
+                          loop
+                          playsInline
+                          preload="auto"
+                          poster={video.image}
+                          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0"
+                            }`}
+                        >
+                          <source src={video.preview} type="video/mp4" />
+                        </video>
+
+                        <div className="absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/10" />
+
+
                       </button>
-                    }
-                  </div>
 
-                  <div className="p-5">
-                    <p className="text-xs uppercase tracking-[0.3em] text-sky-700/70">
-                      TikTok
-                    </p>
 
-                    <h2 className="mt-2 text-xl font-bold text-zinc-900">
-                      {video.title}
-                    </h2>
-
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="text-sm text-zinc-500">
-                        {isTouchDevice ? "Open on TikTok" : "Xem trên TikTok"}
-                      </span>
-
-                      <a
-                        href={video.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg text-sky-700 transition hover:translate-x-1"
-                        onClick={stopAllVideos}
-                        aria-label={`Open ${video.title} on TikTok`}
-                      >
-                        ↗
-                      </a>
                     </div>
-                  </div>
-                </article>
+
+                    <div className="px-1 py-0.5">
+                      <p className="text-[8px] uppercase tracking-[0.15em] text-sky-700/70">
+                        TikTok
+                      </p>
+
+                      <h2 className="mt-0.5 text-[11px] md:text-xs font-semibold line-clamp-1 text-zinc-900">
+                        {video.title}
+                      </h2>
+
+                      <div className="mt-1 flex justify-center">
+                        <a
+                          href={video.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/10 text-sky-700 transition hover:scale-110"
+                          onClick={stopAllVideos}
+                        >
+                          ↗
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               );
             })}
           </div>
         </div>
-      </main>
-   
+        <div className="mt-16 flex flex-col items-center justify-center gap-4 rounded-[2rem] px-6 py-8 text-center">
+          <img
+            src="/images/ulightmeup.png"
+            alt="u lighT me up"
+            className="mx-auto w-[320px] sm:w-[420px]"
+            style={{
+              filter: "drop-shadow(0 0 12px rgba(255,255,255,.45))",
+            }}
+          />
+
+
+        </div>
+        <style jsx global>{`
+
+        `}</style>
+      </div>   {/* đóng relative z-10 */}
+      {selectedVideo && (
+        <div
+          className="
+      fixed inset-0 z-[999]
+      flex items-center justify-center
+      bg-black/80 backdrop-blur-md
+      p-4
+    "
+          onClick={() => {
+            setSelectedVideo(null);
+            setPaused(false);
+          }}
+        >
+          <div
+            className="
+    relative
+    w-full
+    max-w-md
+    max-h-[90vh]
+    overflow-y-auto
+    rounded-[2rem]
+    bg-black
+  "
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="
+          absolute right-4 top-4 z-20
+          rounded-full bg-black/60
+          px-3 py-1 text-white
+        "
+              onClick={() => {
+                setSelectedVideo(null);
+                setPaused(false);
+              }}
+            >
+              ✕
+            </button>
+
+            <video
+              src={selectedVideo.preview}
+              ref={popupVideoRef}
+              controls
+              autoPlay
+              loop
+              playsInline
+              className="
+    max-h-[70vh]
+    w-full
+    object-contain
+  "
+            />
+
+            <div className="p-4">
+              <h3 className="text-xl font-bold">
+                {selectedVideo.title}
+              </h3>
+
+              <a
+                href={selectedVideo.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+            mt-3 inline-flex
+            rounded-full
+            bg-sky-500
+            px-4 py-2
+            text-white
+          "
+              >
+                Open TikTok ↗
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      )}
+
+    </main>
   );
 }

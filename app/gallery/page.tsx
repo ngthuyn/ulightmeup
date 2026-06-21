@@ -16,6 +16,9 @@ const mediaItems: MediaItem[] = [
   { src: "/images/lighT_TN.jpg", alt: "lighT", title: "" },
   { src: "/images/lighT_tamh2.jpg", alt: "lighT", title: "" },
   { src: "/images/lighT_ĐHHS.jpg", alt: "lighT", title: "ĐHS" },
+  { src: "/images/lighT_SunSong3.jpg", alt: "lighT", title: "" },
+  { src: "/images/lighT_VIFW2026_1.jpg", alt: "lighT", title: "ĐHS" },
+  { src: "/images/lighT_VIFW2026_2.jpg", alt: "lighT", title: "ĐHS" },
   { src: "/images/lighT_dhhs2.jpg", alt: "lighT", title: "" },
   { src: "/images/lighT_TAMH_30_6.jpg", alt: "lighT", title: "" },
   { src: "/images/lighT_crocs.jpg", alt: "lighT", title: "" },
@@ -150,7 +153,7 @@ export default function GalleryPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="h-16">
             <Link
-              href="/"
+              href="/home"
               className="
     fixed
     left-6
@@ -331,6 +334,18 @@ export default function GalleryPage() {
             </div>
           </div>
         )}
+                  <div className="mt-16 flex flex-col items-center justify-center gap-4 rounded-[2rem] px-6 py-8 text-center">
+            <img
+  src="/images/ulightmeup.png"
+  alt="u lighT me up"
+  className="mx-auto w-[320px] sm:w-[420px]"
+  style={{
+    filter: "drop-shadow(0 0 12px rgba(255,255,255,.45))",
+  }}
+/>
+
+           
+          </div>
 
         <style jsx global>{`
               .camera-flash{

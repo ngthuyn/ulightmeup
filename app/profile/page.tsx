@@ -43,7 +43,7 @@ export default function ProfilePage() {
 
         {/* HOME */}
         <Link
-  href="/"
+  href="/home"
   className="
     absolute
     left-6

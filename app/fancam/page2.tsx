@@ -253,27 +253,20 @@ export default function FancamPage() {
   };
 
   return (
-    <PageShell videoSrc="/videos/light-intro.mp4">
-    <main
+    
+<main
   className="relative min-h-[100svh] overflow-hidden text-white"
   style={{
     backgroundImage: "url('/images/bg.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
->       
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.76)_0%,rgba(255,255,255,0.22)_34%,rgba(255,255,255,0.08)_100%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:56px_56px] opacity-5" />
-          <div className="absolute left-[-8%] top-[-10%] h-[24rem] w-[24rem] rounded-full bg-sky-300/30 blur-3xl" />
-          <div className="absolute right-[-10%] top-[12%] h-[22rem] w-[22rem] rounded-full bg-cyan-300/25 blur-3xl" />
-          <div className="absolute left-[10%] bottom-[-14%] h-[24rem] w-[24rem] rounded-full bg-blue-200/35 blur-3xl" />
-        </div>
+>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="h-16">
             <Link
-  href="/"
+  href="/home"
   className="
     fixed
     left-6
@@ -303,13 +296,18 @@ export default function FancamPage() {
           </div>
 
           <div className="mt-10 text-center">
-            <p className="text-xs uppercase tracking-[0.35em] text-sky-700/70 sm:text-sm">
-              FANCAM
-            </p>
-            <h1 className="mt-3 text-5xl font-black tracking-[-0.04em] text-zinc-900 sm:text-6xl lg:text-7xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
+  FANCAM
+</p>
+            <h1
+  className="mt-3 text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
+  style={{
+    textShadow: "0 0 15px rgba(255,255,255,.2)",
+  }}
+>
               Fancam Collection
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-600 sm:text-base sm:leading-8">
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
               {
                 "Chạm vào card để xem preview. Bấm 🔊 để bật âm thanh. Bấm ↗ để mở TikTok."
                           }
@@ -428,6 +426,6 @@ export default function FancamPage() {
           </div>
         </div>
       </main>
-    </PageShell>
+   
   );
 }
