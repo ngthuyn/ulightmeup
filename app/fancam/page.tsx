@@ -26,6 +26,13 @@ const videos: VideoItem[] = [
     preview: "/videos/lighT_ssdd_preview.mp4",
   },
   {
+
+    title: "99KISS",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7650501250710129938",
+    image: "/images/lighT_ssdd1.jpg",
+    preview: "/videos/lighT_99kiss_preview.mp4",
+  },
+  {
     title: "Nhớ mãi chuyến đi này",
     url: "https://www.tiktok.com/@tincredible_allforlight/video/7645868133881810184",
     image: "/images/lighT_tamh2.jpg",
@@ -68,6 +75,12 @@ const videos: VideoItem[] = [
     preview: "/videos/lighT_ycc_mvvn.mp4",
   },
   {
+    title: "WE LIT THE SHOW",
+    url: "https://www.tiktok.com/@tincredible_allforlight/video/7586038883809234184",
+    image: "/images/lighT_wlts.jpg",
+    preview: "/videos/lighT_wlts_preview.mp4",
+  },
+  {
     title: "Không cần nói nhiều",
     url: "https://www.tiktok.com/@tincredible_allforlight/video/7586312075387964690",
     image: "/images/lighT_YCC_kcnn.jpg",
@@ -87,6 +100,8 @@ export default function FancamPage() {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [viewMode, setViewMode] =
+  useState<"arc" | "grid">("arc");
  const popupVideoRef =
   useRef<HTMLVideoElement>(null);
   
@@ -370,8 +385,31 @@ export default function FancamPage() {
               "Tap a card for a quick preview, or click ↗ to watch the full video on TikTok."
             }
           </p>
-        </div>
+          <div className="mt-6 flex justify-center gap-3">
+  <button
+    onClick={() => setViewMode("arc")}
+    className={`rounded-full px-4 py-2 text-sm ${
+      viewMode === "arc"
+        ? "bg-sky-400 text-black"
+        : "bg-white/10 text-white"
+    }`}
+  >
+    🌀 Arc
+  </button>
 
+  <button
+    onClick={() => setViewMode("grid")}
+    className={`rounded-full px-4 py-2 text-sm ${
+      viewMode === "grid"
+        ? "bg-sky-400 text-black"
+        : "bg-white/10 text-white"
+    }`}
+  >
+    ⬜ Grid
+  </button>
+</div>
+        </div>
+{viewMode === "arc" ? (
         <div className="relative mt-6 h-[600px] overflow-visible perspective-[1000px]">
           <div
             className="absolute left-1/2 top-[25%]"
@@ -499,6 +537,51 @@ export default function FancamPage() {
             })}
           </div>
         </div>
+        ) : (
+          <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+  {videos.map((video, index) => (
+    <article
+      key={video.url}
+      className="overflow-hidden bg-white/80 shadow-xl backdrop-blur transition hover:-translate-y-1 "
+    >
+      <button
+        onClick={() => {
+          setSelectedVideo(video);
+        }}
+        className="block w-full"
+      >
+        <img
+          src={video.image}
+          alt={video.title}
+          className="aspect-[3/4] w-full object-cover"
+        />
+      </button>
+
+      <div className="px-2 py-1">
+        <p className="text-[8px] uppercase tracking-[0.15em] text-sky-700/70">
+          TikTok
+        </p>
+
+        <h2 className="text-xs font-semibold text-black line-clamp-1">
+          {video.title}
+        </h2>
+
+        <div className="mt-1 flex justify-center">
+          <a
+            href={video.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/10 text-sky-700"
+          >
+            ↗
+          </a>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
+            // Grid sẽ ở đây
+)}
         <div className="mt-16 flex flex-col items-center justify-center gap-4 rounded-[2rem] px-6 py-8 text-center">
           <img
             src="/images/ulightmeup.png"
