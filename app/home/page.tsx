@@ -141,7 +141,7 @@ useEffect(() => {
     
     <div className="flex h-full flex-col justify-center">
       <p
-  className="text-center text-xl italic font-semibold text-white"
+  className="text-center text-lg italic font-medium text-white"
   style={{
     textShadow:
   "0 0 6px rgba(255,255,255,.35), 0 0 12px rgba(96,165,250,.18)",
