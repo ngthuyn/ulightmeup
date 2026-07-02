@@ -53,43 +53,17 @@ async function loadComments() {
   setComments(data || []);
 }
 return ( <main
-  className="relative min-h-[100svh] overflow-x-hidden text-white"
+  className="relative min-h-screen overflow-hidden"
   style={{
-    backgroundImage: "url('/images/bg.jpg')",
+    backgroundImage: "url('/videos/bg.gif')",
     backgroundSize: "cover",
     backgroundPosition: "center",
+    
   }}
 >
 
   <div className="relative z-20 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between gap-4">
-    <Link
-  href="/home"
-  className="
-    fixed
-    left-6
-    top-6
-    z-50
-    flex
-    h-12
-    w-12
-    items-center
-    justify-center
-    rounded-full
-    border
-    border-white/15
-    bg-black/10
-    text-xl
-    text-white
-    backdrop-blur-xl
-    transition-all
-    duration-300
-    hover:scale-110
-  "
->
-  🏠
-</Link>
-    </div>
+    
 <div className="mx-auto mt-16 md:mt-4 max-w-4xl">
   <div className="flex items-center justify-between gap-4">
     
@@ -99,10 +73,10 @@ return ( <main
       </p>
 
       <h2
-        className="mt-2 text-2xl font-black sm:text-3xl md:text-4xl"
+        className="mt-2 text-2xl text-white sm:text-3xl md:text-4xl"
         style={{
           textShadow:
-            "0 0 12px rgba(255,255,255,.25)",
+            "0 0 12px rgb(233, 227, 227)",
         }}
       >
         💌 from tinies

@@ -30,7 +30,7 @@ export default function ProfilePage() {
       <main
   className="relative min-h-screen overflow-hidden"
   style={{
-    backgroundImage: "url('/images/bg.jpg')",
+    backgroundImage: "url('/videos/bg.gif')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     
@@ -41,33 +41,6 @@ export default function ProfilePage() {
 
 
 
-        {/* HOME */}
-        <Link
-  href="/home"
-  className="
-    absolute
-    left-6
-    top-6
-    z-50
-    flex
-    h-12
-    w-12
-    items-center
-    justify-center
-    rounded-full
-    border
-    border-white/15
-    bg-black/10
-    text-xl
-    text-white
-    backdrop-blur-xl
-    transition-all
-    duration-300
-    hover:scale-110
-  "
->
-  🏠
-</Link>
 
         {/* DESKTOP */}
         <div className="hidden lg:flex min-h-screen items-center justify-center px-8">

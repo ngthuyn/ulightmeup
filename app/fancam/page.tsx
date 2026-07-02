@@ -330,62 +330,19 @@ export default function FancamPage() {
     <main
       className="relative min-h-[100svh] overflow-hidden text-white"
       style={{
-        backgroundImage: "url('/images/bg.jpg')",
+        backgroundImage: "url('/videos/bg.gif')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <div className="h-16">
-          <Link
-            href="/home"
-            className="
-    fixed
-    left-6
-    top-6
-    z-50
-    flex
-    h-12
-    w-12
-    items-center
-    justify-center
-    rounded-full
-    border
-    border-white/15
-    bg-black/10
-    text-xl
-    text-white
-    backdrop-blur-xl
-    transition-all
-    duration-300
-    hover:scale-110
-  "
-          >
-            🏠
-          </Link>
+ 
 
-
-        </div>
-
-        <div className="mt-10 text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
-            FANCAM
-          </p>
-          <h1
-            className="mt-3 text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
-            style={{
-              textShadow: "0 0 15px rgba(255,255,255,.2)",
-            }}
-          >
-            Fancam Collection
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-            {
-              "Tap a card for a quick preview, or click ↗ to watch the full video on TikTok."
-            }
-          </p>
+        <div className="mt-25 text-center">
+    
           <div className="mt-6 flex justify-center gap-3">
+  
   <button
     onClick={() => setViewMode("arc")}
     className={`rounded-full px-4 py-2 text-sm ${

@@ -144,62 +144,20 @@ export default function GalleryPage() {
      <main
   className="relative min-h-[100svh] overflow-hidden text-white"
   style={{
-    backgroundImage: "url('/images/bg.jpg')",
+    backgroundImage: "url('/videos/bg.gif')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
 >
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="h-16">
-            <Link
-              href="/home"
-              className="
-    fixed
-    left-6
-    top-6
-    z-50
-    flex
-    h-12
-    w-12
-    items-center
-    justify-center
-    rounded-full
-    border
-    border-white/15
-    bg-black/10
-    text-xl
-    text-white
-    backdrop-blur-xl
-    transition-all
-    duration-300
-    hover:scale-110
-  "
-            >
-              🏠
-            </Link>
+       
 
-
-          </div>
-
-          <div className="mt-10 text-center">
-            <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
-  Gallery
-</p>
-            <h1
-  className="mt-3 text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl"
-  style={{
-    textShadow: "0 0 15px rgba(255,255,255,.2)",
-  }}
->
-              lighT
-            </h1>
-            
-          </div>
+         
 
 
 
-          <div className="mt-10">
+          <div className="mt-35">
 
             {!showGallery ?
               (
