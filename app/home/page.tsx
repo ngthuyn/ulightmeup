@@ -205,7 +205,7 @@ export default function Home() {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <a
-          href="https://www.youtube.com/watch?v=wmCQAghWAzM&t=8s"
+          href="https://www.youtube.com/watch?v=dCx1XTxPxXg"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full bg-sky-500 px-7 py-3 font-semibold text-white shadow-lg transition hover:scale-105"
