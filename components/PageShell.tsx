@@ -20,7 +20,16 @@ export default function PageShell({ videoSrc, children }: PageShellProps) {
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
-
+     <div>
+      <main
+      className="relative min-h-screen overflow-hidden"
+      style={{
+        backgroundImage: "url('/videos/bg.gif')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    ></main>
+     </div>
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.78)_0%,rgba(255,255,255,0.22)_32%,rgba(255,255,255,0.08)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.5),transparent_36%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px)] bg-[size:56px_56px] opacity-15" />

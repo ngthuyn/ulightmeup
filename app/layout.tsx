@@ -1,32 +1,35 @@
+import LayoutWrapper from "@/components/LayoutWrapper";
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   Plus_Jakarta_Sans,
   Syne,
-  Cormorant_Garamond,
+  EB_Garamond,
 } from "next/font/google";
 import "./globals.css";
-import PageTransition from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin", "vietnamese"],
-  variable: "--font-body",
-  display: "swap",
-});
+
 
 const syne = Syne({
   subsets: ["latin"],
   variable: "--font-logo",
-  display: "swap",
+  display: "block",
 });
+import { Playfair_Display } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-quote",
+display: "block",  
+});
+const ebGaramond = EB_Garamond({
   subsets: ["latin", "vietnamese"],
   variable: "--font-quote",
   style: ["normal", "italic"],
-  display: "swap",
+display: "block",
 });
-
 
 export const metadata: Metadata = {
   title: "u lighT me up!",
@@ -39,15 +42,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className="h-full antialiased">
-      <body className={`${cormorant.className} min-h-full`}>
-        <Navbar />
-        {children}
+    <html
+      lang="vi"
+      className={`
+        ${playfair.variable}
+        ${syne.variable}
+        ${ebGaramond.variable}
+        h-full
+        antialiased
+      `}
+    >
+      <body className={`${playfair.className} min-h-full`}>
+        <div
+          className="fixed inset-0 -z-10"
+          style={{
+            backgroundImage: "url('/videos/bg.gif')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+
+       <LayoutWrapper>
+
+    {children}
+
+  </LayoutWrapper>
+
+        <Script
+          src="https://www.tiktok.com/embed.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
 }
-<html
-  lang="vi"
-  className={`${plusJakarta.variable} ${syne.variable} ${cormorant.variable} h-full antialiased`}
-></html>

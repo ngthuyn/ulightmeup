@@ -8,9 +8,9 @@ export default function ProfilePage() {
   const [page, setPage] = useState(0);
 
   const pages = [
-    "/images/profile1.jpg",
-    "/images/profile2.jpg",
-    "/images/profile3.jpg",
+    "/images/profile1.png",
+    "/images/profile2.png",
+    "/images/profile3.png",
   ];
 
   const nextPage = () => {

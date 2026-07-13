@@ -61,29 +61,14 @@ export default function Home() {
       }}
     >
       <div className="flex items-center justify-center gap-1">
-        <span className="text-[12px] font-medium tracking-[0.02em] sm:text-base lg:text-xl">
-          The lighT in
+        <span className="text-[15px] font-medium tracking-[0.02em] sm:text-base lg:text-xl">
+         ✨Lài Tì Lái Ti✨
         </span>
 
-        <div className="flex items-center whitespace-nowrap">
-          <img
-            src="/images/tinie_1.png"
-            alt="tinie"
-            className="h-6 w-auto sm:h-9 lg:h-10"
-          />
-          <span className="ml-px text-sm font-medium tracking-[0.03em] sm:text-lg lg:text-xl">
-            's
-          </span>
-        </div>
-
-        <span className="text-sm font-medium tracking-[0.03em] sm:text-lg lg:text-xl">
-          eyes
-        </span>
+        
       </div>
 
-      <div className="mt-1 text-[12px] sm:text-sm lg:text-xl font-medium tracking-[0.03em] sm:text-lg lg:text-xl">
-        ✨shines the brightest ✨
-      </div>
+     
     </div>
   </div>
 </div>
@@ -98,20 +83,26 @@ export default function Home() {
   />
   <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-  <div className="absolute inset-x-0 bottom-15 flex min-h-[100px] items-center justify-center px-6 pb-6">
-    <p
-      className="max-w-2xl text-center text-sm italic font-medium text-white sm:text-base lg:text-xl"
-      style={{
-        textShadow:
-          "0 0 10px rgba(255,255,255,.5),0 0 20px rgba(96,165,250,.25)",
-      }}
-    >
-      "{fanQuotes[quoteIndex]}"
-    </p>
-  </div>
+ <div
+  className="absolute left-0 bottom-35 sm:bottom-20 md:bottom-75 lg:bottom-54 w-full px-5 sm:px-8 md:px-12 lg:px-16"
+>
+<p
+  className="max-w-[120px] sm:max-w-[180px] md:max-w-[300px] lg:max-w-[560px] whitespace-normal break-words text-left italic font-bold text-sm sm:text-base md:text-lg lg:text-2xl leading-relaxed text-white"
+  style={{
+    textShadow: `
+      0 2px 8px rgba(0,0,0,.95),
+      0 0 18px rgba(0,0,0,.85),
+      0 0 35px rgba(0,0,0,.65)
+    `,
+  }}
+>
+  "{fanQuotes[quoteIndex]}"
+</p>
+</div>
 </div>
 
 {/* Credit / social section */}
+{/*
 <div className="relative z-20 mx-auto max-w-7xl px-4 pb-10 sm:px-6 lg:px-8">
 
 <div className="relative z-30 mt-4 text-center">
@@ -181,7 +172,8 @@ export default function Home() {
       </div>
       </div>
             </div>
-
+            */}
+{/*
 {showPopup && (
   <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/60 backdrop-blur-sm">
     <div className="relative w-[90%] max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
@@ -224,6 +216,7 @@ export default function Home() {
     </div>
   </div>
 )}
+  */}
 
 
 
