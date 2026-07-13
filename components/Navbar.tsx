@@ -108,7 +108,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const savedTheme =
-      localStorage.getItem("theme") || "aurora";
+      localStorage.getItem("theme") || "transparent";
 
     document.body.dataset.theme = savedTheme;
   }, []);
