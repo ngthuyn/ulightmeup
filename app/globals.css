@@ -283,7 +283,12 @@ background-attachment:fixed;
   --menu-bg: rgba(20,20,20,.35);
   --footer-bg: rgba(20,20,20,.35);
 }
+/* Transparent */
+[data-theme="transparent"]{
+    --menu-bg: transparent
 
+    --footer-bg:transparent
+}
 /* Aurora */
 [data-theme="aurora"]{
   --menu-bg:
@@ -361,12 +366,7 @@ background-attachment:fixed;
       #2d2d2d
     );
 }
-/* Transparent */
-[data-theme="transparent"]{
-    --menu-bg: transparent
 
-    --footer-bg:transparent
-}
 @keyframes lightBurst{
 
 0%{
