@@ -10,7 +10,7 @@ const journey = [
     title: "Casting",
     date: "2025",
     description:
-      '<span className="text-sky-300"> Minh Tân </span> chính thức tham gia casting chương trình <span className="text-sky-300"> Tân Binh Toàn Năng </span>. Đây là cột mốc đầu tiên mở ra hành trình theo đuổi ước mơ trở thành nghệ sĩ chuyên nghiệp.',
+      'Minh Tân chính thức tham gia casting chương trình Tân Binh Toàn Năng. Đây là cột mốc đầu tiên mở ra hành trình theo đuổi ước mơ trở thành nghệ sĩ chuyên nghiệp.',
     platform: "youtube",
     url: "",
     gallery: [
@@ -25,7 +25,7 @@ const journey = [
     title: "Top 30",
     date: "2025",
     description:
-      'Sau vòng tuyển chọn, <span className="text-sky-300"> Minh Tân </span> trở thành một trong Top 30 thực tập sinh bước tiếp vào hành trình 100 ngày thăng cấp.  là thí sinh duy nhất được các chuyên gia đề xuất cân nhắc vào lớp A dù chưa nổi bật về truyền thông. Cậu được mệnh danh là “ngoại lệ đặc biệt” – một gương mặt không cần chiêu trò nhưng vẫn tỏa sáng bằng thực lực, thần thái và nội lực sân khấu không thể chối cãi.',
+      'Sau vòng tuyển chọn, Minh Tân trở thành một trong Top 30 thực tập sinh bước tiếp vào hành trình 100 ngày thăng cấp.  là thí sinh duy nhất được các chuyên gia đề xuất cân nhắc vào lớp A dù chưa nổi bật về truyền thông. Minh Tân được mệnh danh là “ngoại lệ đặc biệt” – một gương mặt không cần chiêu trò nhưng vẫn tỏa sáng bằng thực lực, thần thái và nội lực sân khấu không thể chối cãi.',
     platform: "facebook",
     url: "",
     gallery: [
@@ -45,7 +45,7 @@ const journey = [
     title: "Top 11",
     date: "2025",
     description:
-      'Sau nhiều tháng đào tạo và thử thách, <span className="text-sky-300"> Minh Tân </span> chính thức lọt vào top 11 của chương trình và tham gia "Tân Binh Toàn Năng - Giai đoạn chính thức" với nghệ danh <span className="text-sky-300"> minhtin</span>.',
+      'Sau nhiều tháng đào tạo và thử thách, Minh Tân thức lọt vào top 11 của chương trình và tham gia "Tân Binh Toàn Năng - Giai đoạn chính thức" với nghệ danh minhtin.',
     platform: "tiktok",
     url: "",
     video: [
@@ -70,7 +70,7 @@ const journey = [
     title: "Trở thành nghệ sĩ độc lập",
     date: "2025",
     description:
-'Dù hành trình tại Top 11 khép lại trong nhiều tiếc nuối, <span className="text-sky-300"> minhtin</span>  đã chứng minh khát vọng mãnh liệt được tỏa sáng trên sân khấu và khẳng định tiềm năng của một nghệ sĩ mang màu sắc rất riêng. Chính từ hành trình ấy, <span className="text-sky-300"> minhtin</span> chính thức bước sang một chương mới, hoạt động với tư cách nghệ sĩ độc lập dưới nghệ danh <span className="text-sky-300"> lighT</span>.',   
+'Dù hành trình tại Top 11 khép lại trong nhiều tiếc nuối, minhtin đã chứng minh khát vọng mãnh liệt được tỏa sáng trên sân khấu và khẳng định tiềm năng của một nghệ sĩ mang màu sắc rất riêng. Chính từ hành trình ấy, minhtin chính thức bước sang một chương mới, hoạt động với tư cách nghệ sĩ độc lập dưới nghệ danh lighT.',   
       platform: "tiktok",
     url: "",
     video: [
@@ -343,7 +343,7 @@ Khám phá thêm về <span className="text-sky-300"> lighT</span>
 </h2>
 
 <p className="mx-auto mt-5 max-w-3xl leading-8 text-white/70">
-  Khám phá thêm những video Focus Cam, Dance Compilation, Song Cover cùng các bài báo để nhìn lại những dấu ấn đáng nhớ và theo dõi hành trình phát triển của <span className="text-sky-300"> lighT</span>.
+  Cùng nhìn lại những dấu ấn đáng nhớ qua các video Focus Cam, Dance Compilation, Song Cover và theo dõi hành trình phát triển của <span className="text-sky-300"> lighT</span>.
 </p>
 
   <div className="mt-10 flex flex-wrap justify-center gap-5">
