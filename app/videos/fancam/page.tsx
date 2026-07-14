@@ -173,8 +173,11 @@ export default function FancamPage() {
       }}
     >
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
- 
+<section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
+
+             <h1 className="text-center text-4xl font-black">
+          FANCAM
+        </h1>
 
         <div className="mt-25 text-center">
     
@@ -224,7 +227,7 @@ export default function FancamPage() {
         <style jsx global>{`
 
         `}</style>
-      </div>   {/* đóng relative z-10 */}
+      </section>   {/* đóng relative z-10 */}
      
   
 

@@ -87,10 +87,10 @@ export default function FactCheckPage() {
   ),
 
        images: [
-    "/images/facts/fact01_1.jpg",
-    "/images/facts/fact01_2.jpg",
-    "/images/facts/fact01_3.jpg",
-    "/images/facts/fact01_4.jpg",
+    "/images/facts/fact01_1.JPG",
+    "/images/facts/fact01_2.JPG",
+    "/images/facts/fact01_3.JPG",
+    "/images/facts/fact01_4.JPG",
     "/images/facts/fact01_5.jpg",
     "/images/facts/fact01_6.jpg",
     "/images/facts/fact01_7.jpg",
@@ -131,7 +131,7 @@ export default function FactCheckPage() {
     {
   id: "02",
   title: "Những mảnh ghép ấm áp về gia đình",
-  image: "/images/facts/fact02_1.png",
+  image: "/images/facts/fact02_1.PNG",
   href: "https://facebook.com/...",
 
   intro: (
@@ -203,8 +203,8 @@ export default function FactCheckPage() {
   ),
 
   images: [
-    "/images/facts/fact02_1.png",
-    "/images/facts/fact02_2.png",
+    "/images/facts/fact02_1.PNG",
+    "/images/facts/fact02_2.PNG",
     "/images/facts/fact02_3.jpg",
 
   ],
@@ -379,7 +379,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
       <div className="relative z-20 mx-auto max-w-7xl px-6 pt-24 pb-16">
 
         <h1
-          className="mb-12 text-center text-4xl font-bold text-white md:text-5xl"
+          className="mb-12 text-center text-3xl font-bold text-white md:text-5xl"
           style={{
             textShadow: "0 0 12px rgba(255,255,255,.45)",
           }}
@@ -387,7 +387,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
           lighT's FACT CHECK
         </h1>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+<div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-3">        
           {facts.map((fact) => (
             <button
   key={fact.id}
@@ -417,7 +417,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
                   EP {fact.id}
                 </p>
 
-                <h2 className="mt-2 text-xl font-semibold text-white">
+                <h2 className="mt-2 text-sm font-semibold text-white">
                   {fact.title}
                 </h2>
               {/*
@@ -489,6 +489,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
 {"images" in selectedFact && selectedFact.images && (
   <div className="my-8 grid grid-cols-2 gap-3 md:grid-cols-3">
+    
     {selectedFact.images.map((img, index) => (
       <img
         key={index}

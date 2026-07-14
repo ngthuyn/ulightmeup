@@ -12,7 +12,8 @@ export default async function Page({
     const { id } = await params;
 
     const video = videos.find((v) => v.id === id);
-
+console.log(id);
+console.log(video);
     if (!video) {
         return <div>Video not found</div>;
     }
@@ -81,14 +82,14 @@ export default async function Page({
                
 
                 <h2 className="mt-20 mb-8 text-3xl font-bold text-white">
-                    Related Videos
+                     Video liên quan 
                 </h2>
 
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
                     {related.map((item) => (
                         <Link
                             key={item.id}
-href={`/videos/dan-compilation/${item.id}`}                            
+href={`/videos/dance-compilation/${item.id}`}                            
                             className="
         group
         overflow-hidden

@@ -33,7 +33,7 @@ export default function IntroPage() {
   // Chuyển sang Landing
   const pageTimer = setTimeout(() => {
     router.replace("/landing");
-  }, 3500);
+  }, 3200);
 
   return () => {
     clearInterval(interval);

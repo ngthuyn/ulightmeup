@@ -30,7 +30,7 @@ const navItems = [
     label: "Videos",
     children: [
       {
-        label: "Fan Cam",
+        label: "FanCam",
         href: "/videos/fancam",
       },
       {
@@ -128,7 +128,7 @@ export default function Navbar() {
 
     setTimeout(() => {
       router.push(href);
-    }, 220);
+    }, 0);
   };
 
   const changeTheme = (theme: string) => {

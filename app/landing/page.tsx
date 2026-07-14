@@ -32,7 +32,7 @@ export default function LandingPage() {
       FIRST SINGLE
     </h1>
 
-    <p className="mt-3 text-xl md:text-3xl uppercase tracking-[0.3em]">
+    <p className="mt-3 text-2xl md:text-3xl uppercase tracking-[0.3em]">
       OUT NOW
     </p>
 

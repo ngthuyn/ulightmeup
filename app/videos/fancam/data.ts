@@ -21,7 +21,7 @@ export type VideoItem = {
 export const videos: VideoItem[] = [
   {
     id: "7648561307121208596",
-    title: "[20260606] Dịu dàng đến từng phút giây",
+    title: "[06.06.2026] Dịu dàng đến từng phút giây",
     image: "/images/lighT_SunSong4.jpe",
     keywords: ["SunSong", "20260606", "lighT"],
     sources: [
@@ -38,7 +38,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7648345317116595474",
-    title: "[20260606] Đi đu đưa đi",
+    title: "[06.06.2026] Đi đu đưa đi",
     image: "/images/lighT_SunSong3.jpg",
     keywords: ["SunSong", "20260606", "lighT"],
     sources: [
@@ -56,7 +56,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7646159440785181959",
-    title: "[20260531] Chuyện đôi ta",
+    title: "[31.05.2026] Chuyện đôi ta",
     image: "/images/lighT_ssdd.jpg",
     keywords: ["SucSongDaiDuong", "20260531", "lighT"],
     sources: [
@@ -87,7 +87,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7650501250710129938",
-    title: "[20260531] 99KISS",
+    title: "[31.05.2026] 99KISS",
     image: "/images/lighT_ssdd1.jpg",
     keywords: ["SucSongDaiDuong", "20260531", "lighT"],
     sources: [
@@ -100,7 +100,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7645868133881810184",
-    title: "[20260526] Nhớ mãi chuyến đi này",
+    title: "[30.05.2026] Nhớ mãi chuyến đi này",
     image: "/images/lighT_tamh2.jpg",
     keywords: ["ThanhAmMuaHa", "20260526", "lighT"],
     sources: [
@@ -113,7 +113,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7646324668034583816",
-    title: "[20260526] Đại lộ mặt trời",
+    title: "[30.05.2026] Đại lộ mặt trời",
     image: "/images/lighT_tamh.jpg",
     keywords: ["ThanhAmMuaHa", "20260526", "lighT"],
     sources: [
@@ -126,7 +126,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7641433710721518866",
-    title: "[20260518] Tôi người Việt Nam",
+    title: "[18.05.2026] Tôi người Việt Nam",
     image: "/images/lighT_na.jpg",
     keywords: ["LehoilangSen", "20260518", "lighT"],
     sources: [
@@ -139,7 +139,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7603752306613538056",
-    title: "[20260226] EXPOSURE",
+    title: "[06.02.2026] EXPOSURE",
     image: "/images/lighT_TrungVuong.jpg",
     keywords: ["TrungVuong", "20260226", "minhtin"],
     sources: [
@@ -152,7 +152,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7589311310429506834",
-    title: "[20251228] SHOW ME",
+    title: "[28.12.2025] SHOW ME",
     image: "/images/lighT_tthssv_showme.jpg",
     keywords: ["HSSV", "20251228", "minhtin"],
     sources: [
@@ -177,7 +177,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7588970584634084626",
-    title: "[20251228] TAKE A SHOT",
+    title: "[28.12.2025] TAKE A SHOT",
     image: "/images/lighT_tthssv_takeashot.jpg",
     keywords: ["HSSV", "20251228", "minhtin"],
     sources: [
@@ -190,7 +190,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7587461359969914120",
-    title: "[20251220] Một vòng Việt Nam",
+    title: "[20.12.2025] Một vòng Việt Nam",
     image: "/images/lighT_ycc_mvvn.jpg",
     keywords: ["Y Concert", "20251220", "minhtin"],
     sources: [
@@ -203,7 +203,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7586038883809234184",
-    title: "[20251220] WE LIT THE SHOW",
+    title: "[20.12.2025] WE LIT THE SHOW",
     image: "/images/lighT_wlts.jpg",
     keywords: ["Y Concert", "20251220", "minhtin"],
     sources: [
@@ -216,7 +216,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7586312075387964690",
-    title: "[20251220] Không cần nói nhiều",
+    title: "[20.12.2025] Không cần nói nhiều",
     image: "/images/lighT_YCC_kcnn.jpg",
     keywords: ["Y Concert", "20251220", "minhtin"],
     sources: [
@@ -229,7 +229,7 @@ export const videos: VideoItem[] = [
 
   {
     id: "7586183799931702546",
-    title: "[20251220] EXPOSURE",
+    title: "[20.12.2025] EXPOSURE",
     image: "/images/lighT_YCC_exposure.jpg",
     keywords: ["Y Concert", "20251220", "minhtin"],
     sources: [

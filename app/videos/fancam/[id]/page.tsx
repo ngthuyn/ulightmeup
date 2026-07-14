@@ -31,7 +31,9 @@ export default async function Page({
 
                 <div className="flex justify-center">
                     <div className="space-y-12">
-
+<h1 className="mt-10 text-4xl font-bold">
+                    {video.title}
+                </h1>
  {video.sources.map((source) => (
   <div
     key={source.url}

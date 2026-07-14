@@ -25,7 +25,7 @@ export async function GET(req: Request) {
   const images = fs
     .readdirSync(dir)
     .filter(file =>
-      /\.(jpg|jpeg|png|webp|gif)$/i.test(file)
+      /\.(jpg|jpeg|png|jpe|webp|gif)$/i.test(file)
     )
     .sort()
     .map(file => ({

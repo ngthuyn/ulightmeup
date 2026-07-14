@@ -18,6 +18,7 @@ export default function PageTransition({
       }}
     >
       <AnimatePresence mode="wait" initial={false}>
+        
         <motion.div
           key={pathname}
           initial={{

@@ -6,7 +6,7 @@ const news = [
     tag: "TV SHOW",
     title: "Đỗ Minh Tân “Ngoại lệ” của Tân Binh Toàn Năng và cú bật âm thầm nhưng bền bỉ",
     source: "CTV SHOW",
-    date: "Aug 2025",
+    date: "07.05.2025",
     image: "/images/news/news2.png",
     href: "https://hoahoctro.tienphong.vn/tan-binh-toan-nang-do-minh-tan-ngoai-le-duoc-can-nhac-len-lop-a-la-ai-post1739531.tpo",
   },
@@ -15,11 +15,28 @@ const news = [
     tag: "TV SHOW",
     title: "Tân Binh Toàn Năng: Đỗ Minh Tân - ngoại lệ được cân nhắc lên lớp A là ai?",
     source: "CTV SHOW",
-    date: "May 2025",
+    date: "01.08.2025",
     image: "/images/news/news1.jpg",
     href: "https://yeah1.com/tv-show/do-minh-tan-ngoai-le-cua-tan-binh-toan-nang-va-cu-bat-am-tham-nhung-ben-bi-a412-d125701",
   },
- 
+  {
+    id: 3,
+    tag: "Giải trí",
+    title: "Tân binh minhtin ngậm ngùi dừng chân",
+    source: "CTV SHOW",
+    date: " 22.11.2025",
+    image: "/images/news/news3.jpg",
+    href: "https://baovanhoa.vn/giai-tri/tan-binh-minhtin-ngam-ngui-dung-chan-183266.html",
+  },
+  {
+    id: 4,
+    tag: "Âm nhạc",
+    title: "YeaH1 bắt tay Sony Music ra mắt SYE",
+    source: "CTV SHOW",
+    date: " 21.01.2026",
+    image: "/images/news/news4.jpg",
+    href: "https://yeah1.com/viet-nam/yeah1-bat-tay-sony-music-ra-mat-sye-debut-nhom-nhac-uprize-dua-vpop-ra-thi-truong-quoc-te-a427-d127752.html",
+  },
 ];
 
 export default function NewspaperPage() {

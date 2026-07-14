@@ -279,15 +279,15 @@ background-attachment:fixed;
   --glass-border:rgba(255,255,255,.25);
 }*/
 
-:root{
-  --menu-bg: rgba(20,20,20,.35);
-  --footer-bg: rgba(20,20,20,.35);
+:root {
+  --menu-bg: transparent;
+  --footer-bg: transparent;
 }
 /* Transparent */
 [data-theme="transparent"]{
-    --menu-bg: transparent
+    --menu-bg: transparent;
 
-    --footer-bg:transparent
+    --footer-bg:transparent;
 }
 /* Aurora */
 [data-theme="aurora"]{

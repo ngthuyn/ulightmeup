@@ -57,18 +57,18 @@ export default function SongCoverACPage() {
     >
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
 
-        <h1 className="mt-3 text-center text-4xl font-black">
+        <h1 className="mt-3 text-center text-3xl font-black">
           SONG COVER
         </h1>
 <div className="mt-20 space-y-24">
   {covers.map((cover) => (
     <div
       key={cover.title}
-className="grid grid-cols-[0.95fr_0.75fr] items-center gap-4"    
-    >
+className="grid grid-cols-1 lg:grid-cols-[0.95fr_0.75fr] items-center gap-10" 
+ >
       {/* Video */}
-<div className="flex justify-end">
-  <div className="w-full max-w-[380px]">        
+<div className="order-2 lg:order-1 flex justify-center lg:justify-end">  
+  <div className="w-full max-w-[300px] sm:max-w-[340px] lg:max-w-[380px]">      
         {cover.platform === "tiktok" && cover.url && (
           <TikTokPlayer url={cover.url} />
         )}
@@ -98,11 +98,13 @@ className="grid grid-cols-[0.95fr_0.75fr] items-center gap-4"
       </div>
 </div>
       {/* Text */}
-      <div>
-<h2 className="text-4xl font-body font-semibold">          {cover.title}
+<div
+  className="order-1 lg:order-2 text-left pl-2 sm:pl-4 lg:pl-0 lg:text-left"
+>  
+<h2 className="text-2xl sm:text-3xl lg:text-4xl font-body font-semibold">              {cover.title}
         </h2>
 
-        <p className="mt-6 text-lg leading-8 text-white/70">
+<p className="mt-4 text-base sm:text-lg leading-7 lg:leading-8 text-white/70">         
           {cover.description}
         </p>
       </div>
