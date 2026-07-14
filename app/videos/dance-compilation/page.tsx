@@ -153,7 +153,7 @@ const maxPage = Math.max(
   })}
 
 </div>
-
+{/*
         <div className="mt-16 flex flex-col items-center justify-center gap-4 rounded-[2rem] px-6 py-8 text-center">
           <img
             src="/images/ulightmeup.png"
@@ -166,6 +166,7 @@ const maxPage = Math.max(
 
 
         </div>
+        */}
         <style jsx global>{`
 
         `}</style>

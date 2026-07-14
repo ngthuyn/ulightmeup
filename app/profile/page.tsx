@@ -43,7 +43,7 @@ export default function ProfilePage() {
 
 
         {/* DESKTOP */}
-        <div className="hidden lg:flex min-h-screen items-center mt-8  justify-center px-8">
+        <div className="hidden lg:flex min-h-screen items-center mt-10  justify-center px-8">
 
           <div
               className="
@@ -80,7 +80,7 @@ export default function ProfilePage() {
         </div>
 
 {/* MOBILE + TABLET */}
-<div className="lg:hidden flex min-h-screen flex-col items-center mt-10 justify-center px-4">
+<div className="lg:hidden flex min-h-screen flex-col items-center mt-15 justify-center px-4">
 
   <img
   key={page}

@@ -10,25 +10,9 @@ type PageShellProps = {
 export default function PageShell({ videoSrc, children }: PageShellProps) {
   return (
     <main className="relative min-h-[100svh] overflow-hidden bg-[#edf5ff] text-zinc-900">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 h-full w-full object-cover opacity-30 blur-[3px] scale-105"
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+      
      <div>
-      <main
-      className="relative min-h-screen overflow-hidden"
-      style={{
-        backgroundImage: "url('/videos/bg.gif')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    ></main>
+      
      </div>
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.78)_0%,rgba(255,255,255,0.22)_32%,rgba(255,255,255,0.08)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.5),transparent_36%)]" />

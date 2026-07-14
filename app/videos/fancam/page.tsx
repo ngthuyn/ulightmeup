@@ -211,7 +211,7 @@ export default function FancamPage() {
   </article>
 ))}
 </div>
-
+{/*
         <div className="mt-16 flex flex-col items-center justify-center gap-4 rounded-[2rem] px-6 py-8 text-center">
           <img
             src="/images/ulightmeup.png"
@@ -224,6 +224,7 @@ export default function FancamPage() {
 
 
         </div>
+        */}
         <style jsx global>{`
 
         `}</style>
