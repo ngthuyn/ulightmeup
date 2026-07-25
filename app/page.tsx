@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 export default function IntroPage() {
   const router = useRouter();
 
@@ -25,15 +25,13 @@ export default function IntroPage() {
     }
   }, 65);
 
-  // Bắt đầu fade-out trước khi chuyển trang
   const fadeTimer = setTimeout(() => {
-    setFadeOut(true);
-  }, 3000);
+  setFadeOut(true);
+}, 5000);
 
-  // Chuyển sang Landing
-  const pageTimer = setTimeout(() => {
-    router.replace("/landing");
-  }, 3200);
+const pageTimer = setTimeout(() => {
+  router.replace("/landing");
+}, 5000);
 
   return () => {
     clearInterval(interval);
@@ -44,12 +42,22 @@ export default function IntroPage() {
   return (
     <main className={`intro ${fadeOut ? "fade-out" : ""}`}>
 <div className="intro-content">
-        <h1
-  data-text="lighT"
-  className="intro-logo font-logo"
->
-  lighT
+   <h1 className="intro-logo font-logo">
+  <span className="logo-top">
+    lài tì
+    <span className="logo-stars">
+      <span className="star star1"> ✦</span>
+         </span>
+  </span>
+
+  <span className="logo-bottom">
+  
+   <span className="logo-stars">
+      <span className="star star1"> ✦</span>
+         </span>  lái ti
+  </span>
 </h1>
+ 
 
      <div className="intro-text">
   <span className="sparkle">✨</span>

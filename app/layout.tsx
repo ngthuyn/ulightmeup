@@ -10,12 +10,12 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { DynaPuff } from "next/font/google";
 
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-logo",
-  display: "block",
+export const dyna = DynaPuff({
+  subsets:["latin"],
+  variable:"--font-logo",
+  weight:["600"],
 });
 import { Playfair_Display } from "next/font/google";
 
@@ -46,22 +46,14 @@ export default function RootLayout({
       lang="vi"
       className={`
         ${playfair.variable}
-        ${syne.variable}
+        ${dyna.variable}
         ${ebGaramond.variable}
         h-full
         antialiased
       `}
     >
-      <body className={`${playfair.className} min-h-full`}>
-        <div
-          className="fixed inset-0 -z-10"
-          style={{
-            backgroundImage: "url('/videos/bg.gif')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-
+      <body className={`${ebGaramond.className} min-h-full`}>
+     
        <LayoutWrapper>
 
     {children}

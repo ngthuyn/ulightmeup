@@ -1,487 +1,344 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
-import { useRouter } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
+export default function TinieCornerPage() {
+  const [opened, setOpened] = useState(false);
 
-export default function TmiPage() {
-  const router = useRouter();
-
-const [showLogin, setShowLogin] = useState(false);
-const [staffPassword, setStaffPassword] = useState("");
-  console.log(
-    "SUPABASE URL:",
-    process.env.NEXT_PUBLIC_SUPABASE_URL
-  );
-  const [comments, setComments] = useState<any[]>([]);
-
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-const [sent, setSent] = useState(false);
-const [visibility, setVisibility] = useState<
-  "public" | "private"
->("public");
- useEffect(() => {
-  loadComments();
-
-  const channel = supabase
-    .channel("comments-realtime")
-    .on(
-      "postgres_changes",
-      {
-        event: "*",
-        schema: "public",
-        table: "comments",
-      },
-      () => {
-        loadComments();
-      }
-    )
-    .subscribe();
-
-  return () => {
-    supabase.removeChannel(channel);
-  };
-}, []);
-function loginStaff() {
-
-  if (
-    staffPassword ===
-    process.env.NEXT_PUBLIC_ADMIN_PASSWORD
-  ) {
-
-    sessionStorage.setItem("admin","true");
-
-    router.push("/admin/comments");
-
-    return;
-  }
-
-  if (
-    staffPassword ===
-    process.env.NEXT_PUBLIC_TIN_PASSWORD
-  ) {
-
-    sessionStorage.setItem("tin","true");
-
-    router.push("/tin");
-
-    return;
-  }
-
-  alert("Wrong password");
-
-}
-async function loadComments() {
- const { data, error } = await supabase
-  .from("comments")
-  .select("*")
-.eq("status","approved")
-.eq("visibility","public")  
-  .order("created_at", {
-    ascending: false,
-  });
-
-  if (error) {
-    console.error(error);
-    return;
-  }
-
-  setComments(data || []);
-}
-return ( <main
-  className="relative min-h-screen overflow-hidden"
-  style={{
-    backgroundImage: "url('/videos/bg.gif')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    
-  }}
->
-
-  <div className="relative z-20 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-    
-<div className="mx-auto mt-16 md:mt-20 max-w-4xl">
-  <div className="flex items-center justify-between gap-4">
-    {/* Title */}
-<div className="relative z-20 mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
-  <div className="relative mx-auto mt-[8vh] max-w-3xl text-center sm:mt-[10vh] lg:mt-[12vh]">
-    <div
-      className="text-white"
+  return (
+    <main
+      className="relative min-h-screen overflow-hidden text-white"
       style={{
-        textShadow:
-          "0 0 8px rgba(255,255,255,.8), 0 0 20px rgba(96,165,250,.8), 0 0 40px rgba(96,165,250,.5)",
+        backgroundImage: "url('/videos/bg.gif')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div className="flex items-center justify-center gap-1">
-        <span className="text-[11px] font-medium tracking-[0.02em] sm:text-base lg:text-xl">
-          The lighT in
-        </span>
+      <div className="absolute inset-0 bg-black/25" />
 
-        <div className="flex items-center whitespace-nowrap">
-          <img
-            src="/images/tinie_1.png"
-            alt="tinie"
-            className="h-6 w-auto sm:h-9 lg:h-10"
-          />
-          <span className="ml-px text-sm font-medium tracking-[0.03em] sm:text-lg lg:text-xl">
-            's
-          </span>
-        </div>
+<section className="relative z-[60] flex min-h-screen items-center justify-center px-4 py-24 sm:px-6">
+        <AnimatePresence mode="wait">
 
-        <span className="text-sm font-medium tracking-[0.03em] sm:text-lg lg:text-xl">
-          eyes
-        </span>
-      </div>
+          {!opened ? (
 
-      <div className="mt-1 text-[11px] sm:text-sm lg:text-xl font-medium tracking-[0.03em] sm:text-lg lg:text-xl">
-        ✨shines the brightest ✨
-      </div>
-    </div>
-  </div>
+            <motion.div
+              key="envelope"
+              initial={{ opacity: 0, scale: .85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: .85 }}
+              transition={{ duration: .45 }}
+              className="flex flex-col items-center"
+            >
 
-</div>
-   {/* <div className="flex-1">
-      <p className="text-xs uppercase tracking-[0.35em] text-sky-200">
-        Messages
-      </p>
+              {/* Envelope */}
 
-      <h2
-        className="mt-2 text-2xl text-white sm:text-3xl md:text-4xl"
-        style={{
-          textShadow:
-            "0 0 12px rgb(233, 227, 227)",
-        }}
-      >
-        💌 from tinies
-      </h2>
+              <motion.div
+                animate={{
+                  y: [0, -12, 0],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
+                whileHover={{
+                  scale: 1.03,
+                }}
+                onClick={() => setOpened(true)}
+                className="relative cursor-pointer"
+              >
 
-      <p className="mt-2 text-sm text-white/70 sm:text-base">
-        👇 Leave a message ✨
-      </p>
-    </div>
-    */}
-
-    <div
-      className="
-        shrink-0
-        rounded-2xl
-        border border-white/10
-        bg-black/15
-        backdrop-blur-xl
-        p-2
-      "
-    >
-      <img
-        src="/images/lighT_.jpg"
-        alt="lighT"
-        className="
-          w-[120px]
-          sm:w-[140px]
-          md:w-[180px]
-          rounded-xl
-        "
-      />
-    </div>
-  </div>
-</div>
-   {/* <div className="mt-10 text-center">
-      <p className="text-xs uppercase tracking-[0.35em] text-sky-200 sm:text-sm">
-        TMI
-      </p>
-
-      <h1 className="mt-3 text-5xl font-black tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl"
-        style={{
-  textShadow: "0 0 15px rgba(255,255,255,.2)",
-}}>
-        Ghi chú nhỏ của fan
-      </h1>
-
-      <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8 lg:text-lg">
-        Những điều nhỏ xíu nhưng rất “lighT”.
-      </p>
-    </div>*/}
-
-
-
-
-
-  {/* MESSAGES FROM TINIES */}
-<div className="mt-8 md:mt-10 mx-auto max-w-3xl">
-{/* FORM */}
-  <button
-  onClick={() => setShowLogin(true)}
+<div className="absolute left-1/2 top-full h-6 w-40 sm:w-48 lg:w-56" />
+                <div
   className="
-    mt-10
-    rounded-full
-    border border-white/10
-    bg-white/5
-    px-6
-    py-3
-    text-white/70
-    transition
-    hover:bg-white/10
+    relative
+    h-[190px]
+    w-[300px]
+    sm:h-[230px]
+    sm:w-[360px]
+    lg:h-[270px]
+    lg:w-[420px]
+                    overflow-hidden
+                    rounded-xl
+                    border
+                    border-white/20
+                    bg-gradient-to-b
+                    from-[#f8f5ef]
+                    to-[#ece5d9]
+                    
+                    shadow-[0_0_60px_rgba(150,210,255,.45)]
+                 
+                 
+                    "
+                    style={{
+  backgroundImage: `
+    linear-gradient(to bottom,#faf7f1,#ece5d9),
+    radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px)
+  `,
+  backgroundSize: "100% 100%,18px 18px",
+}}
+                >
+
+                  {/* flap */}
+
+                  <div
+  className="
+    absolute
+    inset-x-0
+    top-0
+    h-[48%]
+    overflow-hidden
   "
 >
-  🔐 Only lighT
-</button>
   <div
     className="
-      mt-8
-      rounded-3xl
-      border border-white/10
-      bg-black/15
-      backdrop-blur-xl
-      p-6
+      absolute
+      inset-0
+      bg-gradient-to-b
+      from-[#fcfaf6]
+      to-[#efe6d9]
+      border-b
+      border-white/50
     "
-  >
-    <input
-      value={name}
-onChange={(e) => {
-  setName(e.target.value);
-  setSent(false);
-}}      
-      placeholder="Your name (optional)"
-      className="
-        w-full
-        rounded-xl
-        border border-white/10
-        bg-white/5
-        px-4 py-3
-        text-white
-        outline-none
-        placeholder:text-white/40
-      "
-    />
+    style={{
+      clipPath: "polygon(0 0,100% 0,50% 100%)",
+    }}
+  />
 
-    <textarea
-      rows={3}
-      value={message}
-onChange={(e) => {
-  setMessage(e.target.value);
-  setSent(false);
-}}      
-      placeholder="Write your message for lighT..."
-      className="
-        mt-4
-        w-full
-        rounded-xl
-        border border-white/10
-        bg-white/5
-        px-4 py-3
-        text-white
-        outline-none
-        placeholder:text-white/40
-      "
-    />
-<div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4">
-
-  <p className="mb-3 text-sm text-white/70">
-    Who can read this message?
-  </p>
-
-  <label className="flex cursor-pointer items-center gap-3">
-
-    <input
-      type="radio"
-      checked={visibility === "public"}
-      onChange={() => setVisibility("public")}
-    />
-
-    <div>
-
-      <p className="font-medium text-white">
-        🌍 Public
-      </p>
-
-      <p className="text-sm text-white/50">
-        Everyone can read this.
-      </p>
-
-    </div>
-
-  </label>
-
-  <label className="mt-4 flex cursor-pointer items-center gap-3">
-
-    <input
-      type="radio"
-      checked={visibility === "private"}
-      onChange={() => setVisibility("private")}
-    />
-
-    <div>
-
-      <p className="font-medium text-white">
-        🔒 Only lighT Can Read
-      </p>
-
-      <p className="text-sm text-white/50">
-        This message will only be visible to lighT.
-      </p>
-
-    </div>
-
-  </label>
-
+  {/* highlight */}
+  <div
+    className="absolute left-1/2 top-2 h-10 w-[2px] -translate-x-1/2 bg-white/40 blur-[1px]"
+  />
 </div>
-   <button
-  onClick={async () => {
-    console.log("SEND CLICKED");
 
-    if (!message.trim()) {
-      console.log("EMPTY MESSAGE");
-      return;
-    }
+                  {/* bottom */}
 
-  const { data, error } = await supabase
-  .from("comments")
-  .insert([
-    {
-      name: name || "Anonymous",
-      message,
-      status: "pending",
-       visibility,
-
-    },
-  ]);
-
-console.log("DATA:", data);
-console.log("ERROR:", error);
-
-    if (error) return;
-    setSent(true);
-    setName("");
-    setMessage("");
-
-    loadComments();
-  }}
-
-  className="
-    mt-4
-    rounded-full
-    bg-sky-400
-    px-6
-    py-3
-    font-semibold
-    text-white
-    transition
-    hover:scale-105
-  "
-
+                  <div
+  className="absolute inset-x-0 bottom-0 h-[48%]"
 >
-  Send to lighT 💙
-</button>
-{sent && (
-  <div className="mt-4 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 p-4 text-sm text-emerald-200">
-    💙 Thank you! Your message has been received.
-  </div>
-)}
-  </div>
-  <h3 className="mt-12 mb-4 text-xl font-bold text-white">
-  Recent Messages
-</h3>
-  {/* COMMENTS */}
-  <div className="mt-8 space-y-4">
-    {comments.map((comment, index) => (
-      <div
-        key={index}
-        className="
-          rounded-2xl
-          border border-white/10
-          bg-black/15
-          backdrop-blur-xl
-           p-5 md:p-6
-        "
-      >
-        <p className="font-semibold text-sky-200">
-          {comment.name}
-        </p>
+  <div
+    className="absolute inset-0"
+    style={{
+      clipPath: "polygon(0 100%,50% 0,100% 100%)",
+      background:
+        "linear-gradient(to bottom,#ece4d7,#ddd2c2)",
+    }}
+  />
 
-       <p className="mt-2 text-white/90">
-  {comment.message}
-</p>
-      </div>
-    ))}
-  </div>
-
-  
+  <div
+    className="absolute left-1/2 bottom-0 h-full w-px -translate-x-1/2 bg-white/30"
+  />
 </div>
-    <div className="mt-16 text-center">
-    
-      <img
-  src="/images/ulightmeup.png"
-  alt="u lighT me up"
-  className="mx-auto w-[320px] sm:w-[420px]"
-  style={{
-    filter: "drop-shadow(0 0 12px rgba(255,255,255,.45))",
-  }}
+
+                  {/* seal */}
+
+                  <motion.div
+                    whileHover={{
+                      scale: 1.08,
+                    }}
+                    className="
+                      absolute
+                      left-1/2
+                      top-1/2
+                      z-20
+                      flex
+                     h-12
+w-12
+sm:h-14
+sm:w-14
+lg:h-16
+lg:w-16
+                      -translate-x-1/2
+                      -translate-y-1/2
+                      items-center
+                      justify-center
+                      rounded-full
+                      border
+                      border-sky-200/90
+bg-[#9fd7ff]/60
+                      backdrop-blur-xl
+                      shadow-[0_0_25px_rgba(120,200,255,.8)]
+                    "
+                  >
+                    <img
+  src="/images/tinie_1.PNG"
+  alt="Moon Seal"
+  className="h-12 w-12 object-contain"
 />
-      
-    </div>
-  </div>
-  {showLogin && (
+                  </motion.div>
 
-<div
-  className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-md"
->
+                </div>
 
-  <div className="w-full max-w-md rounded-3xl bg-black/30 p-8">
+              </motion.div>
 
-    <h2 className="mb-6 text-center text-3xl font-bold text-white">
-      Staff Access
-    </h2>
+              <p className="mt-12 text-center">
+                <span className="block text-2xl font-semibold">
+                  Một điều đặc biệt đang chờ bạn
+                </span>
 
-    <input
-      type="password"
-      value={staffPassword}
-      onChange={(e) =>
-        setStaffPassword(e.target.value)
-      }
-      placeholder="Password"
-      className="
-        w-full
-        rounded-xl
-        border
-        border-white/10
-        bg-white/5
-        px-4
-        py-3
-        text-white
-        outline-none
-      "
-    />
+                <span className="mt-3 block text-white/60">
+                  Nhấn vào phong bì để mở
+                </span>
+              </p>
 
-    <div className="mt-6 flex gap-3">
+            </motion.div>
 
-      <button
-        onClick={() => {
-          setShowLogin(false);
-          setStaffPassword("");
-        }}
-        className="flex-1 rounded-xl bg-white/10 py-3"
-      >
-        Cancel
-      </button>
+          ) : (
 
-      <button
-        onClick={loginStaff}
-        className="flex-1 rounded-xl bg-sky-400 py-3"
-      >
-        Enter
-      </button>
+            <motion.div
+              key="letter"
+              initial={{
+                opacity: 0,
+                scale: .85,
+                y: 80,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              transition={{
+                duration: .55,
+              }}
+            >
 
-    </div>
+              <div
+                className="
+                  relative
+                  mx-auto
+w-[94vw]
+max-w-[900px]                  max-w-[92vw]
+                  overflow-hidden
+                  rounded-[28px]
+                  border
+                  border-sky-200/40
+                  shadow-[0_0_80px_rgba(140,190,255,.45)]
+                "
+              >
 
-  </div>
+                {/* Paper */}
 
-</div>
+                <div
+                  className="bg-[#fbfdff]"
+                  style={{
+                    backgroundImage:
+                      "radial-gradient(circle, rgba(90,165,255,.28) .9px, transparent .9px)",
+                    backgroundSize: "36px 36px",
+                  }}
+                >
 
-)}
-</main>
+                  <button
+                    onClick={() => setOpened(false)}
+                    className="
+                      absolute
+                      right-6
+                      top-5
+                      text-3xl
+                      text-slate-500
+                      transition
+                      hover:text-sky-600
+                    "
+                  >
+                    ×
+                  </button>
 
+<div className="px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16 text-slate-700">
+                    <p className="text-center text-xs
+sm:text-base
+lg:text-lg
+tracking-[.2em]
+sm:tracking-[.25em] text-sky-700">
+                      Tinie Corner
+                    </p>
 
-);
+                    <h1
+                      className="
+                        mt-10
+                        text-center
+                        font-serif
+text-3xl
+sm:text-5xl
+lg:text-6xl                        italic
+                        font-bold
+                        text-slate-900
+                      "
+                    >
+                      COMING SOON
+                    </h1>
+
+                    <div
+                      className="
+                        mx-auto
+                        mt-12
+                        max-w-2xl
+                        space-y-8
+                        text-center
+                        text-xl
+                        leading-10
+                      "
+                    >
+
+                      <p>
+                        Một góc nhỏ đặc biệt đang được chuẩn bị
+                        dành riêng cho tất cả các tinie iu.
+                      </p>
+
+                      <p>
+                        Trong thời gian tới sẽ có thêm nhiều nội dung,
+                        hoạt động và những điều thú vị đang chờ bạn khám phá.
+                      </p>
+
+                      <p>
+                        Cảm ơn bạn đã luôn đồng hành cùng lighT.
+                      </p>
+
+                    </div>
+
+                    <div className="mt-20 flex flex-col items-center">
+
+                      <div
+                        className="
+                          flex
+                          h-20
+                          w-20
+                          items-center
+                          justify-center
+                          rounded-full
+                          bg-sky-100
+                          text-3xl
+                          shadow-[0_0_25px_rgba(120,180,255,.5)]
+                        "
+                      >
+                          <img
+  src="/images/tinie_1.PNG"
+  alt="Moon Seal"
+  className="h-12 w-12 object-contain"
+/>
+                      </div>
+
+                      <p className="mt-6 font-serif text-2xl italic">
+                        TINcredible
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </motion.div>
+
+          )}
+
+        </AnimatePresence>
+
+      </section>
+    </main>
+  );
 }

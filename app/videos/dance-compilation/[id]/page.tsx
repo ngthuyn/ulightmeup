@@ -27,15 +27,30 @@ console.log(video);
 });
 
     return (
-        <main className="min-h-screen text-white">
+        <main  className="relative min-h-[100svh] overflow-hidden text-white"
+      style={{
+        backgroundImage: "url('/videos/bg.gif')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
          
 <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
- <h1 className="mt-3 text-center text-4xl font-black">
+ <h1 className="mt-3 text-center text-xl font-black">
           DANCE COMPILATION
         </h1>
- <h2 className="mt-10 text-2xl font-bold">
-                    {video.title}
-                </h2>
+<h3 className="mt-4 text-sm italic font-serif leading-tight">
+  {video.title.includes("(") ? (
+    <>
+      {video.title.split("(")[0].trim()}
+      <br />
+      <span className="text-lg text-white/70">
+        ({video.title.split("(")[1]}
+      </span>
+    </>
+  ) : (
+    video.title
+  )}
+</h3>
                 <div className="flex justify-center">
                     <div className="space-y-12">
 
@@ -44,7 +59,7 @@ console.log(video);
     key={source.url}
     className="flex flex-col items-center"
   >
-    <div className="mb-5 text-xl font-semibold">
+    <div className="mb-5 text-sm font-semibold">
       {source.platform.toUpperCase()}
     </div>
 
@@ -79,7 +94,28 @@ console.log(video);
 </div>
                 </div>
 
-               
+        <Link
+  href="/videos/dance-compilation"
+  className="
+  mt-10
+    inline-flex
+    items-center
+    gap-2
+    rounded-full
+    border
+    border-white/10
+    bg-white/5
+    px-5
+    py-2.5
+    text-sm
+    text-white/80
+    transition
+    hover:border-sky-300/40
+    hover:text-sky-300
+  "
+>
+  ← Quay về
+</Link>       
 
                 <h2 className="mt-20 mb-8 text-3xl font-bold text-white">
                      Video liên quan 
@@ -120,19 +156,29 @@ href={`/videos/dance-compilation/${item.id}`}
 
                             {/* Content */}
                             <div className="p-4">
-                                <h3
-                                    className="
-            line-clamp-2
-            text-center
-            text-sm
-            font-medium
-            text-white
-            transition
-            group-hover:text-sky-300
-          "
-                                >
-                                    {item.title}
-                                </h3>
+                              <h3
+  className="
+    text-center
+    text-sm
+    font-medium
+    text-white
+    transition
+    group-hover:text-sky-300
+    leading-tight
+  "
+>
+  {item.title.includes("(") ? (
+    <>
+      {item.title.split("(")[0].trim()}
+      <br />
+      <span className="text-xs text-white/70">
+        ({item.title.split("(")[1]}
+      </span>
+    </>
+  ) : (
+    item.title
+  )}
+</h3>
                             </div>
                         </Link>
                     ))}

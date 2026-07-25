@@ -1,5 +1,24 @@
 export const videos = [
+   {
+    id: "7661255439228751122",
+
+    title: "BAD (feat. UPRIZE WONBI) ",
+
+    image: "/images/dance/7661255439228751122.jpe",
+
+    keywords: [
+      "vpop"
+    ],
+
+    sources: [
+      {
+        platform: "tiktok",
+        url: "https://www.tiktok.com/@do.nathnim_/video/7661255439228751122",
+      },
+    ],
+  },
   {
+
     id: "7660117352066960647",
 
     title: "MOVE ON (feat. Judam) ",

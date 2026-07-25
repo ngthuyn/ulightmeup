@@ -21,7 +21,7 @@ export type VideoItem = {
 export const videos: VideoItem[] = [
   {
     id: "7648561307121208596",
-    title: "[06.06.2026] Dịu dàng đến từng phút giây",
+    title: "[06.06.2026] Dịu dàng đến từng phút giây x Cá chưa cắn câu",
     image: "/images/lighT_SunSong4.jpe",
     keywords: ["SunSong", "20260606", "lighT"],
     sources: [
@@ -29,10 +29,10 @@ export const videos: VideoItem[] = [
         platform: "tiktok",
         url: "https://www.tiktok.com/@mimoon658/video/7648561307121208596",
       },
-       {
+       /*{
         platform: "threads",
         url: "https://www.threads.com/@maccaron_laitin/post/DZQCOX5k-p9?xmt=AQG0l-8twWIawjgi_bqIm68zLKnbhCk4f0S4dc-nHDfhCPcyj_ljm5dBr9DT6Napv5zVwAbR&slof=1",
-      },
+      },*/
     ],
   },
 
@@ -44,13 +44,18 @@ export const videos: VideoItem[] = [
     sources: [
       {
         platform: "tiktok",
+        url: "https://www.tiktok.com/@do.nathnim_/video/7648605809575841031",
+      },
+/*
+      {
+        platform: "tiktok",
         url: "https://www.tiktok.com/@tincredible_allforlight/video/7648345317116595474",
       },
 
       {
          platform: "tiktok",
         url: "https://www.tiktok.com/@mimoon658/video/7648445388176755988",
-      }
+      }*/
     ],
   },
 
@@ -138,14 +143,26 @@ export const videos: VideoItem[] = [
   },
 
   {
-    id: "7603752306613538056",
-    title: "[06.02.2026] EXPOSURE",
-    image: "/images/lighT_TrungVuong.jpg",
-    keywords: ["TrungVuong", "20260226", "minhtin"],
+    id: "7663540006283185416",
+    title: "[14.05.2026] VACATION",
+    image: "/images/lighT_ta22.jpg",
+    keywords: ["ThanhAm22", "20260514", "lighT"],
     sources: [
       {
         platform: "tiktok",
-        url: "https://www.tiktok.com/@tincredible_allforlight/video/7603752306613538056",
+        url: "https://www.tiktok.com/@tincredible_allforlight/video/7663540006283185416",
+      },
+    ],
+  },
+   {
+    id: "7607798162266295572",
+    title: "[16.02.2026] Rehearsal - Tết này con sẽ về ",
+    image: "/images/lighT_tn.jpg",
+    keywords: ["tn", "20260216", "lighT"],
+    sources: [
+      {
+        platform: "tiktok",
+        url: "https://www.tiktok.com/@mimoon658/video/7607798162266295572",
       },
     ],
   },
@@ -187,7 +204,7 @@ export const videos: VideoItem[] = [
       },
     ],
   },
-
+/*
   {
     id: "7587461359969914120",
     title: "[20.12.2025] Một vòng Việt Nam",
@@ -200,7 +217,7 @@ export const videos: VideoItem[] = [
       },
     ],
   },
-
+*/
   {
     id: "7586038883809234184",
     title: "[20.12.2025] WE LIT THE SHOW",

@@ -58,7 +58,7 @@ useEffect(() => {
     >
 
 <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
- <h1 className="mt-3 text-center text-4xl font-black">
+ <h1 className="mt-3 text-center text-xl font-black">
           DANCE COMPILATION
         </h1>
 
@@ -104,7 +104,7 @@ const maxPage = Math.max(
             }
             className="rounded-full border border-white/20 px-4 py-2 disabled:opacity-30"
           >
-            ←
+            ← Trước
           </button>
 
           <button
@@ -118,7 +118,7 @@ const maxPage = Math.max(
             }
             className="rounded-full border border-white/20 px-4 py-2 disabled:opacity-30"
           >
-            →
+           Tiếp →
           </button>
 
         </div>
@@ -139,9 +139,19 @@ const maxPage = Math.max(
         />
       </Link>
 
-      <h3 className="mt-4 text-center text-xl italic font-serif">
-        {video.title}
-      </h3>
+      <h3 className="mt-4 text-center text-xl italic font-serif leading-tight">
+  {video.title.includes("(") ? (
+    <>
+      {video.title.split("(")[0].trim()}
+      <br />
+      <span className="text-lg text-white/70">
+        ({video.title.split("(")[1]}
+      </span>
+    </>
+  ) : (
+    video.title
+  )}
+</h3>
     </article>
   ))}
 </div>

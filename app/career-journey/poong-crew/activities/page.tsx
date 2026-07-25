@@ -71,7 +71,7 @@ useEffect(() => {
           POONG Crew
         </p>
 
-        <h1 className="mt-3 text-center text-4xl font-black">
+        <h1 className="mt-3 text-center text-3xl font-black">
           ACTIVITIES
         </h1>
 
@@ -146,7 +146,7 @@ ease-out
   src={item.banner}
   alt={item.title}
   className="
-    aspect-video
+    aspect-[7/8]
     w-full
     object-cover
 
@@ -207,50 +207,78 @@ ease-out
     "
   />
 </div>
-      {/* Gradient */}
-
-      <div
-        className="
-          absolute
-          inset-0
-          bg-gradient-to-t
-          from-black/90
-          via-black/20
-          to-transparent
-        "
-      />
-
-      {/* Title */}
-
-   <div
+{/* Poster Text */}
+<div
   className="
     absolute
-    inset-x-0
-    bottom-0
-    p-3
-    md:p-5
+    bottom-5
+    left-1/2
+    -translate-x-1/2
+    z-20
+    w-[90%]
+    text-center
+    pointer-events-none
   "
 >
-
-  <h2
+  
+{/* Year */}
+<p
   className="
-    text-sm
-    sm:text-base
-    md:text-sm
-    lg:text-sm
+    text-[8px]
+    md:text-[15px]
+    uppercase
+    tracking-[0.15em]
     font-bold
-    leading-snug
-    line-clamp-2
-    drop-shadow-lg
-    transition
+    text-amber-300
+  "
+  style={{
+    textShadow: "0 0 8px rgba(190, 140, 12, 0.6)",
+  }}
+>
+  {item.year}
+</p>
+
+{/* Member */}
+<p
+  className="
+    mt-1
+    text-[9px]
+    md:text-[13px]
+    font-bold
+    text-cyan-300
+  "
+  style={{
+    textShadow: "0 0 8px rgba(34,211,238,.7)",
+  }}
+>
+  {item.member}
+</p>
+
+{/* Title */}
+<h2
+  className="
+    mt-2
+    text-[11px]
+    md:text-[18px]
+    font-black
+    uppercase
+    leading-[1.15]
+    tracking-wide
+    text-white
+    transition-colors
+    duration-300
     group-hover:text-sky-300
   "
-
+  style={{
+    textShadow: `
+      0 2px 6px rgba(0,0,0,.9),
+      0 0 12px rgba(0,0,0,.45)
+    `,
+  }}
 >
-          {item.title}
-        </h2>
-
-      </div>
+  {item.title}
+</h2>
+</div>
 
     </div>
 

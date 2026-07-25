@@ -74,7 +74,58 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+.nav-logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
+    font-family:var(--font-logo);
+
+    font-size:1.15rem;
+font-weight:900;
+    line-height:1;
+    row-gap:.04em;
+
+    letter-spacing:-.02em;
+ overflow:visible;
+    padding:6px 10px;
+    user-select:none;
+}
+
+
+.nav-logo{
+    position:relative;
+    overflow:visible;
+}
+/*
+.nav-logo::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:90px;
+    height:90px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255,185,235,.28),
+            rgba(130,220,255,.22),
+            transparent 72%);
+
+    filter:blur(18px);
+
+    z-index:-1;
+
+}
+*/
 /* PASTEL LIGHT TEXT (dùng cho chữ "lighT" ở Navbar và Home) */
 .pastel-light {
   background: linear-gradient(
@@ -97,14 +148,28 @@ body {
     0 0 20px rgba(96, 165, 250, .4),
     0 0 40px rgba(96, 165, 250, .25);
 }
+@keyframes pastelFlow{
 
-@keyframes pastelFlow {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 300% center;
-  }
+    0%{
+        background-position:0% center;
+    }
+
+    25%{
+        background-position:50% center;
+    }
+
+    50%{
+        background-position:100% center;
+    }
+
+    75%{
+        background-position:50% center;
+    }
+
+    100%{
+        background-position:0% center;
+    }
+
 }
 
 /* CAMERA BURST */
@@ -280,15 +345,28 @@ background-attachment:fixed;
 }*/
 
 :root {
-  --menu-bg: transparent;
-  --footer-bg: transparent;
+  --menu-bg:
+    linear-gradient(
+      90deg,
+      #111,
+      #1b1b1b,
+      #2d2d2d
+    );
+
+  --footer-bg:
+    linear-gradient(
+      90deg,
+      #111,
+      #1b1b1b,
+      #2d2d2d
+    );
 }
-/* Transparent */
+/* Transparent 
 [data-theme="transparent"]{
     --menu-bg: transparent;
 
     --footer-bg:transparent;
-}
+}*/
 /* Aurora */
 [data-theme="aurora"]{
   --menu-bg:
@@ -413,61 +491,178 @@ opacity:1;
 }
 
 .intro-logo{
-  font-size:3.5rem;
-  font-weight:900;
-  line-height:1;
 
-  position:relative;
-  display:inline-block;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-  background:linear-gradient(
-    90deg,
-    #bdf6ff,
-    #8adfff,
-    #79b9ff,
-    #b598ff,
-    #bdf6ff
-  );
+    position:relative;
 
-  background-size:300% auto;
+    font-family:var(--font-logo);
 
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
+  font-size: clamp(3.8rem, 10vw, 6rem);
 
-  animation:
-    logoIntro .9s ease-out,
-    floatLogo 4s ease-in-out .9s infinite,
-    pastelFlow 8s linear infinite;
+    font-weight:900;
 
-  /* tạo cảm giác dày + phát sáng */
-  filter:
-    drop-shadow(0 1px 0 rgba(255,255,255,.8))
-    drop-shadow(0 3px 3px rgba(0,0,0,.18))
-    drop-shadow(0 0 12px rgba(255,255,255,.65))
-    drop-shadow(0 0 26px rgba(120,210,255,.55))
-    drop-shadow(0 0 50px rgba(8, 71, 102, 0.35));
+    line-height:.95;
 
-  transform-style:preserve-3d;
+    row-gap:.14em;
 
-  letter-spacing:-0.03em;
+    letter-spacing:-.03em;
+
+    animation:
+        logoIntro .9s ease-out,
+        floatLogo 5s ease-in-out infinite;
+
 }
-.intro-logo::after{
-  content:attr(data-text);
+.logo-top,
+.nav-logo-top,
+.logo-bottom,
+.nav-logo-bottom{
 
-  position:absolute;
-  inset:0;
+    position:relative;
 
-  z-index:-1;
+    display:block;
 
-  color:rgba(255,255,255,.18);
+    background-size:300% auto;
 
-  transform:
-    translate(2px,2px);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+animation:pastelFlow 10s ease-in-out infinite;
 
-  filter:blur(1px);
+    -webkit-text-stroke:.45px rgba(255,255,255,.18);
+
+}
+.logo-top,
+.nav-logo-top{
+
+    background-image:
+        linear-gradient(
+            90deg,
+            #fff4ff,
+            #ffd3ef,
+            #ff6ab5,
+            #ff3e90,
+            #ffd3ef,
+            #fff4ff
+        );
+
+    filter:
+        drop-shadow(0 1px 0 rgba(255,255,255,.9))
+        drop-shadow(0 3px 4px rgba(255,150,210,.25))
+        drop-shadow(0 0 16px rgba(255,160,220,.65))
+        drop-shadow(0 0 36px rgba(255,120,180,.45));
+
+}
+.logo-bottom,
+.nav-logo-bottom{
+
+    background-image:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #dffbff,
+            #8ee4ff,
+            #45c7ff,
+            #dffbff,
+            #ffffff
+        );
+
+    filter:
+        drop-shadow(0 1px 0 rgba(255,255,255,.9))
+        drop-shadow(0 3px 4px rgba(140,220,255,.25))
+        drop-shadow(0 0 16px rgba(140,220,255,.65))
+        drop-shadow(0 0 36px rgba(70,190,255,.45));
+
+}
+.logo-top,
+.logo-bottom{
+    position:relative;
 }
 
+.logo-top::after,
+.logo-bottom::after{
+
+    content:attr(data-text);
+
+    position:absolute;
+    inset:0;
+
+    z-index:-1;
+
+    color:currentColor;
+
+    opacity:.35;
+
+    transform:translate(.5px,.5px);
+
+}
+
+.intro-content{
+
+    position:relative;
+
+}
+
+.intro-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    width:520px;
+    height:520px;
+
+    left:50%;
+    top:36%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255,180,230,.30),
+            rgba(140,220,255,.26),
+            transparent 72%);
+
+    filter:blur(55px);
+
+    z-index:-1;
+
+}
+
+
+.pink{
+
+background:
+linear-gradient(
+180deg,
+#ffd9ee,
+#f8a8d7,
+#e782c1);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.blue{
+
+background:
+linear-gradient(
+180deg,
+#ecfbff,
+#a7e7ff,
+#6fd1ff);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
 .typing{
   display:inline-block;
 
@@ -512,15 +707,13 @@ opacity:1;
 }
 
 @keyframes floatLogo{
-  0%,100%{
-    transform:translateY(0) rotateY(0deg);
-  }
 
-  25%{
-    transform:translateY(-6px) rotateY(-8deg);
-  }
+    0%,100%{
+        transform:translateY(0);
+    }
 
-  75%{
-    transform:translateY(-6px) rotateY(8deg);
-  }
+    50%{
+        transform:translateY(-5px);
+    }
+
 }

@@ -26,20 +26,43 @@ export default async function Page({
 });
 
     return (
-        <main className="min-h-screen text-white">
+        <main  className="relative min-h-[100svh] overflow-hidden text-white"
+      style={{
+        backgroundImage: "url('/videos/bg.gif')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}>
+        <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <h1 className="mt-3 text-center text-xl font-black">
+FANCAM        </h1>
+        <h1 className="mt-10 italic font-serif leading-tight text-white">
+  {video.title.startsWith("[") ? (
+    <>
+      <span className="text-lg">
+        {video.title.match(/^\[[^\]]+\]/)?.[0]}
+      </span>
+
+      <br />
+
+      <span className="text-2xl font-bold">
+        {video.title.replace(/^\[[^\]]+\]\s*/, "")}
+      </span>
+    </>
+  ) : (
+    <span className="text-2xl font-bold">{video.title}</span>
+  )}
+</h1>
             <div className="mx-auto max-w-6xl px-6 pt-28 pb-20">
 
                 <div className="flex justify-center">
                     <div className="space-y-12">
-<h1 className="mt-10 text-4xl font-bold">
-                    {video.title}
-                </h1>
+
  {video.sources.map((source) => (
   <div
     key={source.url}
     className="flex flex-col items-center"
   >
-    <div className="mb-4 text-xl font-semibold">
+    <div className="mb-4 text-sm font-semibold">
       {source.platform.toUpperCase()}
     </div>
 
@@ -73,14 +96,32 @@ export default async function Page({
 
 </div>
                 </div>
-
-                <h1 className="mt-10 text-4xl font-bold">
-                    {video.title}
-                </h1>
+  <Link
+  href="/videos/dance-compilation"
+  className="
+  mt-10
+    inline-flex
+    items-center
+    gap-2
+    rounded-full
+    border
+    border-white/10
+    bg-white/5
+    px-5
+    py-2.5
+    text-sm
+    text-white/80
+    transition
+    hover:border-sky-300/40
+    hover:text-sky-300
+  "
+>
+  ← Quay về
+</Link>       
+               
 
                 <h2 className="mt-20 mb-8 text-3xl font-bold text-white">
-                    Related Videos
-                </h2>
+Fancam liên quan                 </h2>
 
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
                     {related.map((item) => (
@@ -117,25 +158,39 @@ export default async function Page({
 
                             {/* Content */}
                             <div className="p-4">
-                                <h3
-                                    className="
-            line-clamp-2
-            text-center
-            text-sm
-            font-medium
-            text-white
-            transition
-            group-hover:text-sky-300
-          "
-                                >
-                                    {item.title}
-                                </h3>
+                            <h3
+  className="
+    text-center
+    font-medium
+    leading-tight
+    text-white
+    transition
+    group-hover:text-sky-300
+  "
+>
+  {item.title.startsWith("[") ? (
+    <>
+      <span className="text-xs">
+        {item.title.match(/^\[[^\]]+\]/)?.[0]}
+      </span>
+
+      <br />
+
+      <span className="text-sm">
+        {item.title.replace(/^\[[^\]]+\]\s*/, "")}
+      </span>
+    </>
+  ) : (
+    <span className="text-sm">{item.title}</span>
+  )}
+</h3>
                             </div>
                         </Link>
                     ))}
                 </div>
 
             </div>
+            </section>
         </main>
     );
 }

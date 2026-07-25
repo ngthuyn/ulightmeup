@@ -37,14 +37,34 @@ export default function ProfilePage() {
   }}
 >
 
+      <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
 
+<h1
+  className="
+    mt-2
+    mb-6
+
+    text-center
+
+    text-2xl
+    font-black
+    tracking-tight
+
+    text-white
+
+    drop-shadow-[0_2px_10px_rgba(0,0,0,.45)]
+
+    lg:hidden
+  "
+>
+  Get to know <span className="text-sky-200">lighT</span>
+</h1>
 
 
 
 
         {/* DESKTOP */}
-        <div className="hidden lg:flex min-h-screen items-center mt-10  justify-center px-8">
-
+<div className="hidden lg:flex items-center justify-center mt-8 px-8">
           <div
               className="
                 flex
@@ -80,8 +100,7 @@ export default function ProfilePage() {
         </div>
 
 {/* MOBILE + TABLET */}
-<div className="lg:hidden flex min-h-screen flex-col items-center mt-15 justify-center px-4">
-
+<div className="lg:hidden flex flex-col items-center mt-8 px-4">
   <img
   key={page}
   src={pages[page]}
@@ -131,6 +150,8 @@ export default function ProfilePage() {
   </div>
 
 </div>
+</section>
+
 
       </main>
     

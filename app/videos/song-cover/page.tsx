@@ -57,9 +57,26 @@ export default function SongCoverACPage() {
     >
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
 
-        <h1 className="mt-3 text-center text-3xl font-black">
-          SONG COVER
-        </h1>
+         {/* Header */}
+        <div className="text-center mb-6">
+
+          {/*" <p className="tracking-[0.35em] uppercase text-sky-200 text-xs">
+            Gallery
+          </p>*/}
+
+          <h1
+            className="mt-3 text-xl font-bold"
+            style={{
+              textShadow: "0 0 15px rgba(255,255,255,.45)",
+            }}
+          >
+            SONG COVER
+          </h1>
+
+          
+
+        </div>
+
 <div className="mt-20 space-y-24">
   {covers.map((cover) => (
     <div
@@ -124,6 +141,7 @@ className="grid grid-cols-1 lg:grid-cols-[0.95fr_0.75fr] items-center gap-10"
           />
         </div>
 */}
+
       </section>
     </main>
   );

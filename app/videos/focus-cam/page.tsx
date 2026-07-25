@@ -1,9 +1,24 @@
 "use client";
-
+import { useState } from "react";
 import Link from "next/link";
 import { videos } from "./data";
 
 export default function FocusCamPage() {
+    const [search, setSearch] = useState("");
+
+ const filteredVideos = videos.filter((video) => {
+  const keyword = search.toLowerCase();
+
+  return (
+    video.title.toLowerCase().includes(keyword) ||
+    video.event.toLowerCase().includes(keyword) ||
+    video.date.toLowerCase().includes(keyword) ||
+    video.keywords.some((k) =>
+      k.toLowerCase().includes(keyword)
+    )
+  );
+
+});
   return (
     <main
       className="min-h-screen text-white"
@@ -15,14 +30,38 @@ export default function FocusCamPage() {
     >
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
 
-        <h1 className="text-center text-4xl font-black">
-          FOCUS CAM
-        </h1>
+        <h1 className="text-center text-xl font-black">
+  FOCUS CAM
+</h1>
+
+<div className="mx-auto mt-10 max-w-xl">
+  <input
+    type="text"
+    placeholder="🔍 Tìm theo bài hát, sự kiện..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="
+      w-full
+      rounded-full
+      border
+      border-white/15
+      bg-white/10
+      px-6
+      py-3
+      text-white
+      placeholder:text-white/40
+      backdrop-blur-xl
+      outline-none
+      transition
+      focus:border-sky-300
+      focus:bg-white/15
+    "
+  />
+</div>
 
         <div className="mt-20 space-y-10">
 
-          {videos.map((video) => (
-
+{filteredVideos.map((video) => (
             <Link
               key={video.id}
               href={`/videos/focus-cam/${video.id}`}
@@ -121,7 +160,11 @@ export default function FocusCamPage() {
             </Link>
 
           ))}
-
+{filteredVideos.length === 0 && (
+  <p className="py-16 text-center text-white/60">
+    Không tìm thấy Focus Cam phù hợp.
+  </p>
+)}
         </div>
 
       </section>

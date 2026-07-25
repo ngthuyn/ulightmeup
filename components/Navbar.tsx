@@ -5,10 +5,10 @@ import { usePathname, useRouter } from "next/navigation";
 import TransitionOverlay from "@/components/TransitionOverlay";
 
 const navItems = [
-  {
+  /*{
     label: "Home",
     href: "/home",
-  },
+  },*/
   {
     label: "Profile",
     href: "/profile",
@@ -33,10 +33,10 @@ const navItems = [
         label: "FanCam",
         href: "/videos/fancam",
       },
-      {
+      /*{
         label: "Focus Cam",
         href: "/videos/focus-cam",
-      },
+      },*/
       {
         label: "Dance Compilation",
         href: "/videos/dance-compilation",
@@ -74,10 +74,7 @@ const navItems = [
 ];
 
 const themes = [
-  {
-    id: "transparent",
-    color: "rgba(255,255,255,.08)",
-  },
+ 
   {
     id: "aurora",
     color: "linear-gradient(90deg,#ff8b5c,#ffd15c,#c07cff,#6ab8ff)",
@@ -108,7 +105,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const savedTheme =
-      localStorage.getItem("theme") || "transparent";
+      localStorage.getItem("theme") || "dark";
 
     document.body.dataset.theme = savedTheme;
   }, []);
@@ -468,22 +465,35 @@ hover:text-pink-100
 
               {/* LOGO */}
               <button
-                onClick={() => handleNavigate("/")}
-                className="
-                mr-3
-                mx-10
-                font-logo
-                pastel-light
+  onClick={() => handleNavigate("/")}
+  className="
+    mx-8
+    lg:mx-10
+    xl:mx-12
+    font-logo
+    text-3xl
+    xl:text-5xl
+    font-black
+    tracking-tight
+    shrink-0
+  "
+>
+   <h1 className="nav-logo font-logo">
+  <span className="nav-logo-top">
+    lài tì
+    <span className="logo-stars">
+      <span className="star star1"> ✦</span>
+         </span>
+  </span>
 
-                text-3xl
-                xl:text-5xl
-
-                font-black
-                tracking-tight
-                "
-              >
-                lighT
-              </button>
+  <span className="nav-logo-bottom">
+  
+   <span className="logo-stars">
+      <span className="star star1"> ✦</span>
+         </span>  lái ti
+  </span>
+</h1>
+</button>
 
               {/* RIGHT */}
 <nav
@@ -659,7 +669,7 @@ hover:text-pink-100
                       ))}
 
                     </div>
-<div className="pt-10 pb-12">                      
+<div className="pt-20 pb-12">                      
                       <div className="flex justify-center gap-6">
 
                         <a

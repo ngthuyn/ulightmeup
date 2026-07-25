@@ -1,7 +1,14 @@
+"use client";
 import Link from "next/link";
 import MediaEmbed from "@/components/MediaEmbed";
-
+import { useState } from "react";
 export default function PoongCrewPage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const gallery = [
+  "/images/poong/Casting-call.jpg",
+  "/images/poong/Full-mail.jpg",
+  "/images/poong/Final-Announcement.jpg",
+];
   return (
     <main
       className="min-h-screen text-white"
@@ -15,17 +22,14 @@ export default function PoongCrewPage() {
 
         {/* Hero */}
 
-        <p className="text-center uppercase tracking-[0.35em] text-sky-300">
-          Career Journey
-        </p>
+      
 
-        <h1 className="mt-3 text-center text-6xl font-black">
+        <h1 className="mt-3 text-center text-3xl font-black">
           POONG Crew
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-8 text-white/70">
-          Thành viên Gen V
-        </p>
+Dancer        </p>
 
         {/* Hành trình gia nhập */}
 
@@ -51,31 +55,35 @@ export default function PoongCrewPage() {
 
             <p>
               Vào ngày <span className="font-semibold text-white">01/12/2022</span>,
-              Minh Tân chính thức trở thành thành viên
-              <span className="font-semibold text-sky-300"> Gen V của POONG Crew </span>
-              sau khi vượt qua hai vòng casting vô cùng cạnh tranh.
+                           <span className="text-sky-300">
+ {""} Minh Tân
+ </span> chính thức trở thành thành viên Gen V của
+              <span className="font-semibold text-sky-300">  POONG Crew </span>
+              sau khi vượt qua hai vòng tuyển chọn khốc liệt.
+
             </p>
 
             <p>
-              Hoạt động năng nổ cùng nhóm trong giai đoạn
+             Trong giai đoạn
               <span className="font-semibold text-white"> 2023 - 2025</span>,
-              lighT liên tục góp mặt trong nhiều dự án đặc sắc, từ các sản phẩm
-              dance cover chất lượng đến các dự án âm nhạc cùng
-              L’Officiel Vietnam, rapper OSAD, ca sĩ Trúc Nhân...
+                   <span className="text-sky-300">
+ {" "}lighT </span> đã hoạt động vô cùng năng nổ và liên tục góp mặt trong nhiều dự án nghệ thuật đặc sắc. Không chỉ khẳng định tài năng qua các sản phẩm dance cover ấn tượng, lighT còn cùng nhóm tham gia nhiều dự án âm nhạc chất lượng cao cùng L'Officiel Vietnam, rapper OSAD và ca sĩ Trúc Nhân dưới vai trò vũ công phụ họa…
+
             </p>
 
             <p>
-              Đặc biệt, anh chàng còn có cơ hội đồng hành trong tiết mục biểu diễn
-              của ca sĩ Hồ Ngọc Hà tại Đêm 1 Concert
-              <span className="text-white">
-                {" "}Anh Trai Vượt Ngàn Chông Gai 2024.
+              Đặc biệt, anh chàng còn có cơ hội hỗ trợ biểu diễn cho ca sĩ Hồ Ngọc Hà tại Đêm 1 
+              <span className="font-semibold text-sky-300">
+                {" "} Concert Anh Trai Vượt Ngàn Chông Gai 2024.
               </span>
             </p>
 
             <p>
-              Trước khi bén duyên với Tân Binh Toàn Năng,
-              POONG Crew chính là nơi giúp lighT tích lũy kinh nghiệm biểu diễn,
-              rèn luyện kỹ năng và trưởng thành trên sân khấu.
+             Có thể nói,               <span className="font-semibold text-sky-300">  POONG Crew </span>
+ chính là nơi giúp   <span className="text-sky-300">
+ {" "}lighT </span> rèn luyện kỹ năng trình diễn và bản lĩnh làm chủ sân khấu trước khi thử sức tại chương trình <span className="font-semibold text-sky-300">
+                {" "}Tân Binh Toàn Năng 2025. 
+              </span>
             </p>
 
           </div>
@@ -127,117 +135,58 @@ export default function PoongCrewPage() {
 
         {/* Gallery */}
 
-        <section className="mt-24">
+        <section className="mt-20">
 
-          <h2 className="mb-10 text-3xl font-bold">
-            Dấu mốc
-          </h2>
+          
 
           <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-8">
-            {/* 1 */}
-
-            <div className="group">
-
-              <img
-                src="/images/poong/Casting-call.jpg"
-                className="
-                aspect-[3/4]
-                w-full
-                rounded-xl
-                md:rounded-3xl
-                object-cover
-                transition
-                duration-500
-                group-hover:scale-105
-              "
-              />
-
-              {/*<p className="mt-5 text-center text-lg">
-                Thông báo tuyển thành viên
-              </p>
-            */}
-            </div>
-
-            {/* 2 */}
-
-            <div className="group">
-
-              <img
-                src="/images/poong/Full-mail.jpg"
-                alt=""
-                className="
-                  aspect-[3/4]
-                  w-full
-                  rounded-3xl
-                  object-cover
-                  transition
-                  duration-500
-                  group-hover:scale-105
-                "
-              />
-
-              {/* <p className="mt-5 text-center text-lg">
-                Thông báo vượt qua vòng 1
-              </p>
-              */}
-            </div>
-
-            {/* 3 */}
-
-            <div className="group">
-
-              <img
-                src="/images/poong/Final-Announcement.jpg"
-                alt=""
-                className="
-                  aspect-[3/4]
-                  w-full
-                  rounded-3xl
-                  object-cover
-                  transition
-                  duration-500
-                  group-hover:scale-105
-                "
-              />
-              {/*
-              <p className="mt-5 text-center text-lg">
-                Thông báo trở thành thành viên Gen V
-              </p>
-              */}
-
-            </div>
-
-          </div>
+  {gallery.map((image) => (
+    <button
+      key={image}
+      onClick={() => setSelectedImage(image)}
+      className="group overflow-hidden rounded-3xl"
+    >
+      <img
+        src={image}
+        className="
+          aspect-[3/4]
+          w-full
+          object-cover
+          transition
+          duration-500
+          group-hover:scale-105
+        "
+      />
+    </button>
+  ))}
+</div>
 
 
-          <div className="mt-10 flex justify-center">
+          <div className="mt-4 text-center">
 
-            <p className="mt-5 text-center text-lg">
-Thông báo trúng tuyển POONG Crew
-              </p>
-            
-            </div>
-          <div className="mt-10 flex justify-center">
-
-            <a
-              href="https://www.facebook.com/share/p/14g2wXxnYBA/"
-              target="_blank"
-              className="
-                rounded-full
-                border
-                border-sky-300
-                px-8
-                py-3
-                text-sky-300
-                transition
-                hover:bg-sky-300
-                hover:text-black
-              "
-            >
-              Xem thêm
-            </a>
-
-          </div>
+  <p className="text-base md:text-lg">
+    Thông báo trúng tuyển POONG Crew
+  </p>
+{/*
+  <a
+    href="https://www.facebook.com/share/p/14g2wXxnYBA/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      mt-1
+      inline-block
+      text-sm
+      text-sky-300
+      underline
+      underline-offset-4
+      transition
+      hover:text-sky-200
+    "
+  >
+    Xem thêm
+  </a>
+*/}
+</div>
 
         </section>
 {/* Facebook Video */}
@@ -345,6 +294,49 @@ Thông báo trúng tuyển POONG Crew
         </section>
 
       </section>
+      {selectedImage && (
+  <div
+    onClick={() => setSelectedImage(null)}
+    className="
+      fixed
+      inset-0
+      z-[9999]
+      flex
+      items-center
+      justify-center
+      bg-black/80
+      backdrop-blur-sm
+      p-6
+    "
+  >
+    <img
+      src={selectedImage}
+      alt=""
+      onClick={(e) => e.stopPropagation()}
+      className="
+        max-h-[90vh]
+        max-w-[90vw]
+        rounded-2xl
+        shadow-2xl
+      "
+    />
+
+    <button
+      onClick={() => setSelectedImage(null)}
+      className="
+        absolute
+        top-6
+        right-6
+        text-4xl
+        text-white
+        hover:text-sky-300
+        transition
+      "
+    >
+      ×
+    </button>
+  </div>
+)}
     </main>
   );
 }

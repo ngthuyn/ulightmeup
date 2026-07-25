@@ -35,7 +35,22 @@ export default async function ActivityPage({
 
     return item.category === activity.category;
   });
-
+const getPlatformName = (platform: string) => {
+  switch (platform) {
+    case "facebook":
+      return "Facebook";
+    case "youtube":
+      return "YouTube";
+    case "tiktok":
+      return "TikTok";
+    case "instagram":
+      return "Instagram";
+    case "threads":
+      return "Threads";
+    default:
+      return platform;
+  }
+};
   return (
     <main
       className="min-h-screen text-white"
@@ -59,6 +74,28 @@ export default async function ActivityPage({
           ACTIVITIES
         </h1>
 
+   <Link
+  href="/career-journey/poong-crew/activities"
+  className="
+  mt-10
+    inline-flex
+    items-center
+    gap-2
+    rounded-full
+    border
+    border-white/10
+    bg-white/5
+    px-5
+    py-2.5
+    text-sm
+    text-white/80
+    transition
+    hover:border-sky-300/40
+    hover:text-sky-300
+  "
+>
+  ← Quay về
+</Link>      
     <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-start">
 
   {/* Banner */}
@@ -99,59 +136,14 @@ export default async function ActivityPage({
     About
   </h2>
 
-  <p className="mt-5 leading-8 text-white/70">
-    {activity.description}
-  </p>
+  <p className="whitespace-pre-line text-white/80 leading-8">
+  {activity.description}
+</p>
 
-  {activity.source && (
-    <p className="mt-6 text-white/70">
-      <span className="font-semibold text-white">
-        Nguồn:
-      </span>{" "}
-      <a
-        href={activity.source}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-sky-300 underline"
-      >
-        Link
-      </a>
-    </p>
-  )}
+
 </div>
-            {/* Members */}
 
-        <div className="mt-16">
-
-          <h2 className="text-3xl font-bold">
-
-            Members
-
-          </h2>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-
-            {activity.members.map((member) => (
-
-              <span
-                key={member}
-                className="
-rounded-full
-border
-border-sky-300/30
-px-4
-py-2
-text-sky-300
-"
-              >
-                {member}
-              </span>
-
-            ))}
-
-          </div>
-
-        </div>
+     
 
 
   </div>
@@ -162,6 +154,7 @@ text-sky-300
     {/* Videos */}
 
 {activity.sections ? (
+  
   activity.sections.map((section) => (
     <div key={section.title} className="mt-24">
 
@@ -179,33 +172,31 @@ text-sky-300
         <div className="mt-10 space-y-20">
           {section.videos.map((video) => (
             <div key={video.url}>
-
-              <div className="mb-5">
-                <span
-                  className="
-                  rounded-full
-                  bg-sky-500/15
-                  px-4
-                  py-2
-                  text-sm
-                  uppercase
-                  tracking-[0.2em]
-                  text-sky-300"
-                >
-                  {video.platform}
-                </span>
-              </div>
-
-              {video.platform === "facebook" ? (
-                <FacebookPlayer url={video.url} />
-              ) : video.platform === "tiktok" ? (
-                <TikTokPlayer url={video.url} />
-              ) : (
-                <MediaEmbed
-                  platform={video.platform}
-                  url={video.url}
-                />
-              )}
+<h3 className="mb-4 text-xl font-semibold">
+  {video.title ?? getPlatformName(video.platform)}
+</h3>
+             <a
+  href={video.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex
+    items-center
+    gap-2
+    rounded-xl
+    border
+    border-sky-300/30
+    bg-sky-500/10
+    px-5
+    py-3
+    text-sky-300
+    transition
+    hover:border-sky-300
+    hover:bg-sky-500/20
+  "
+>
+  ▶ Xem trên {getPlatformName(video.platform)}
+</a>
 
             </div>
           ))}
@@ -230,39 +221,41 @@ text-sky-300
 
       <div className="space-y-20">
 
-        {activity.videos.map((video) => (
-          <div key={`${video.platform}-${video.url}`}>
+       {activity.videos.map((video) => (
+  <div
+    key={`${video.platform}-${video.url}`}
+    className="space-y-4"
+  >
+    {video.title && (
+      <h3 className="text-xl font-semibold text-white">
+        {video.title}
+      </h3>
+    )}
 
-            <div className="mb-5">
-              <span
-                className="
-                rounded-full
-                bg-sky-500/15
-                px-4
-                py-2
-                text-sm
-                uppercase
-                tracking-[0.2em]
-                text-sky-300"
-              >
-                {video.platform}
-              </span>
-            </div>
-
-            {video.platform === "facebook" ? (
-              <FacebookPlayer url={video.url} />
-            ) : video.platform === "tiktok" ? (
-              <TikTokPlayer url={video.url} />
-            ) : (
-              <MediaEmbed
-                platform={video.platform}
-                url={video.url}
-              />
-            )}
-
-          </div>
-        ))}
-
+    <a
+      href={video.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        inline-flex
+        items-center
+        gap-2
+        rounded-xl
+        border
+        border-sky-300/30
+        bg-sky-500/10
+        px-5
+        py-3
+        text-sky-300
+        transition
+        hover:border-sky-300
+        hover:bg-sky-500/20
+      "
+    >
+      ▶ Xem trên {getPlatformName(video.platform)}
+    </a>
+  </div>
+))}
       </div>
 
     </div>

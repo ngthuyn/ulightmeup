@@ -1,275 +1,247 @@
 "use client";
+
+import Link from "next/link";
 import type { ReactNode } from "react";
+
+const menu = [
+  /*{ label: "Home", href: "/home" },*/
+  { label: "Profile", href: "/profile" },
+  { label: "Career", href: "/career-journey/poong-crew" },
+  { label: "Videos", href: "/videos/fancam" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Newspaper", href: "/newspapers" },
+  { label: "TMI", href: "/tmi/fact-check" },
+];
+
 export default function Footer() {
   return (
     <footer
-  id="site-footer"
-  className="
-      
+      id="site-footer"
+      className="border-t border-sky-200/30 py-8 md:py-10"
+      style={{
+        background: "var(--footer-bg)",
+      }}
+    >
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
 
-    mt-0
-    border-t border-sky-200/40
-    py-14
-  "
-  /*style={{
-    background:
-      "linear-gradient(180deg,#dff8ff 0%,#c8eeff 40%,#bde5ff 100%)",
-  }}*/
-/*style={{
-  background: `
-    radial-gradient(circle at 50% 45%, rgba(255,255,255,.75) 0%, rgba(255,255,255,.25) 25%, transparent 55%),
-    radial-gradient(circle at 50% 0%, rgba(255,255,255,.18) 0%, transparent 45%),
-    linear-gradient(
-      90deg,
-      #FF4500 0%,
-      #FFA500 32%,
-      #8A2BE2 66%,
-      #4682B4 100%
-    )
-  `,
-}}
-  */
- style={{
-    background: "var(--footer-bg)"
-}}
->
-      <div className="mx-auto max-w-6xl px-6">
+        {/* Desktop */}
+<div className="hidden lg:flex items-start justify-between gap-8 xl:gap-12">           
+              {/* MENU */}
+<div className="w-[240px] shrink-0">  
+<h3 className="mb-5 text-center text-sm font-semibold tracking-[0.25em] uppercase text-sky-200">              
+              Menu
+            </h3>
 
-        {/* LINK */}
-        <div className="text-center">
-   {  /*  <p
+<div className="grid grid-cols-2 gap-x-10 gap-y-3">              
+              {menu.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-white/75 transition hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* SNS */}
+          
+<div className="w-[320px] shrink-0">  
+            <h2
   className="
-    font-logo
-    text-3xl
-    font-extrabold
-    tracking-[0.08em]
+    text-center
     pastel-light
-
-  "
-  style={{
-    background:
-      "linear-gradient(90deg,#FF4500,#FFA500,#8A2BE2,#4682B4)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    textShadow: "0 0 20px rgba(255,255,255,.2)",
-  }}
->
-  lighT's SNS Links
-</p>
-*/}
-{/*
-<p
-  className="
     font-logo
-    text-3xl
-    font-extrabold
-    tracking-[0.08em]
-    text-white
-  "
-  style={{
-    textShadow:
-      "0 0 10px rgba(255,255,255,.6), 0 0 25px rgba(138,43,226,.35)",
-  }}
->
-  lighT's SNS Links
-</p>
-*/}
-
-<p
-  className="
-    pastel-light
-    text-2xl
-        font-logo
-
+    text-xl
     font-black
-    tracking-[0.12em]
-    text-white
+    tracking-[0.14em]
   "
-  style={{
-    textShadow:
-      "0 2px 8px rgba(0,0,0,.18),0 0 15px rgba(255,255,255,.5)",
-  }}
 >
-  lighT's SNS Links
-</p>
+              lighT's SNS
+            </h2>
 
-{/*<p
-  className="
+            <div className="mt-5 flex gap-4">
+              
+              <Social img="/images/facebook.png" href="https://www.facebook.com/lighT.sye" />
+              <Social img="/images/instagram.png" href="https://www.instagram.com/do.nathnim" />
+              <Social img="/images/tiktok.png" href="https://www.tiktok.com/@do.nathnim_" />
+              <Social img="/images/youtube.png" href="https://www.youtube.com/@lighT-official-T" />
+              <Social img="/images/threads.png" href="https://www.threads.com/@do.nathnim" />
+              <Social img="/images/1creators.jpg" href="https://share.1creators.com/fandom-tinie-oiii" />
+            </div>
+{/*
+            <p className="mt-5 max-w-sm text-center text-[12px] italic leading-6 text-white/65">
+              Tham gia{" "}
+              <a
+                href="https://zalo.me/g/hkjrlj645"
+                target="_blank"
+                className="text-sky-200 hover:text-white"
+              >
+                Nhà Văn Hóa tinie
+              </a>{" "}
+              và theo dõi{" "}
+              <a
+                href="https://www.facebook.com/profile.php?id=61582766494305"
+                target="_blank"
+                className="text-sky-200 hover:text-white"
+              >
+                TINcredible
+              </a>{" "}
+              để cập nhật những thông tin mới nhất từ fandom.
+            </p>*/}
+          </div>
+
+          {/* CTA */}
+<div className="w-[320px] shrink-0">              
+<h3 className="mb-5 text-center text-sm font-semibold tracking-[0.25em] uppercase text-sky-200">              
+              Community
+            </h3>
+<div className="flex flex-col gap-3">
+  <FooterButton href="https://zalo.me/g/hkjrlj645">
+    Nhà Văn Hóa tinie
+  </FooterButton>
+
+  <FooterButton href="https://www.facebook.com/profile.php?id=61582766494305">
+    TINcredible - All for lighT Facebook
+  </FooterButton>
+
+  <FooterButton href="https://www.tiktok.com/@tincredible_allforlight">
+    TINcredible - All for lighT TikTok
+  </FooterButton>
+</div>
+          </div>
+        </div>
+
+    {/* Mobile */}
+<div className="lg:hidden flex flex-col items-center">
+  <h2
+    className="
       pastel-light
+      font-logo
+      text-xl
+      font-black
+      tracking-[0.12em]
+    "
+  >
+    lighT's SNS
+  </h2>
 
-    font-logo
-    text-3xl
-    font-extrabold
-    tracking-[0.08em]
-  "
-  style={{
-    background:
-      "linear-gradient(90deg,#FF4500,#FFA500,#8A2BE2,#4682B4)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    textShadow: "0 0 20px rgba(255,255,255,.2)",
-  }}
->
-  lighT's SNS Links
-</p>
-*/}
+<div className="mt-6 flex justify-center gap-3">    
+    <Social img="/images/facebook.png" href="https://www.facebook.com/lighT.sye" />
+    <Social img="/images/instagram.png" href="https://www.instagram.com/do.nathnim" />
+    <Social img="/images/tiktok.png" href="https://www.tiktok.com/@do.nathnim_" />
+    <Social img="/images/youtube.png" href="https://www.youtube.com/@lighT-official-T" />
+    <Social img="/images/threads.png" href="https://www.threads.com/@do.nathnim" />
+    <Social img="/images/1creators.jpg" href="https://share.1creators.com/fandom-tinie-oiii" />
+  </div>
 
-          <div className="mx-auto mt-3 h-px w-8 bg-white/0" />
-        </div>
+  <p className="mt-6 max-w-xs text-center text-xs italic leading-7 text-white/60">
+    Tham gia{" "}
+    <a
+      href="https://zalo.me/g/hkjrlj645"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold text-sky-300"
+    >
+      Nhà Văn Hóa tinie
+    </a>{" "}
+    và theo dõi{" "}
+    <a
+      href="https://www.facebook.com/profile.php?id=61582766494305"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold text-sky-300"
+    >
+      TINcredible
+    </a>{" "}
+    để cập nhật những thông tin mới nhất từ fandom.
+  </p>
 
-        {/* SOCIAL */}
-        <div className="mt-8 flex flex-wrap justify-center gap-5">
-
-          <Social
-            img="/images/facebook.png"
-            href="https://www.facebook.com/lighT.sye"
-          />
-
-          <Social
-            img="/images/instagram.png"
-            href="https://www.instagram.com/do.nathnim"
-          />
-
-          <Social
-            img="/images/tiktok.png"
-            href="https://www.tiktok.com/@do.nathnim_"
-          />
-
-          <Social
-            img="/images/youtube.png"
-            href="https://www.youtube.com/@lighT-official-T"
-          />
-
-          <Social
-            img="/images/threads.png"
-            href="https://www.threads.com/@do.nathnim"
-          />
-
-          <Social
-            img="/images/1creators.jpg"
-            href="https://share.1creators.com/fandom-tinie-oiii"
-          />
-
-        </div>
-
-        {/* BUTTONS */}
-
-        <div className="mx-auto mt-12 flex max-w-3xl flex-col gap-5">
-
-          <FooterButton 
-          logo="/images/zalo.png"
-          href="https://zalo.me/g/hkjrlj645">
-           Nhà văn hóa tinie
-          </FooterButton>
-          <FooterButton
-          logo="/images/facebook.png"
-            href="https://www.facebook.com/profile.php?id=61582766494305"
-          >
-           TINcredible - All for Đỗ Minh Tân
-
-          </FooterButton>
-
-          <FooterButton
-          logo="/images/threads.png"
-            href="https://www.threads.com/@tincredible_allforlight"
-          >
-TINcredible - All for lighT
-          </FooterButton>
-
-                    <FooterButton
-          logo="/images/tiktok.png"
-            href="https://www.tiktok.com/@tincredible_allforlight"
-          >
-TINcredible - All for lighT
-          </FooterButton>
-
-
-        </div>
+</div>
 
       </div>
     </footer>
   );
 }
-
-function Social({
-  img,
-  href,
-}: {
+type SocialProps = {
   img: string;
   href: string;
-}) {
+};
+
+function Social({ img, href }: SocialProps) {
   return (
     <a
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       className="
-        flex
-        h-8
-        w-8
-        items-center
-        justify-center
-        rounded-full
-        bg-transparent
-        transition
-        hover:bg-sky-200
-        hover:scale-110
-      "
+  flex
+  h-8 w-8
+  lg:h-10 lg:w-10
+  items-center
+  justify-center
+  rounded-full
+  border border-white/10
+  bg-white/5
+  transition-all duration-300
+  hover:-translate-y-1
+  hover:border-sky-300/60
+  hover:bg-sky-400/10
+"
     >
       <img
         src={img}
-        className="h-7 w-7 object-contain"
+        alt=""
+        className="h-4 w-4 object-contain lg:h-5 lg:w-5"
       />
     </a>
   );
 }
 
+type FooterButtonProps = {
+  href: string;
+  children: ReactNode;
+};
+
 function FooterButton({
   href,
   children,
-  logo,
-}: {
-  href: string;
-  children: ReactNode;
-  logo?: string;
-}) {
+}: FooterButtonProps) {
   return (
     <a
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       className="
+        group
         flex
         items-center
-        gap-5
-        rounded-xl
+        justify-center
+
+        rounded
+
         border
-        border-sky-200/50
-        bg-white/55
-        px-8
-        py-5
-        transition
-        hover:bg-white/80
-        hover:scale-[1.02]
+        border-white/10
+
+        bg-white/[0.03]
+
+        px-5
+        py-2.5
+
+        text-sm
+        font-medium
+        text-white/75
+
+        transition-all
+        duration-300
+
+        hover:border-sky-300/40
+        hover:bg-sky-400/10
+        hover:text-white
       "
     >
-      {logo && (
-        <img
-          src={logo}
-          className="h-10 w-10 object-contain shrink-0"
-        />
-      )}
-
-      <span
-        className="
-          flex-1
-          text-center
-          text-sm
-          tracking-[0.15em]
-          font-semibold
-          text-slate-700
-        "
-      >
-        {children}
-      </span>
+      {children}
     </a>
   );
 }
