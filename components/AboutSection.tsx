@@ -43,7 +43,7 @@ desc: "Bật mí những điều thú vị về lighT mà có thể bạn chưa 
   },
   {
     title: "TÂN BINH TOÀN NĂNG",
-    image: "/images/lighT_YCC_exposure.jpg",
+    image: "/images/lighT_ycc_exposure.jpg",
     href: "/career-journey/tv-shows",
   desc: "Theo dấu hành trình của lighT tại Tân Binh Toàn Năng qua từng vòng thi, từng cột mốc và những khoảnh khắc đáng nhớ.",
   
