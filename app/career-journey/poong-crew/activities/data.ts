@@ -55,7 +55,7 @@ export const activities: ActivityItem[] = [
 
   year: "2025",
 
-  banner: "/images/typo_poong.jpg",
+  banner: "/images/typo_poong_2024.jpg",
 
   thumbnail: "/images/typo_poong_2024.jpg",
 
