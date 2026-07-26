@@ -157,7 +157,7 @@ export const videos: VideoItem[] = [
    {
     id: "7607798162266295572",
     title: "[16.02.2026] Rehearsal - Tết này con sẽ về ",
-    image: "/images/lighT_tn.jpg",
+    image: "/images/lighT_TN.jpg",
     keywords: ["tn", "20260216", "lighT"],
     sources: [
       {
@@ -247,7 +247,7 @@ export const videos: VideoItem[] = [
   {
     id: "7586183799931702546",
     title: "[20.12.2025] EXPOSURE",
-    image: "/images/lighT_YCC_exposure.jpg",
+    image: "/images/lighT_ycc_exposure.jpg",
     keywords: ["Y Concert", "20251220", "minhtin"],
     sources: [
       {
