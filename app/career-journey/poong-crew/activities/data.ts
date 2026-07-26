@@ -100,7 +100,7 @@ Inspired by: ROCKSTAR - LISA ( Victoria’s Secret Fashion Show 2024 )`,
 
   description: `POONG CREW vinh dự được trở thành một mảnh ghép trong quá trình tạo nên thước phim thời trang nghệ thuật tại triển lãm về Hy vọng mang tên “Ô HOPE: BETWEEN DESPAIR AND RENEWAL” của L’Officiel Vietnam.
 
-Choreography by POONG CREW`,
+Choreography by POONG CREW.`,
 
   member: "L’Officiel Vietnam x POONG CREW",
 
@@ -168,9 +168,9 @@ Choreography by POONG CREW`,
 
   thumbnail: "/images/poongpoong.jpg",
 
-  description: `POONG CREW chào đón các bạn K30 Khoa Mỹ thuật và Thiết kế của ĐH Văn Lang với một màu sắc vô cùng tươi mới, mang đậm dấu ấn tuổi thơ pha cùng nét tươi vui và năng động 🌈🫧
+  description: `POONG CREW chào đón các bạn K30 Khoa Mỹ thuật và Thiết kế của ĐH Văn Lang với một màu sắc vô cùng tươi mới, mang đậm dấu ấn tuổi thơ pha cùng nét tươi vui và năng động 🌈🫧.
 
-Choreography by POONG CREW`,
+Choreography by POONG CREW.`,
 
   member: "POONG CREW",
 
@@ -421,7 +421,7 @@ Choreography by POONG CREW`,
 
   thumbnail: "/images/poong/UDC/2.jpg",
 
-  description: `Sân khấu nhằm tôn vinh cộng đồng LGBTQIA++ đã mang về cho POONG CREW vị trí 𝟐𝐍𝐃 𝐑𝐔𝐍𝐍𝐄𝐑 𝐔𝐏 tại 𝐔𝐃𝐂 𝟐𝟎𝟐4`,
+  description: `Sân khấu nhằm tôn vinh cộng đồng LGBTQIA++ đã mang về cho POONG CREW vị trí 𝟐𝐍𝐃 𝐑𝐔𝐍𝐍𝐄𝐑 𝐔𝐏 tại 𝐔𝐃𝐂 𝟐𝟎𝟐4.`,
 
   member: "POONG CREW",
 
@@ -472,7 +472,7 @@ Choreography by POONG CREW`,
 
   thumbnail: "/images/BARBIE-WORLD-02.jpg",
 
-  description: `Cùng nhìn lại những khoảnh khắc khi POONG CREW hoá thân thành những chú bướm lạc vào thế giới Barbie nhé 🥰`,
+  description: `Cùng nhìn lại những khoảnh khắc khi POONG CREW hoá thân thành những chú bướm lạc vào thế giới Barbie nhé 🥰.`,
 
   member: "POONG CREW",
 

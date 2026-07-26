@@ -41,7 +41,7 @@ export default function FacebookPlayer({
         title="Facebook Video"
         className={
           orientation === "portrait"
-            ? "w-full h-[520px] sm:h-[620px] md:h-[720px]"
+            ? "w-full h-[450px] sm:h-[620px] md:h-[720px]"
             : "aspect-video w-full"
         }
         frameBorder={0}

@@ -15,7 +15,10 @@ export default function ShowItAllPage() {
 
       <h2 className="text-center text-3xl font-black leading-tight md:text-5xl">
           Hành trình từ một thí sinh tiềm năng đến nghệ sĩ trẻ đầy triển vọng của
-          <span className="text-sky-300"> lighT (Đỗ Minh Tân)</span> Phần 2
+          <span className="text-sky-300"> lighT (Đỗ Minh Tân)</span>
+        </h2>
+        <h2 className="text-center text-3xl font-black leading-tight md:text-5xl">
+           Phần 2
         </h2>
 
       </section>
@@ -53,9 +56,9 @@ export default function ShowItAllPage() {
 
           <p>
             Sau 100 ngày đào tạo và sát hạch khắt khe, Minh Tân đã chính thức
-            ghi danh vào Top 11 “Tân Binh Thăng Cấp”. Lựa chọn nghệ danh
-            <span className="text-sky-300"> minhtin</span>, Tân bước vào giai đoạn chính thức của
-            "Tân Binh Toàn Năng", cùng 10 thành viên còn lại cọ xát với các
+            ghi danh vào Top 11 <span className="text-sky-300"> Tân Binh Thăng Cấp</span>. Lựa chọn nghệ danh
+            <span className="text-sky-300"> minhtin</span>, <span className="text-sky-300"> Tân </span> bước vào giai đoạn chính thức của
+            <span className="text-sky-300"> Tân Binh Toàn Năng</span>, cùng 10 thành viên còn lại cọ xát với các
             nhóm nhạc quốc tế để học hỏi kinh nghiệm và từng bước khẳng định bản
             lĩnh.
           </p>
@@ -137,10 +140,9 @@ export default function ShowItAllPage() {
 
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/4100026973593119"
-            width="100%"
-            height="700"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            allowFullScreen
+           className="w-full h-[380px] sm:h-[620px] md:h-[700px]"
+  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+  allowFullScreen
           />
 
         </div>
@@ -225,7 +227,7 @@ export default function ShowItAllPage() {
     >
       <div className="aspect-[3/4] overflow-hidden">
         <img
-          src="/images/SIA_BTS.JPEG"
+          src="/images/SIA_BTS.jpeg"
           alt="SIA Behind the Scenes"
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
@@ -292,7 +294,7 @@ export default function ShowItAllPage() {
 
           <p>
             Không để sự dang dở làm chùn bước, những trải nghiệm quý giá ấy đã
-            trở thành hành trang để Tin vững vàng bước sang một chương mới.
+            trở thành hành trang để <span className="text-sky-300"> minhtin</span> vững vàng bước sang một chương mới.
             Bắt đầu hoạt động với tư cách nghệ sĩ độc lập dưới nghệ danh
             <span className="text-sky-300"> lighT</span>, con đường phía trước có thể sẽ còn nhiều
             thử thách.

@@ -102,7 +102,7 @@ export default function Navbar() {
 
   const [mobileOpen, setMobileOpen] =
     useState<Record<string, boolean>>({});
-
+const [desktopOpen, setDesktopOpen] = useState<string | null>(null);
   useEffect(() => {
     const savedTheme =
       localStorage.getItem("theme") || "dark";
@@ -250,53 +250,66 @@ hover:text-pink-100
       key={item.label}
       className="group relative flex h-10 items-center"
     >
-      <button
-        className={`
-          h-10
-          flex
-          items-center
-          justify-center
-          text-sm xl:text-base
-          transition
-          ${
-            item.children.some((c) => isActive(c.href))
-              ? "pastel-light"
-              : "text-white/80 hover:text-white"
-          }
-        `}
-      >
-        {item.label}
-      </button>
-
+   <button
+  onClick={() =>
+    setDesktopOpen(
+      desktopOpen === item.label ? null : item.label
+    )
+  }
+  className={`
+    h-10
+    flex
+    items-center
+    justify-center
+    text-sm xl:text-base
+    transition
+    ${
+      item.children.some((c) => isActive(c.href))
+        ? "pastel-light"
+        : "text-white/80 hover:text-white"
+    }
+  `}
+>
+  {item.label}
+</button>
       <div
-        className="
-          absolute
-          left-1/2
-          top-full
-          -translate-x-1/2
-          pt-2
-          w-56
-          pointer-events-none
-          opacity-0
-          transition
-          group-hover:pointer-events-auto
-          group-hover:opacity-100
-        "
+       className={`
+  absolute
+  left-1/2
+  top-full
+  -translate-x-1/2
+  pt-2
+  w-56
+  transition
+  duration-200
+
+  ${
+    desktopOpen === item.label
+      ? "opacity-100 pointer-events-auto"
+      : "opacity-0 pointer-events-none"
+  }
+
+  group-hover:opacity-100
+  group-hover:pointer-events-auto
+`}
       >
         <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-2xl p-2">
-          {item.children.map((child) => (
-            <button
-              key={child.href}
-              onClick={() => handleNavigate(child.href)}
-              className="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10"
-            >
-              {"image" in child ? (
-                <img src={child.image} className="h-8" />
-              ) : (
-                child.label
-              )}
-            </button>
-          ))}
+       {item.children.map((child) => (
+  <button
+    key={child.href}
+    onClick={() => {
+      setDesktopOpen(null);
+      handleNavigate(child.href);
+    }}
+    className="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10"
+  >
+    {"image" in child ? (
+      <img src={child.image} className="h-8" />
+    ) : (
+      child.label
+    )}
+  </button>
+))}
         </div>
       </div>
     </div>

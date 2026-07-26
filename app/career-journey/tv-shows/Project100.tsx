@@ -18,9 +18,11 @@ export default function Project100() {
 
       <h2 className="text-center text-3xl font-black leading-tight md:text-5xl">
           Hành trình từ một thí sinh tiềm năng đến nghệ sĩ trẻ đầy triển vọng của
-          <span className="text-sky-300"> lighT (Đỗ Minh Tân)</span> Phần 1
+          <span className="text-sky-300"> lighT (Đỗ Minh Tân)</span>
         </h2>
-
+ <h2 className="text-center text-3xl font-black leading-tight md:text-5xl">
+           Phần 1
+        </h2>
       </section>
 
       {/* ================= COVER IMAGE ================= */}
