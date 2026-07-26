@@ -2,18 +2,72 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
-
+import { useState } from "react";
 const menu = [
-  /*{ label: "Home", href: "/home" },*/
-  { label: "Profile", href: "/profile" },
-  { label: "Career", href: "/career-journey/poong-crew" },
-  { label: "Videos", href: "/videos/fancam" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Newspaper", href: "/newspapers" },
-  { label: "TMI", href: "/tmi/fact-check" },
+  {
+    label: "Profile",
+    href: "/profile",
+  },
+
+  {
+    label: "Career",
+    children: [
+      {
+        label: "POONG Crew",
+        href: "/career-journey/poong-crew",
+      },
+      {
+        label: "TV Shows",
+        href: "/career-journey/tv-shows",
+      },
+    ],
+  },
+
+  {
+    label: "Videos",
+    children: [
+      {
+        label: "FanCam",
+        href: "/videos/fancam",
+      },
+      {
+        label: "Dance Compilation",
+        href: "/videos/dance-compilation",
+      },
+      {
+        label: "Song Cover",
+        href: "/videos/song-cover",
+      },
+    ],
+  },
+
+  {
+    label: "Gallery",
+    href: "/gallery",
+  },
+
+  {
+    label: "Newspaper",
+    href: "/newspapers",
+  },
+
+  {
+    label: "TMI",
+    children: [
+      {
+        label: "lighT's FACT CHECK",
+        href: "/tmi/fact-check",
+      },
+      {
+        label: "tinie's corner",
+        href: "/tmi/tinies-corner",
+      },
+    ],
+  },
 ];
 
 export default function Footer() {
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   return (
     <footer
       id="site-footer"
@@ -33,15 +87,74 @@ export default function Footer() {
             </h3>
 
 <div className="grid grid-cols-2 gap-x-10 gap-y-3">              
-              {menu.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm text-white/75 transition hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ))}
+           {menu.map((item) => {
+if (!item.children) {
+      return (
+      <Link
+        key={item.href}
+        href={item.href}
+        className="text-sm text-white/75 transition hover:text-white"
+      >
+        {item.label}
+      </Link>
+    );
+  }
+
+  return (
+    <div key={item.label} className="relative">
+      <button
+        onClick={() =>
+          setOpenMenu(
+            openMenu === item.label ? null : item.label
+          )
+        }
+        className="text-left text-sm text-white/75 transition hover:text-white"
+      >
+        {item.label}
+      </button>
+
+      {openMenu === item.label && (
+        <div
+          className="
+            absolute
+            left-0
+            top-full
+            z-30
+            mt-2
+            w-56
+            rounded-xl
+            border
+            border-white/10
+            bg-black/80
+            p-2
+            backdrop-blur-xl
+          "
+        >
+          {item.children.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              onClick={() => setOpenMenu(null)}
+              className="
+                block
+                rounded-lg
+                px-3
+                py-2
+                text-sm
+                text-white/75
+                transition
+                hover:bg-white/10
+                hover:text-white
+              "
+            >
+              {child.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+})}
             </div>
           </div>
 
