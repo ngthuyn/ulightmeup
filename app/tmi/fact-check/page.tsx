@@ -8,7 +8,7 @@ export default function FactCheckPage() {
   id: "01",
   title: "Bật mí profile học vấn và những fact thú vị",
   image: "/images/facts/fact01_7.jpg",
-  href: "https://facebook.com/...",
+  href: "",
  
 
  intro: (
@@ -125,7 +125,7 @@ export default function FactCheckPage() {
     "/images/facts/fact01_5.jpg",
     "/images/facts/fact01_6.jpg",
         "/images/facts/fact01_8.jpg",
-    "/images/IMG_8224.jpg",
+    "/images/IMG_8224.JPG",
     "/images/facts/fact01_7.jpg",
   ],
   outro: (
@@ -170,7 +170,7 @@ export default function FactCheckPage() {
   id: "02",
   title: "Những mảnh ghép ấm áp về gia đình",
   image: "/images/facts/fact02_1.PNG",
-  href: "https://facebook.com/...",
+  href: "",
 
   intro: (
   <>

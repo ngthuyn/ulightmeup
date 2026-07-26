@@ -14,7 +14,7 @@ export function getImages(folder: string) {
   return fs
     .readdirSync(dir)
     .filter((file) =>
-      /\.(jpg|jpeg|png|webp|gif)$/i.test(file)
+      /\.(JPG|PNG|JPEG|jpg|jpeg|png|webp|gif)$/i.test(file)
     )
     .sort()
     .map((file) => ({

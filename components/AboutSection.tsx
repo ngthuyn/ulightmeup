@@ -147,9 +147,6 @@ className="
     right-2
     z-20
     rounded-full
-    bg-black/50
-    border border-white/30
-    backdrop-blur-md
     px-4
     py-2
     text-white
@@ -166,7 +163,7 @@ className="
 
                 <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/45 to-transparent" />
 
-<div className="absolute bottom-12 left-8 right-8">                 
+<div className="absolute bottom-20 left-8 right-8">                 
                     <motion.p
   key={quoteIndex}
   initial={{ opacity: 0, y: 12 }}
@@ -213,7 +210,7 @@ left-1/2
 top-0
 
 -translate-x-1/2
--translate-y-[5%]
+-translate-y-[13%]
 
 lg:left-0
 lg:top-1/2

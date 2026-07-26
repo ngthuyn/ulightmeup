@@ -69,7 +69,7 @@ onClick={() => changeTab("project")}
                 font-semibold
                 transition-all
                 duration-300
-
+whitespace-nowrap
                 ${
                   tab === "project"
                     ? "bg-sky-300 text-slate-900"
@@ -91,7 +91,7 @@ onClick={() => changeTab("show")}
                 font-semibold
                 transition-all
                 duration-300
-
+whitespace-nowrap
                 ${
                   tab === "show"
                     ? "bg-sky-300 text-slate-900"

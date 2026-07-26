@@ -1,88 +1,70 @@
 "use client";
 import Link from "next/link";
-const behindVideos = [
+import FacebookPlayer from "@/components/FacebookPlayer";
+type BehindVideo = {
+  title: string;
+  video: string;
+  orientation: "portrait" | "landscape";
+};
+
+const behindVideos: BehindVideo[] = [
   {
     title: "Minh Tân bắt chước chị Tóc Tiên",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1106148461546668&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/1106148461546668/",
     orientation: "portrait",
   },
   {
     title: "Minh Tân - Tân Binh Đa Năng nhất KTX là đây",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/462271723614709&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/462271723614709/",
     orientation: "portrait",
   },
   {
     title: '"Ăn biên bản" phiên bản Tân Binh Toàn Năng',
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/536500096190010&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/536500096190010/",
     orientation: "portrait",
   },
   {
     title: "Tốt khoe xấu khui",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1704063250989338&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/1704063250989338/",
     orientation: "portrait",
   },
   {
     title: "Người lạ line quen",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/2765816313618155&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/2765816313618155/",
     orientation: "portrait",
   },
   {
     title: "Thử thách kẹo mìn",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1023976896111942&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/1023976896111942/",
     orientation: "portrait",
   },
   {
     title: "Ăn cơm online cùng Minh Tân",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/968978958641809&show_text=false",
-    keyword: ["daily"],
+    video: "https://www.facebook.com/reel/968978958641809/",
     orientation: "portrait",
   },
   {
     title: 'Đỗ Minh Tân với niềm đam mê "truyền thông bẩn" bất tận',
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1168332751767010&show_text=false",
-    keyword: ["fun"],
+    video: "https://www.facebook.com/reel/1168332751767010/",
     orientation: "portrait",
   },
-
-  // ===== SHOWCASE =====
-
   {
     title:
       '"Tròn 100 ngày, tất cả những gì tụi em được đào tạo sẽ trình diễn hết trên sân khấu..."',
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1220202673243008&show_text=false",
-    keyword: ["showcase"],
+    video: "https://www.facebook.com/reel/1220202673243008/",
     orientation: "portrait",
   },
   {
     title: "Hành trình 100 ngày của Minh Tân",
-    video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/2277211189378753&show_text=false",
-    keyword: ["showcase"],
+    video: "https://www.facebook.com/reel/2277211189378753/",
     orientation: "portrait",
   },
   {
     title: 'Khán giả duy nhất được hưởng đặc quyền tại Showcase',
     video:
-      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/TanBinhToanNang/videos/750381591302526/&show_text=false",
-    keyword: ["showcase"],
+      "https://www.facebook.com/TanBinhToanNang/videos/750381591302526/",
     orientation: "landscape",
   },
-
 ];
 
 
@@ -132,21 +114,26 @@ export default function BehindPage() {
                 {item.title}
               </h2>
 
-              <div className="overflow-hidden rounded-[30px] border border-white/10">
-                <iframe
-    src={item.video}
-    title={item.title}
-    className={
-      item.orientation === "portrait"
-        ? "mx-auto w-full max-w-[450px] h-[450px] sm:h-[620px] md:h-[720px] lg:h-[820px]"
-        : "aspect-video w-full"
-    }
-    frameBorder={0}
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  />
-              </div>
+        <div className="flex justify-center">
+  {item.video.includes("youtube.com") ? (
+    <div className="w-full overflow-hidden rounded-[30px] border border-white/10">
+      <iframe
+        src={item.video}
+        title={item.title}
+        className="aspect-video w-full"
+        frameBorder={0}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
+    </div>
+  ) : (
+    <FacebookPlayer
+      url={item.video}
+      orientation={item.orientation}
+    />
+  )}
+</div>
             </section>
           ))}
         </div>
