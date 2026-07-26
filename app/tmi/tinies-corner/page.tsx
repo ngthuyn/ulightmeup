@@ -314,7 +314,7 @@ lg:text-6xl                        italic
                         "
                       >
                           <img
-  src="/images/tinie_1.PNG"
+  src="/images/tinie_1.png"
   alt="Moon Seal"
   className="h-12 w-12 object-contain"
 />
