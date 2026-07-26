@@ -55,9 +55,9 @@ export const activities: ActivityItem[] = [
 
   year: "2025",
 
-  banner: "/images/typo_poong_2024.jpg",
+  banner: "/images/typo_poong.jpg",
 
-  thumbnail: "/images/typo_poong_2024.jpg",
+  thumbnail: "/images/typo_poong.jpg",
 
   description: `Đúng như tên gọi “AELLA NOIR”, POONG CREW mang đến TITAN 2024 “BRITERY” một sân khấu với nguồn năng lượng rực cháy, mê hoặc, kéo người xem vào một hành trình cuốn hút và không thể rời mắt 🌪️
 
