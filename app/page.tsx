@@ -71,7 +71,34 @@ const pageTimer = setTimeout(() => {
 </div>
 
       </div>
-{/*
+ <style jsx>{`
+ .intro-text{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.3rem;
+
+  margin-top:2.5rem;
+}
+  .typing{
+  margin:0;
+
+  font-size:1.4rem;
+  color:white;
+  letter-spacing:.03em;
+  font-weight:300;
+}
+  .sparkle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  line-height:1;
+  transform:translateY(2px);
+}
+       `}</style>
+
+ {/*
       <style jsx>{`
 
         .intro{

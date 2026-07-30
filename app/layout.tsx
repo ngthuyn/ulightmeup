@@ -32,7 +32,7 @@ display: "block",
 });
 
 export const metadata: Metadata = {
-  title: "u lighT me up!",
+  title: "lài tì lái ti!",
   description: "Fanpage profile for lighT",
 };
 
@@ -52,7 +52,8 @@ export default function RootLayout({
         antialiased
       `}
     >
-      <body className={`${ebGaramond.className} min-h-full`}>
+      <body className={`${ebGaramond.className} min-h-full bg-black
+    text-white`}>
      
        <LayoutWrapper>
 

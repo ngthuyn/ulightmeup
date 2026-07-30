@@ -12,13 +12,11 @@ export default function FocusCamPage() {
 
 
 const rows = useMemo(() => {
-  const result = [];
-
-  for (let i = 0; i < videos.length; i += 6) {
-    result.push(videos.slice(i, i + 6));
-  }
-
-  return result;
+  return [
+    videos.slice(0, 6),      // hàng 1
+    videos.slice(6, 14),     // hàng 2 (8 video)
+    videos.slice(14),        // phần còn lại
+  ].filter((row) => row.length > 0);
 }, []);
   const [itemsPerPage, setItemsPerPage] = useState(3);
 
@@ -58,6 +56,13 @@ useEffect(() => {
     >
 
 <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-04.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
  <h1 className="mt-3 text-center text-xl font-black">
           DANCE COMPILATION
         </h1>

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import TransitionOverlay from "@/components/TransitionOverlay";
+import { image } from "framer-motion/client";
 
 const navItems = [
   /*{
@@ -12,9 +13,11 @@ const navItems = [
   {
     label: "Profile",
     href: "/profile",
+    image: "/images/logo_web/logo-03.png"
   },
   {
     label: "Career",
+
     children: [
       {
         label: "POONG Crew",
@@ -25,6 +28,8 @@ const navItems = [
         href: "/career-journey/tv-shows",
       },
     ],
+        image: "/images/logo_web/logo-07.png"
+
   },
   {
     label: "Videos",
@@ -46,17 +51,22 @@ const navItems = [
         href: "/videos/song-cover",
       },
     ],
+        image: "/images/logo_web/logo-04.png"
+
   },
   {
     label: "Gallery",
 
     href: "/gallery",
+    image: "/images/logo_web/logo-02.png"
 
 
   },
   {
     label: "Newspaper",
     href: "/newspapers",
+        image: "/images/logo_web/logo-06.png"
+
   },
   {
     label: "TMI",
@@ -70,6 +80,8 @@ const navItems = [
         href: "/tmi/tinies-corner",
       },
     ],
+        image: "/images/logo_web/logo-05.png"
+
   },
 ];
 
@@ -160,8 +172,14 @@ transition
 hover:text-pink-100
 "
       >
-        {item.label}
-      </button>
+{"image" in item && item.image ? (
+  <img
+    src={item.image}
+    alt={item.label}
+className="h-14 sm:h-16 w-auto object-contain"  />
+) : (
+  item.label
+)}      </button>
     );
   }
 
@@ -189,8 +207,14 @@ transition
 hover:text-pink-100
 "
       >
-        {item.label}
-      </button>
+{"image" in item && item.image ? (
+  <img
+    src={item.image}
+    alt={item.label}
+className="h-14 sm:h-16 w-auto object-contain"  />
+) : (
+  item.label
+)}      </button>
 
       {mobileOpen[item.label] && (
         <div className="mt-4 flex flex-col items-center gap-3">
@@ -656,14 +680,13 @@ hover:text-pink-100
     items-center
     pt-24
     pb-16
-    space-y-5
+    space-y-1.5
     min-h-max
   "
 >
 
                    {navItems.map(renderMobileItem)}
-                    <div className="mb-8 flex justify-center gap-4">
-
+<div className="mt-5 mb-8 flex justify-center gap-4">
                       {themes.map((theme) => (
                         <button
                           key={theme.id}
@@ -682,7 +705,7 @@ hover:text-pink-100
                       ))}
 
                     </div>
-<div className="pt-20 pb-12">                      
+<div className="pt-15 pb-10">                      
                       <div className="flex justify-center gap-6">
 
                         <a

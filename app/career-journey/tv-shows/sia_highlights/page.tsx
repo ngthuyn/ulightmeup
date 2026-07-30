@@ -1,46 +1,76 @@
 "use client";
 import Link from "next/link";
+import FacebookPlayer from "@/components/FacebookPlayer";
 const performances = [
   {
-    title: "Beautiful Girl",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    title:
+      'Duo Cường Bạch - minhtin và những lần phối hợp line "trước - sau" cùng nhau siêu mượt',
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/794165407121757&show_text=false",
+    keyword: ["performance"],
+    orientation: "square",
   },
   {
-    title: "C → A Evaluation",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    title: '"Niềm hạnh phúc nhất của em là được đứng dưới ánh đèn sân khấu"',
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/761265703400586&show_text=false",
+    keyword: ["interview"],
+    orientation: "portrait",
   },
   {
-    title: "Burn-out",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    title: "Khi bạn nghe SHOW ME quá 180 phút/ngày",
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/747071408329889&show_text=false",
+    keyword: ["funny"],
+    orientation: "portrait",
   },
   {
-    title: "Em ơi cứ vui",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    title: "minhtin nhảy TAKE A SHOT",
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/830633142991524&show_text=false",
+    keyword: ["dancing"],
+    orientation: "portrait",
   },
   {
-    title: "Top X",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    title: 'minhtin ra tay giúp đồng đội xé tan "bóng đêm" thật mượt',
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1515649173100741&show_text=false",
+    keyword: ["performance"],
+    orientation: "square",
   },
   {
-    title: "We Lit The Show",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
+    title: 'minhtin "đau đớn gục ngã" khi không được hát Real Talk',
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1556031125817655&show_text=false",
+    keyword: ["interview"],
+    orientation: "square",
+  },
+  {
+    title:
+      '"Em nghĩ em bị tích cực độc hại, em lúc nào cũng giấu hết cảm xúc vào trong" - minhtin',
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1591129838536558&show_text=false",
+    keyword: ["interview"],
+    orientation: "square",
+  },
+  {
+    title:
+      'minhtin và mentor SOOBIN tâm sự khi nhận kết quả "Tốt nghiệp"',
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://facebook.com/reel/1497504178209215&show_text=false",
+    keyword: ["interview"],
+    orientation: "square",
+  },
+  {
+    title: "minhtin bật khóc trên khán đài sau khi tốt nghiệp",
+    video:
+      "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1285966483548070&show_text=false",
+    keyword: ["interview"],
+    orientation: "square",
   },
 ];
 
-const related = [
-  {
-    title: "Related Video 1",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
-  },
-  {
-    title: "Related Video 2",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
-  },
-  {
-    title: "Related Video 3",
-    video: "https://www.youtube.com/embed/VIDEO_ID",
-  },
-];
+
 
 export default function HighlightsPage() {
   return (
@@ -54,16 +84,15 @@ export default function HighlightsPage() {
     >
       <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
 
-        <p className="text-center uppercase tracking-[0.4em] text-sky-300">
-          Career Journey
-        </p>
 
-        <h1 className="mt-4 text-center text-6xl font-black">
-          TBTN Highlights
+
+        <h1 className="mt-4 text-center text-3xl font-black">
+          SIA Highlights
         </h1>
 <Link
   href="/career-journey/tv-shows?tab=show"
   className="
+  mt-10
     inline-flex
     items-center
     gap-2
@@ -80,7 +109,7 @@ export default function HighlightsPage() {
     hover:text-sky-300
   "
 >
-  ← Quay về 
+  ← Quay về
 </Link>
         <div className="mt-24 space-y-24">
           {performances.map((item) => (
@@ -88,60 +117,29 @@ export default function HighlightsPage() {
               <h2 className="mb-8 text-3xl font-bold">
                 {item.title}
               </h2>
+<div
+  className=" overflow-hidden rounded-[30px] border border-white/10 bg-black flex justify-center py-6">  
 
-              <div className="overflow-hidden rounded-[30px] border border-white/10">
-                <iframe
-                  src={item.video}
-                  title={item.title}
-                  allowFullScreen
-                  className="aspect-video w-full"
-                />
-              </div>
+  <iframe
+    src={item.video}
+    title={item.title}
+    className={
+  item.orientation === "portrait"
+    ? "mx-auto w-full max-w-[500px] h-[360px] sm:h-[580px] md:h-[650px] lg:h-[820px]"
+    : item.orientation === "square"
+    ? "mx-auto aspect-square w-full max-w-[520px]"
+    : "aspect-video w-full"
+}
+    frameBorder={0}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
             </section>
           ))}
         </div>
-<section className="mt-32">
- 
 
-  <h2 className="mt-4 text-center text-4xl font-black">
-Video liên quan  </h2>
-
- <div
-  className="
-    mt-14
-    grid
-    grid-cols-2
-    gap-5
-    lg:grid-cols-3
-  "
->
-  {related.slice(0, 3).map((item) => (
-    <div key={item.title}>
-      <div
-        className="
-          overflow-hidden
-          rounded-[20px]
-          border
-          border-white/10
-          bg-white/[0.04]
-          backdrop-blur-xl
-        "
-      >
-        <iframe
-          src={item.video}
-          title={item.title}
-          allowFullScreen
-          className="aspect-video w-full"
-        />
-      </div>
-
-      <h3 className="mt-3 text-center text-sm font-semibold md:text-base">
-        {item.title}
-      </h3>
-    </div>
-  ))}
-</div>
-</section>
       </section>
     </main>
   );

@@ -286,7 +286,7 @@ const eventItems: MediaItem[] = [
    {
     src: "/images/lighT_bangiaotusach.jpg",
     alt: "lighT",
-    title: "Lễ bàn giao Tủ Sách 25 năm VNEXPRES",
+    title: "Lễ bàn giao Tủ Sách 25 năm VNExpress",
     date: "10.03.2026",
    type: "EVENT",
 
@@ -315,7 +315,7 @@ const eventItems: MediaItem[] = [
       'lighT đã có cơ hội đón giao thừa cùng nhân dân Thái Nguyên tại sự kiện Countdown "Chào Xuân Bính Ngọ 2026 - Rạng Rỡ Thái Nguyên".',
        links: [
   {
-    label: "TINcredible",
+    label: "LighT LighT",
       link: "https://www.facebook.com/lighT.sye/posts/pfbid0BrXLdQ3V54fzNNzarhn329XsQcFxuNnt5jRyXkgRBMps4mN7BC9FmcxZQ64Aqioml?rdid=kaCrzM0efbDYwOJD#",
   },
        ],
@@ -603,16 +603,15 @@ const prevSlide = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="mx-auto max-w-7xl px-6 pt-20 pb-20">
-
-        {/* Header */}
-        <div className="text-center mb-6">
-
-          {/*" <p className="tracking-[0.35em] uppercase text-sky-200 text-xs">
-            Gallery
-          </p>*/}
-
-          <h1
+ <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-02.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
+          {/*<h1
             className="mt-3 text-xl font-bold"
             style={{
               textShadow: "0 0 15px rgba(255,255,255,.45)",
@@ -620,10 +619,10 @@ const prevSlide = () => {
           >
             GALLERY
           </h1>
+          */}
 
           
 
-        </div>
 
         {/* Tabs */}
 
@@ -859,7 +858,7 @@ onClick={() => setCurrentSlide(Math.min(index, maxSlide))}
 
         )}
 
-      </div>
+      </section>
 
       {/* Lightbox */}
 {selected !== null &&

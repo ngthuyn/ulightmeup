@@ -17,7 +17,16 @@ export default function TinieCornerPage() {
     >
       <div className="absolute inset-0 bg-black/25" />
 
-<section className="relative z-[60] flex min-h-screen items-center justify-center px-4 py-24 sm:px-6">
+  <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+  <img
+    src="/images/logo_web/logo-05.png"
+    alt="lighT"
+    className="h-10 w-auto sm:h-12 md:h-14"
+  />
+</div>
+
+<div className=" mt-5 flex justify-center">
         <AnimatePresence mode="wait">
 
           {!opened ? (
@@ -252,7 +261,7 @@ sm:text-base
 lg:text-lg
 tracking-[.2em]
 sm:tracking-[.25em] text-sky-700">
-                      Tinie Corner
+                      Tinie
                     </p>
 
                     <h1
@@ -337,6 +346,7 @@ lg:text-6xl                        italic
           )}
 
         </AnimatePresence>
+      </div>
 
       </section>
     </main>

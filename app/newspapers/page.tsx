@@ -16,7 +16,7 @@ const news = [
     title: "Đỗ Minh Tân - “Ngoại lệ” của Tân Binh Toàn Năng và cú bật âm thầm nhưng bền bỉ",
     source: "YeaH1",
     date: "01.08.2025",
-    image: "/images/news/news1.jpg",
+    image: "/images/Ben-bi.jpg",
     href: "https://yeah1.com/tv-show/do-minh-tan-ngoai-le-cua-tan-binh-toan-nang-va-cu-bat-am-tham-nhung-ben-bi-a412-d125701",
   },
   {
@@ -25,7 +25,7 @@ const news = [
     title: 'Tân binh minhtin ngậm ngùi dừng chân tại hành trình "Tân Binh Toàn Năng"',
     source: "Báo Văn Hóa",
     date: " 22.11.2025",
-    image: "/images/news/news3.jpg",
+    image: "/images/Dung-chan_edited.jpg",
     href: "https://baovanhoa.vn/giai-tri/tan-binh-minhtin-ngam-ngui-dung-chan-183266.html",
   },
   {
@@ -34,7 +34,7 @@ const news = [
     title: "YeaH1 bắt tay Sony Music ra mắt SYE Holdings, chính thức debut nhóm nhạc và giới thiệu dàn nghệ sĩ độc lập thế hệ mới",
     source: "YeaH1",
     date: " 21.01.2026",
-    image: "/images/news/news4.jpg",
+    image: "/images/NSĐL.jpg",
     href: "https://yeah1.com/viet-nam/yeah1-bat-tay-sony-music-ra-mat-sye-debut-nhom-nhac-uprize-dua-vpop-ra-thi-truong-quoc-te-a427-d127752.html",
   },
 ];
@@ -53,9 +53,13 @@ export default function NewspaperPage() {
 
       
 
-        <h1 className="mt-3 text-center text-xl font-black">
-          NEWSPAPER
-        </h1>
+       <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-06.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
 
         <div className="mt-14 space-y-5">
 

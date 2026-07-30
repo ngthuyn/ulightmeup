@@ -63,15 +63,16 @@ useEffect(() => {
       }}
     >
    
-      <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+      <section className="mx-auto max-w-4xl px-6 pt-28 pb-24">
 
         {/* Title */}
 
         <p className="text-center tracking-[0.35em] text-sky-300">
+        
           POONG Crew
         </p>
 
-        <h1 className="mt-3 text-center text-3xl font-black">
+        <h1 className="mt-3 text-center text-2xl font-black">
           ACTIVITIES
         </h1>
 

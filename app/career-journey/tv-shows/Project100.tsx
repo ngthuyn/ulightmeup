@@ -8,8 +8,7 @@ export default function Project100() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="space-y-24"
-    >
+className="space-y-11"    >
       {/* ================= HERO ================= */}
 
       <section className="mx-auto max-w-5xl text-center">
@@ -27,11 +26,7 @@ export default function Project100() {
 
       {/* ================= COVER IMAGE ================= */}
 
-      <section className="mx-auto max-w-7xl">
 
-       
-
-      </section>
 
       {/* ================= INTRO ================= */}
 
@@ -50,7 +45,7 @@ export default function Project100() {
             <span className="text-sky-300">Tân binh toàn năng (TBTN)</span> - chương trình truyền hình thực tế tìm kiếm
             nhóm nhạc thế hệ mới của Việt Nam - là cột mốc quan trọng trong hành
             trình nghệ thuật của <span className="text-sky-300"> Minh Tân </span>. Đây không chỉ là chương trình mang tới
-            những sân khấu để <span className="text-sky-300"> Minh Tân </span> có cơ hội thể hiện giọng hát cũng như kỹ năng
+            những sân khấu để <span className="text-sky-300"> Tân </span> có cơ hội thể hiện giọng hát cũng như kỹ năng
             trình diễn, mà còn là trường học thực tế đưa <span className="text-sky-300"> Đỗ Minh Tân </span> đến gần hơn
             với khán giả và ngày càng trưởng thành hơn sau mỗi thử thách.
           </p>
@@ -65,7 +60,7 @@ export default function Project100() {
           <p>
             Sau chương trình, <span className="text-sky-300"> Minh Tân </span> chính thức ra mắt truyền thông trong vai
             trò nghệ sĩ độc lập của <span className="text-sky-300">  SYE Holdings </span> (công ty liên doanh giải trí giữa
-            Tập đoàn <span className="text-sky-300"> YeaH1 </span> và <span className="text-sky-300"> Sony Music Entertainment </span>) với nghệ danh <span className="text-sky-300"> lighT </span>, minh
+            Tập đoàn YeaH1 và Sony Music Entertainment) với nghệ danh <span className="text-sky-300"> lighT </span>, minh
             chứng cho tinh thần kiên trì và khát khao cống hiến bền bỉ của nam
             nghệ sĩ.
           </p>
@@ -124,7 +119,7 @@ export default function Project100() {
         >
 
           <p>
-            Hành trình chạm tay đến ước mơ nghệ thuật chuyên nghiệp của Minh Tân
+            Hành trình chạm tay đến ước mơ nghệ thuật chuyên nghiệp của <span className="text-sky-300"> Minh Tân </span>
             chính thức khởi động với cột mốc ý nghĩa: thử sức tại buổi casting
             chương trình <span className="text-sky-300"> Tân Binh Toàn Năng </span>.
           </p>
@@ -133,7 +128,7 @@ export default function Project100() {
             Trong buổi casting, <span className="text-sky-300"> Minh Tân </span> lựa chọn thể hiện ca khúc của mentor
             <span className="text-sky-300"> SOOBIN </span>. Cùng với vũ đạo ấn tượng nhờ quá trình hoạt động với vai trò
             dancer, <span className="text-sky-300"> Minh Tân </span> đã thuyết phục được các vị giám khảo và thành công
-            ghi tên mình vào danh sách Top 100 của chương trình.
+            ghi tên mình vào danh sách <b>Top 100</b> của chương trình.
           </p>
 
         </div>
@@ -142,13 +137,15 @@ export default function Project100() {
 
       {/* ================= CASTING IMAGE ================= */}
 
-      <section className="mx-auto max-w-6xl">
+      <section className="mx-auto max-w-4xl">
 
         <img
           src="/images/TV Shows/casting.jpg"
           alt="Casting"
           className="
             w-full
+                max-w-xl
+mx-auto
             rounded-[28px]
             object-cover
           "
@@ -181,29 +178,33 @@ export default function Project100() {
         >
 
           <p>
-            Vào ngày 06.04.2025, <span className="text-sky-300"> Minh Tân </span> nhận được thông báo chính thức lọt vào
-            Top 30 CHUNG CUỘC của <span className="text-sky-300"> Tân Binh Toàn Năng </span> giai đoạn Project 100%.
+            Vào ngày <b>06.04.2025</b>, <span className="text-sky-300"> Minh Tân </span> nhận được thông báo chính thức lọt vào
+            <b>Top 30 CHUNG CUỘC</b> của <span className="text-sky-300"> Tân Binh Toàn Năng </span> giai đoạn <b>Project 100%</b>.
             Trong 100 ngày tham gia chương trình, <span className="text-sky-300"> Minh Tân </span> đã tạo nên dấu ấn vô
             cùng khác biệt dù chưa phải là cái tên nổi bật trên truyền thông.
           </p>
-          <img
-          src="/images/TV Shows/002.1.jpe"
-          alt="Project 100%"
-          className="
-            w-full
-            rounded-[32px]
-            border
-            border-white/10
-            object-cover
-          "
-        />
+     <img
+  src="/images/TV Shows/002.1.jpe"
+  alt="Project 100%"
+  className="
+    mx-auto
+    w-full
+    max-w-[220px]
+    sm:max-w-xs
+    md:max-w-sm
+    rounded-[32px]
+    border
+    border-white/10
+    object-cover
+  "
+/>
           <p>
             Ngay từ buổi sát hạch đầu tiên, tuy chưa được rèn dũa nhiều về thanh
-            nhạc nhưng với chất giọng thời thượng và thế mạnh vũ đạo, <span className="text-sky-300"> Minh Tân </span> đã
+            nhạc nhưng với chất giọng đặc biệt và thế mạnh vũ đạo, <span className="text-sky-300"> Minh Tân </span> đã
             trở thành thí sinh đầu tiên được hội đồng chuyên gia đến từ Hàn Quốc
             đề xuất cân nhắc thăng lớp từ C lên thẳng lớp A.
           </p>
- <img
+ {/*<img
           src="/images/TV Shows/02.3_IMG.jpg"
           alt="Project 100%"
           className="
@@ -213,37 +214,24 @@ export default function Project100() {
             border-white/10
             object-cover
           "
-        />
+        />*/}
           <p>
             Cứ thế, <span className="text-sky-300"> Minh Tân </span> từng bước chinh phục khán giả: từ màn dance break
-            bùng nổ trong “Beautiful girl”, chiến thắng Top X ngay lần đầu tập
-            rap, cho đến vai trò người “thủ lĩnh ngầm” thầm lặng gắn kết các
+            bùng nổ trong <b>Beautiful girl</b>, chiến thắng Top X ngay lần đầu tập
+            rap, cho đến vai trò người <b>thủ lĩnh ngầm</b> thầm lặng gắn kết các
             thành viên nhóm <span className="text-sky-300"> The Aurora </span> (Nhóm nhạc tạo ra trong thử thách hoạt
             động nhóm của chương trình) như mentor <span className="text-sky-300"> Kay Trần </span> đã nhận xét.
           </p>
 
         </div>
 
-      </section>
+     
 
-      {/* ================= VIDEO : C -> A ================= */}
-
-      <section className="mx-auto max-w-6xl">
-
-        <div
-          className="
-            overflow-hidden
-            rounded-[28px]
-            border
-            border-white/10
-            bg-white/[0.03]
-          "
-        >
+        <div>
 
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/897825199123684"
-            className="aspect-video w-full"
-            allowFullScreen
+          className="aspect-video w-full rounded-[28px] max-w-2xl mx-auto"
           />
 
         </div>
@@ -255,7 +243,7 @@ export default function Project100() {
       </section>
 
       {/* ================= BEAUTIFUL GIRL ================= */}
-
+{/*
       <section className="mx-auto max-w-4xl">
 
         <div
@@ -284,11 +272,9 @@ export default function Project100() {
             className="aspect-video w-full rounded-[28px]"
             allowFullScreen
           />
-{/*
           <p className="mt-4 text-center text-sm italic text-white/50">
             Facebook Reel
           </p>
-*/}
         </div>
 
         <div>
@@ -298,17 +284,14 @@ export default function Project100() {
             className="aspect-video w-full rounded-[28px]"
             allowFullScreen
           />
-{/*
           <p className="mt-4 text-center text-sm italic text-white/50">
             YouTube
           </p>
-*/}
         </div>
 
       </section>
 
-      {/* ================= BURN OUT ================= */}
-
+*/}
       <section className="mx-auto max-w-4xl">
 
         <div
@@ -319,7 +302,6 @@ export default function Project100() {
             text-white/80
           "
         >
-
           <p>
             Thế nhưng, nghệ thuật chưa bao giờ là một con đường trải đầy hoa
             hồng. Dưới cường độ tập luyện và học tập khắc nghiệt của chương
@@ -335,44 +317,7 @@ export default function Project100() {
             sưởi ấm và bảo vệ sức khỏe tinh thần của chính mình.
           </p>
 
-        </div>
-
-      </section>
-
-      <section className="mx-auto max-w-6xl">
-
-        <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1752641999001844"
-          className="aspect-video w-full rounded-[28px]"
-          allowFullScreen
-        />
-
-        <p className="mt-4 text-center text-sm italic text-white/50">
-          <span className="text-sky-300"> Minh Tân </span> bật khóc vì burn-out.
-        </p>
-
-      </section>
-            {/* ================= INJURY ================= */}
-
-      <section className="mx-auto max-w-4xl">
-
-        <div className="mb-10">
-
-        
-          <h2 className="mt-3 text-2xl font-black">
-            Chấn thương và ý chí không bỏ cuộc
-          </h2>
-
-        </div>
-
-        <div
-          className="
-            space-y-8
-            text-lg
-            leading-10
-            text-white/80
-          "
-        >
+       
 
           <p>
             Vượt qua những rào cản tâm lý, ý chí của <span className="text-sky-300"> Minh Tân </span> tiếp tục bị thử thách
@@ -389,6 +334,7 @@ export default function Project100() {
             chườm đá là một góc khuất lặng lẽ phía sau những màn trình diễn rực
             rỡ.
           </p>
+          {/*
 <img
           src="/images/TV Shows/06-IMG_20260125_120833_719.jpg"
           alt="Project 100%"
@@ -400,17 +346,34 @@ export default function Project100() {
             object-cover
           "
         />
+        */}
         </div>
 
       </section>
 
       {/* ================= VIDEO ================= */}
+      <section className="mx-auto max-w-4xl">
 
-      <section className="mx-auto max-w-6xl">
+      <div className="grid grid-cols-2 gap-4 mt-5 ">
+
+
+<div>
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1752641999001844"
+          className=" h-[150px] md:h-[300px] lg:h-[450px] rounded-[5px] w-full"
+          allowFullScreen
+        />
+
+        <p className="mt-4 text-center text-sm italic text-white/50">
+          <span className="text-sky-300"> Minh Tân </span> bật khóc vì burn-out.
+        </p>
+
+      </div>
+      <div>
 
         <iframe
           src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/686457424208564"
-          className="aspect-video w-full rounded-[28px]"
+          className=" h-[150px] md:h-[300px] lg:h-[450px] rounded-[5px] w-full"
           allowFullScreen
         />
 
@@ -418,8 +381,9 @@ export default function Project100() {
           <span className="text-sky-300"> Minh Tân </span> gặp chấn thương cổ chân tại Sát hạch 06.
         </p>
 
-      </section>
-
+      </div>
+</div>
+</section>
       {/* ================= TOP X ================= */}
 
       <section className="mx-auto max-w-4xl">
@@ -436,9 +400,6 @@ export default function Project100() {
           <p>
             Dẫu vậy, sự bền bỉ của <span className="text-sky-300"> Minh Tân </span> không cho phép bạn chùn bước. Ngay
             sau chấn thương, Tân vẫn tự tin bước vào vòng đối đầu với Top X.
-          </p>
-
-          <p>
             Không phụ sự tin tưởng của mentor <span className="text-sky-300"> Kay Trần </span>, <span className="text-sky-300"> Minh Tân </span> đã xuất sắc
             nhận được trọn vẹn 3/3 phiếu bầu từ ban giám khảo cho lần đầu tiên
             thử sức với màn biểu diễn rap.
@@ -448,11 +409,11 @@ export default function Project100() {
 
       </section>
 
-      <section className="mx-auto max-w-6xl">
+      <section className="mx-auto max-w-4xl">
 
        <iframe
   src="https://www.youtube.com/embed/I-LyhXP7zmE"
-  className="aspect-video w-full rounded-[28px]"
+  className="aspect-video w-full  mx-auto  max-w-xl rounded-[28px]"
   title="YouTube video"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerPolicy="strict-origin-when-cross-origin"
@@ -504,11 +465,11 @@ export default function Project100() {
 
       {/* ================= WE LIT THE SHOW ================= */}
 
-      <section className="mx-auto max-w-6xl">
+      <section className="mx-auto max-w-4xl">
 
         <iframe
           src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1116775287042427"
-          className="aspect-video w-full rounded-[28px]"
+          className="aspect-video w-full rounded-[28px] max-w-2xl mx-auto"
           allowFullScreen
         />
 
@@ -517,7 +478,7 @@ export default function Project100() {
           100% giúp <span className="text-sky-300"> Minh Tân </span> ghi danh vào Top 11 Tân Binh Thăng Cấp và được khán
           giả nhắc đến với cụm từ “lên đồng”.
         </p>
-        <div className=" mt-10 grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 mt-5 ">
 
   <img
     src="/images/TV Shows/07-TBTC.jpg"
@@ -544,10 +505,38 @@ export default function Project100() {
   />
 
 </div>
+       {/* <div className=" mt-10 grid grid-cols-2 gap-4">
+
+  <img
+    src="/images/TV Shows/07-TBTC.jpg"
+    alt="Project 100%"
+    className="
+      aspect-[4/5]
+      w-full
+      border
+      border-white/10
+      object-cover
+    "
+  />
+
+  <img
+    src="/images/TV Shows/08-Top-11.jpg"
+    alt="Project 100%"
+    className="
+      aspect-[4/5]
+      w-full
+      border
+      border-white/10
+      object-cover
+    "
+  />
+
+</div>
+*/}
      
       </section>
             {/* ================= CONTINUE EXPLORING ================= */}
-<section className="mx-auto max-w-7xl">
+      <section className="mx-auto max-w-4xl">
   <div className="text-center">
     {/*
     <p className="uppercase tracking-[0.35em] text-sky-300">

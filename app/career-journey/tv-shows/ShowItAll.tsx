@@ -2,15 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ShowItAllPage() {
   return (
-    <main className="bg-black text-white">
-
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+className="space-y-11"    >
+\
       {/* ================= HERO ================= */}
 
- <section className="mx-auto max-w-5xl text-center">
-
+<section className="mx-auto max-w-4xl">
     
 
       <h2 className="text-center text-3xl font-black leading-tight md:text-5xl">
@@ -28,7 +32,7 @@ export default function ShowItAllPage() {
 
       {/* ================= INTRO ================= */}
 
-      <section className="mx-auto max-w-4xl px-6 py-24">
+      <section className="mx-auto max-w-4xl">
 
        
 
@@ -46,11 +50,13 @@ export default function ShowItAllPage() {
 
       {/* ================= SECTION 1 ================= */}
 
-      <section className="mx-auto max-w-4xl px-6 pb-12">
+      <section className="mx-auto max-w-4xl">
 
-        <h2 className="text-2xl font-black leading-tight">
-          Tham gia Tân Binh Toàn Năng Show It All – Giai đoạn chính thức
-        </h2>
+        <h2 className="mt-3 text-2xl font-black">
+            Tham gia Tân Binh Toàn Năng Show It All
+            <br />
+            <span className="text-sky-300">Giai đoạn chính thức</span>
+          </h2>
 
         <div className="mt-12 space-y-8 text-lg leading-9 text-white/85">
 
@@ -78,26 +84,39 @@ export default function ShowItAllPage() {
       </section>
             {/* ================= TAKE A SHOT ================= */}
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-4xl">
 
   <div className="grid grid-cols-2 gap-4">
 
-          <Image
-            src="/images/Take a shot.jpg"
-            alt="Take A Shot"
-            width={1600}
-            height={900}
-            className="h-auto w-full object-cover"
-          />
-           <Image
-            src="/images/Guong vo.jpg"
-            alt="Take A Shot"
-            width={1600}
-            height={900}
-            className="h-auto w-full object-cover"
-          />
+  <div>
+    <Image
+      src="/images/Take a shot.jpg"
+      alt="Take A Shot"
+      width={1600}
+      height={900}
+      className="h-auto w-full object-cover"
+    />
 
-        </div>
+    <p className="mt-2 text-center text-sm italic text-white/55">
+      Take A Shot
+    </p>
+  </div>
+
+  <div>
+    <Image
+      src="/images/Guong vo.jpg"
+      alt="Gương Vỡ"
+      width={1600}
+      height={900}
+      className="h-auto w-full object-cover"
+    />
+
+    <p className="mt-2 text-center text-sm italic text-white/55">
+      Gương Vỡ Làm Lành
+    </p>
+  </div>
+
+</div>
 
         
 
@@ -105,7 +124,7 @@ export default function ShowItAllPage() {
 
       {/* ================= ARTICLE CONTINUE ================= */}
 
-      <section className="mx-auto max-w-4xl px-6 pb-20">
+      <section className="mx-auto max-w-4xl">
 
         <div className="space-y-8 text-lg leading-9 text-white/85">
 
@@ -133,29 +152,28 @@ export default function ShowItAllPage() {
 
       {/* ================= FACEBOOK REEL ================= */}
 
-      <section className="mx-auto max-w-6xl px-6 pb-24">
+      <section className="mx-auto max-w-4xl">
 
 
-        <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white">
+        <div>
 
           <iframe
             src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/4100026973593119"
-           className="w-full h-[380px] sm:h-[620px] md:h-[700px]"
+           className="w-full h-[320px] sm:h-[620px] md:h-[700px]"
   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
   allowFullScreen
           />
 
         </div>
 
-        <p className="mt-6 text-center text-white/60">
-          Khoảnh khắc khép lại hành trình thi đấu tại Công diễn 3 với nhiều tiếc
-          nuối nhưng cũng là dấu mốc mở ra một chặng đường mới.
+<p className="mt-2 text-center text-sm italic text-white/55">
+Khoảnh khắc <span className="text-sky-300"> minhtin </span> trốn vào góc khóc nấc & bố <span className="text-sky-300"> SOOBIN </span> gục mặt trước kết quả đau lòng của công diễn 3 
         </p>
 
       </section>
             {/* ================= CONTINUE EXPLORING ================= */}
 
-  <section className="mx-auto max-w-7xl">
+      <section className="mx-auto max-w-4xl">
   <div className="text-center">
     {/*
     <p className="uppercase tracking-[0.35em] text-sky-300">
@@ -277,7 +295,7 @@ export default function ShowItAllPage() {
 </section>
             {/* ================= INDEPENDENT ARTIST ================= */}
 
-      <section className="mx-auto mt-10 max-w-4xl px-6 pb-20">
+      <section className="mx-auto max-w-4xl">
 
         <h2 className="text-2xl font-black leading-tight">
           Nghệ sĩ độc lập lighT thuộc SYE Holdings
@@ -313,7 +331,7 @@ export default function ShowItAllPage() {
 
       {/* ================= GALLERY ================= */}
 
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-4xl">
 
 <div className="grid grid-cols-2 gap-3 md:gap-6">
           <div className="overflow-hidden rounded-[28px] border border-white/10">
@@ -363,7 +381,7 @@ export default function ShowItAllPage() {
       </section>
 
       {/* ================= ENDING ================= */}
-<section className="mx-auto max-w-4xl px-5 pb-24 md:px-6 md:pb-32">
+      <section className="mx-auto max-w-4xl">
   <div
     className="
       rounded-3xl
@@ -402,6 +420,7 @@ export default function ShowItAllPage() {
     </p>
   </div>
 </section>
-    </main>
+        </motion.article>
+
   );
 }

@@ -4,14 +4,14 @@ import FacebookPlayer from "@/components/FacebookPlayer";
 type BehindVideo = {
   title: string;
   video: string;
-  orientation: "portrait" | "landscape";
+  orientation: "portrait" | "landscape"| "square";
 };
 
 const behindVideos: BehindVideo[] = [
   {
     title: "Chứng nhận fans cứng GĐHH",
     video: "https://www.facebook.com/reel/1244519987864775/",
-    orientation: "portrait",
+    orientation: "square",
   },
   {
     title: "lighT và Thu đợi",
@@ -39,7 +39,7 @@ const behindVideos: BehindVideo[] = [
     orientation: "portrait",
   },
   {
-    title: 'nhận làm host trò chơi và liên hoàn "kíp nẹn" không thể tránh',
+    title: 'Nhận làm host trò chơi và liên hoàn "kíp nẹn" không thể tránh',
     video: "https://www.facebook.com/reel/814370918298667/",
     orientation: "portrait",
   },
@@ -104,7 +104,7 @@ export default function BehindPage() {
           SIA Behind The Scenes
         </h1>
 <Link
-  href="/career-journey/tv-shows?tab=project"
+  href="/career-journey/tv-shows?tab=show"
   className="
   mt-10
     inline-flex
@@ -135,15 +135,21 @@ export default function BehindPage() {
     <div className="flex justify-center">
   {item.video.includes("youtube.com") ? (
     <div className="w-full overflow-hidden rounded-[30px] border border-white/10">
-      <iframe
-        src={item.video}
-        title={item.title}
-        className="aspect-video w-full"
-        frameBorder={0}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      />
+     <iframe
+    src={item.video}
+    title={item.title}
+    className={
+  item.orientation === "portrait"
+    ? "mx-auto w-full max-w-[500px] h-[360px] sm:h-[580px] md:h-[650px] lg:h-[820px]"
+    : item.orientation === "square"
+    ? "mx-auto aspect-square w-full max-w-[520px]"
+    : "aspect-video w-full"
+}
+    frameBorder={0}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
     </div>
   ) : (
     <FacebookPlayer

@@ -2,7 +2,7 @@
 
 type Props = {
   url: string;
-  orientation?: "portrait" | "landscape";
+orientation?: "portrait" | "landscape" | "square";
 };
 
 export default function FacebookPlayer({
@@ -42,7 +42,9 @@ export default function FacebookPlayer({
         className={
           orientation === "portrait"
             ? "w-full h-[450px] sm:h-[620px] md:h-[720px]"
-            : "aspect-video w-full"
+            : orientation === "square"
+    ? "mx-auto aspect-square w-full max-w-[650px]"
+    : "aspect-video w-full"
         }
         frameBorder={0}
         scrolling="no"

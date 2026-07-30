@@ -33,6 +33,13 @@ export default async function Page({
         backgroundPosition: "center",
       }}>
         <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-04.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
  <h1 className="mt-3 text-center text-xl font-black">
 FANCAM        </h1>
         <h1 className="mt-10 italic font-serif leading-tight text-white">
@@ -97,7 +104,7 @@ FANCAM        </h1>
 </div>
                 </div>
   <Link
-  href="/videos/dance-compilation"
+  href="/videos/fancam"
   className="
   mt-10
     inline-flex

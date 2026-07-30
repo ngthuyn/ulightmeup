@@ -14,7 +14,7 @@ export default function FactCheckPage() {
  intro: (
   <>
     <h3 className="text-xl font-bold text-sky-300">
-      📝 [TMI]{" "}
+      📝 
       <span className="font-semibold text-sky-300">lighT</span> FACT CHECK:
       Bật mí profile học vấn và những fact thú vị
     </h3>
@@ -175,7 +175,7 @@ export default function FactCheckPage() {
   intro: (
   <>
     <h3 className="text-xl font-bold text-sky-300">
-      📝 [TMI]{" "}
+      📝 
       <span className="font-semibold text-sky-300">lighT</span> FACT CHECK:
       Những mảnh ghép ấm áp về gia đình
     </h3>
@@ -263,6 +263,8 @@ export default function FactCheckPage() {
     "/images/facts/fact02_1.PNG",
     "/images/facts/fact02_2.PNG",
     "/images/facts/fact02_3.jpg",
+    "/images/tinbe_1.jpg",
+    "/images/tinbe_2.jpg",
 
   ],
    
@@ -316,8 +318,9 @@ export default function FactCheckPage() {
   intro: (
   <>
     <h3 className="text-xl font-bold text-sky-300">
-      📝 FACT CHECK:{" "}
-      <span className="font-semibold text-sky-300">lighT</span> đã từng sở hữu
+      📝 
+      <span className="font-semibold text-sky-300">lighT FACT CHECK:
+ lighT</span> đã từng sở hữu
       những cái tên nào nhỉ?
     </h3>
 
@@ -400,6 +403,7 @@ export default function FactCheckPage() {
     "/images/facts/fact03_4.jpg",
     "/images/facts/fact03_5.jpe",
     "/images/facts/fact03_6.jpe",
+    "/images/Ryan.jpg",
 
   ],
 
@@ -453,12 +457,14 @@ export default function FactCheckPage() {
       id="fact04-title"
       className="text-xl font-bold text-sky-300"
     >
-      📝 FACT CHECK: Bí mật phía sau outfit High-end đầu tiên của{" "}
+       📝 
+      <span className="font-semibold text-sky-300">lighT</span> FACT CHECK:
+ Bí mật phía sau outfit High-end đầu tiên của{" "}
       <span className="font-semibold text-sky-300">lighT</span> tại{" "}
       <span className="font-semibold text-sky-300">
-        WeChoice Awards 2025
-      </span>
-      : Hơn cả một bộ trang phục, đó là sự trân trọng!
+        WeChoice Awards 2025.
+     
+Hơn cả một bộ trang phục, đó là sự trân trọng! </span>
     </h3>
 
     <p id="fact04-intro-1" className="mt-5">
@@ -692,7 +698,7 @@ export default function FactCheckPage() {
   intro: (
     <>
       <h3 className="text-xl font-bold text-sky-300">
-        📝 FACT CHECK: Giải mã tỷ lệ cơ thể hài hòa của{" "}
+        📝lighT FACT CHECK: Giải mã tỷ lệ cơ thể hài hòa của{" "}
         <span className="font-semibold text-sky-300">lighT</span>
       </h3>
 
@@ -791,7 +797,6 @@ export default function FactCheckPage() {
         "/images/Tyle/IMG_8073.JPG",
     "/images/Tyle/IMG_8221.JPG",
     "/images/Tyle/IMG_8223.JPG",
-    "/images/Tyle/IMG_8224.JPG",
     "/images/Tyle/design.png",
 
   ],
@@ -849,17 +854,19 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
         backgroundPosition: "center",
       }}
     >
-      <div className="relative z-20 mx-auto max-w-7xl px-6 pt-24 pb-16">
+  <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-05.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
+   <h1 className="mt-3 text-center text-xl font-black">
 
-        <h1
-          className="mb-12 text-center text-2xl font-bold text-white md:text-2xl"
-          style={{
-            textShadow: "0 0 12px rgba(255,255,255,.45)",
-          }}
-        >
           lighT's FACT CHECK
         </h1>
-
+<div className="mt-5"></div>
 <div className="grid grid-cols-2 gap-4 md:grid-cols-2 xl:grid-cols-3">        
           {facts.map((fact) => (
             <button
@@ -913,7 +920,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
           ))}
         </div>
 
-      </div>
+      </section>
       {selectedFact && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
    <div
@@ -948,7 +955,7 @@ const [selectedImage, setSelectedImage] = useState<string | null>(null);
       />
 
       <p className="text-xs uppercase tracking-[0.3em] text-sky-300">
-        TM {selectedFact.id}
+        TMI {selectedFact.id}
       </p>
 
       

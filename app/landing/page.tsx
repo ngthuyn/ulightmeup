@@ -113,8 +113,8 @@ return (
       THE 1ST SINGLE OUT NOW
     </p>
 */}
-<div className="absolute inset-0 z-[999] flex items-center justify-center px-6">  
-  <div className="text-center text-white">
+<div className="absolute  inset-x-0 bottom-30 z-[999] flex justify-center px-6">  
+<div className="text-center text-white max-w-2xl">
    
 
     <h2

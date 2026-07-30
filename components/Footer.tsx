@@ -59,7 +59,7 @@ const menu = [
         href: "/tmi/fact-check",
       },
       {
-        label: "tinie's corner",
+        label: "tinie",
         href: "/tmi/tinies-corner",
       },
     ],

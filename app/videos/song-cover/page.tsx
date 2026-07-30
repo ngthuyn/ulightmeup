@@ -19,23 +19,41 @@ const covers = [
   },
  
   {
-    title: "wish you were gay",
+    title: "Wish you were gay",
     description: "tin tập hát #1",
     platform: "tiktok",
     url: "https://www.tiktok.com/@do.nathnim_/video/7613066484796886290",
   },
   {
-    title: "Viết Tiếp Câu Chuyện Tri Ân",
+    title: "Viết tiếp câu chuyện tri ân",
     description: "Mọi người cùng tham gia cuộc thi cover để săn Vàng chuẩn bị đón tết cùng Danisa nhé!",
     platform: "tiktok",
     url: "https://www.tiktok.com/@do.nathnim_/video/7597464653844794632",
   },
   {
-    title: "MỘT ĐÊM SAY",
+    title: "Một đêm say",
     description: "Hát cùng anh SWAN nè",
     platform: "tiktok",
     url: "https://www.tiktok.com/@tanbinhtoannang/video/7569217168248737079?is_from_webapp=1&sender_device=pc&web_id=7586174988501026320",
   },
+  {
+  title: "Khóc cùng em",
+  description: "🎶Anh đã biết tình mình nhiều khoảng trống, thuộc về miền hư vô🎶",
+  platform: "tiktok",
+  url: "https://www.tiktok.com/@tincredible_allforlight/video/7664940290913946898",
+},
+  {
+  title: "Từng quen",
+  description: "🎶 Nhìn em, anh bối rối🎶",
+  platform: "tiktok",
+  url: "https://www.tiktok.com/@tincredible_allforlight/video/7667819421473230098",
+},
+ {
+  title: "Và thế là hết",
+  description: "Bài kiểm tra vocal cùng các thầy thanh nhạc của Hàn Quốc",
+  platform: "tiktok",
+  url: "https://www.tiktok.com/@tanbinhtoannang/video/7498006700239228202?is_from_webapp=1&sender_device=pc",
+},
  {
   title: "Ánh sao và bầu trời",
   description: "Chưa bao giờ tôi thấy, em cười nhiều như hôm nay...",
@@ -56,6 +74,14 @@ export default function SongCoverACPage() {
       }}
     >
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
+
+  <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-04.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
 
          {/* Header */}
         <div className="text-center mb-6">

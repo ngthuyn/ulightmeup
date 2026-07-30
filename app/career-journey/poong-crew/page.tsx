@@ -2,6 +2,8 @@
 import Link from "next/link";
 import MediaEmbed from "@/components/MediaEmbed";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 export default function PoongCrewPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const gallery = [
@@ -18,13 +20,22 @@ export default function PoongCrewPage() {
         backgroundPosition: "center",
       }}
     >
-      <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
+          <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+className="space-y-11"    >
+      <section className="mx-auto max-w-4xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+      <img
+        src="/images/logo_web/logo-07.png" // đổi sang đường dẫn logo của bạn
+        alt="lighT"
+        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+      />
+  </div>
+ <h1 className="mt-3 text-center text-xl font-black">
 
-        {/* Hero */}
-
-      
-
-        <h1 className="mt-3 text-center text-3xl font-black">
+          
           POONG Crew
         </h1>
 
@@ -67,7 +78,7 @@ Dancer        </p>
              Trong giai đoạn
               <span className="font-semibold text-white"> 2023 - 2025</span>,
                    <span className="text-sky-300">
- {" "}lighT </span> đã hoạt động vô cùng năng nổ và liên tục góp mặt trong nhiều dự án nghệ thuật đặc sắc. Không chỉ khẳng định tài năng qua các sản phẩm dance cover ấn tượng, lighT còn cùng nhóm tham gia nhiều dự án âm nhạc chất lượng cao cùng L'Officiel Vietnam, rapper OSAD và ca sĩ Trúc Nhân dưới vai trò vũ công phụ họa…
+ {" "}lighT </span> đã hoạt động vô cùng năng nổ và liên tục góp mặt trong nhiều dự án nghệ thuật đặc sắc. Không chỉ khẳng định tài năng qua các sản phẩm dance cover ấn tượng, <span className="text-sky-300">lighT</span> còn cùng nhóm tham gia nhiều dự án âm nhạc chất lượng cao cùng L'Officiel Vietnam, rapper OSAD và ca sĩ Trúc Nhân dưới vai trò vũ công phụ họa…
 
             </p>
 
@@ -337,6 +348,7 @@ Dancer        </p>
     </button>
   </div>
 )}
+</motion.article>
     </main>
   );
 }

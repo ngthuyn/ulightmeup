@@ -141,6 +141,7 @@ Choreography by POONG CREW.`,
 
   videos: [
     {
+      title: "lighT xuất hiện vào phút 2:15",
       platform: "youtube",
       url: "https://www.youtube.com/watch?v=rRUzJJ9IV4s",
     },
@@ -213,6 +214,7 @@ Choreography by POONG CREW.`,
 
   videos: [
     {
+      title:"lighT xuất hiện vào phút 3:26 ở hàng cuối cùng",
       platform: "youtube",
       url: "https://youtu.be/82S7WF2Rkt8?si=2VvqYqYMCmzWHzcs",
     },
@@ -265,9 +267,9 @@ Choreography by POONG CREW.`,
 
   banner: "/images/typo_poong_2023.jpg",
 
-  thumbnail: "/images/poong/prettysavage/banner.jpg",
+  thumbnail: "/images/typo_poong_2023.jpg",
 
-  description: `CHOREO BY POONG CREW`,
+  description: `Choreography by POONG CREW`,
 
   member: "POONG CREW",
 
@@ -333,6 +335,9 @@ Choreography by POONG CREW.`,
   videos: [],
 
   gallery: [
+       
+    "/images/poong/vlu/4.jpg",
+    "/images/poong/vlu/5.jpg",
     "/images/poong/vlu/6.jpg",
     "/images/poong/vlu/7.jpg",
   ],
@@ -373,7 +378,7 @@ Choreography by POONG CREW.`,
 
   title: "POONG CREW - KPOP LOVERS FESTIVAL",
 
-  category: "Competition",
+  category: "CONTEST",
 
   year: "2023",
 
@@ -381,7 +386,7 @@ Choreography by POONG CREW.`,
 
   thumbnail: "/images/poong/other/klf/2.jpg",
 
-  description: `Sau những nỗ lực không ngừng, 𝐏𝐎𝐎𝐍𝐆 CREW đã xuất sắc giành được "tấm vé" bước vào Vòng Chung kết của cuộc thi KPOP Lovers Festival 2023 do Trung tâm Văn hoá Hàn Quốc và Tổng Cục Du lịch Hàn Quốc tổ chức tại Hà Nội. Đây cũng là chuyến đi đánh dấu lần đầu tiên lighT ra Hà Nội đó.`,
+  description: `Sau những nỗ lực không ngừng, POONG CREW đã xuất sắc giành được "tấm vé" bước vào Vòng Chung kết của cuộc thi KPOP Lovers Festival 2023 do Trung tâm Văn hoá Hàn Quốc và Tổng Cục Du lịch Hàn Quốc tổ chức tại Hà Nội. Đây cũng là chuyến đi đánh dấu lần đầu tiên lighT ra Hà Nội đó.`,
 
   member: "POONG CREW",
 

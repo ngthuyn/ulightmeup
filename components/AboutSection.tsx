@@ -30,26 +30,36 @@ const cards = [
 ];
 const aboutSections = [
   {
-    title: "FANCAM",
-    image: "/images/lighT_DHHS.jpg",
-    href: "/videos/fancam",
-desc: "Những sân khấu bùng nổ và khoảnh khắc khiến người xem chỉ muốn xem đi xem lại.",
-    },
-      {
-    title: "FACT CHECK",
-    image: "/images/lighT_.jpg",
-    href: "/tmi/fact-check",
-desc: "Bật mí những điều thú vị về lighT mà có thể bạn chưa từng biết."  
-  },
-  {
-    title: "TÂN BINH TOÀN NĂNG",
+    about:"Tân Binh Toàn Năng",
+    title: `HÀNH TRÌNH TỚI ÁNH SÁNG lighT:
+     TỪ TÂN BINH TOÀN NĂNG ĐẾN NGHỆ SĨ ĐỘC LẬP`,
     image: "/images/lighT_ycc_exposure.jpg",
     href: "/career-journey/tv-shows",
-  desc: "Theo dấu hành trình của lighT tại Tân Binh Toàn Năng qua từng vòng thi, từng cột mốc và những khoảnh khắc đáng nhớ.",
-  
+  desc: "Đỗ Minh Tân chọn cách chinh phục khán giả bằng nội lực sân khấu và niềm đam mê chân thành như thế nào? Cùng lật mở những trang ký ức đáng nhớ về Tân binh Đỗ Minh Tân từ những lần nén đau vượt qua chấn thương thể chất, vượt qua giới hạn tinh thần cho đến khoảnh khắc tỏa sáng bằng thực lực để thấy được một lighT hoàn toàn xứng đáng với niềm tin và sự đồng hành của khán giả nhé!",
+  cta:"Khám phá ngay!"
+}, {
+  about: "Fancam",
+    title: "lighT ON STAGE: TỔNG HỢP NHỮNG FANCAM ĐÁNG NHỚ QUA ỐNG KÍNH FANSITE",
+    image: "/images/lighT_DHHS.jpg",
+    href: "/videos/fancam",
+desc: "Mỗi lần bước lên sân khấu, Tin luôn cho thấy nỗ lực mang đến những phần trình diễn chỉn chu và giàu năng lượng. Hãy cùng nhìn lại những khoảnh khắc làm chủ không gian sân khấu đầy ấn tượng của lighT trong các sự kiện vừa qua qua góc nhìn chân thực từ fansite nhé!",
+cta: "Xem ngay!"    
 },
+      {
+        about: "Too Much Information",
+    title: "lighT FACT CHECK",
+    image: "/images/lighT_.jpg",
+    href: "/tmi/fact-check",
+desc: "Cùng TINcredible lật mở lại những câu chuyện và thông tin thú vị về lighT nào! Chắc chắn sẽ có những mảnh ghép bất ngờ về Tin mà các tinie có thể chưa từng biết đến đó."  ,
+cta:"Khám phá ngay!"
+},
+ 
+
 ];
 const quotes = [
+  "Em quý mn nhiều lắm, tại em biết mn phải làm những gì để cố gắng vote cho emmmm, em vui lắmmmmm",
+  "Em biết ơn mn lắm vì đã ủng hộ em cũng như mấy bạn khác trong top 16, đối với ngkhac thì nó nhỏ nhma đối với em nó lớn lắm, rất quý lun ạ. Giờ em chỉ biết nói cảm ơn mọi người rất rất nhiều ạaaaa.",
+  "Mới đây mà đã 5 công diễn rồi, hmmmm, cảm ơn mn đã đồng hành cùng tin, cùng với các anh em. Vẫn câu chuyện cũ thì tin không nghĩ mình sẽ nhận được sự yêu thương và quan tâm của mọi người nhiều đến như vậy, đây sẽ là động lực giúp tin đi tiếp ở con đường này, yêu thương mọi người nhiều ạ",
   "Thương nhà mình lémmm, tin tưởng ở tin nhooo 🫂",
   "Aaaa, cảm ơn tinie nhà mình ạ 🥺🫂",
   "Cảm ơn những pj support của mn ạaaa",
@@ -394,13 +404,13 @@ pointer-events-none
             text-[#8b5e3c]
           "
         >
-          ABOUT
+          {item.about}
         </p>
 
         <h2
           className="
             mt-2
-            text-4xl
+            text-2xl
             font-black
             text-[#4b1704]
           "
@@ -426,7 +436,7 @@ pointer-events-none
           className="
             mt-10
             inline-flex
-
+            text-black
             border
             border-[#4b1704]
 
@@ -442,7 +452,7 @@ pointer-events-none
             hover:text-white
           "
         >
-          Xem
+          {item.cta}
         </Link>
       </div>
     </div>
