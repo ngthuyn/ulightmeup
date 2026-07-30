@@ -11,7 +11,6 @@ export default function ShowItAllPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
 className="space-y-11"    >
-\
       {/* ================= HERO ================= */}
 
 <section className="mx-auto max-w-4xl">
