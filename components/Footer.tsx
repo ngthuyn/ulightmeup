@@ -212,7 +212,7 @@ if (!item.children) {
             </h3>
 <div className="flex flex-col gap-3">
   <FooterButton href="https://zalo.me/g/hkjrlj645">
-    Nhà Văn Hóa tinie
+    Nhà văn hóa tinie
   </FooterButton>
 
   <FooterButton href="https://www.facebook.com/profile.php?id=61582766494305">
@@ -257,7 +257,7 @@ if (!item.children) {
       rel="noopener noreferrer"
       className="font-semibold text-sky-300"
     >
-      Nhà Văn Hóa tinie
+      Nhà văn hóa tinie
     </a>{" "}
     và theo dõi{" "}
     <a

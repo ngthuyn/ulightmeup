@@ -33,15 +33,8 @@ export default function FocusCamPage() {
       <img
         src="/images/logo_web/logo-04.png" // đổi sang đường dẫn logo của bạn
         alt="lighT"
-        className="
-          h-10
-          w-auto
-          sm:h-12
-          md:h-13
-          transition
-          duration-300
-          hover:scale-105
-        "
+               className=" h-12 w-auto sm:h-14 md:h-15 transition duration-300 hover:scale-105"
+
       />
   </div>
         <h1 className="text-center text-xl font-black">

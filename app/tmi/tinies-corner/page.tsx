@@ -22,7 +22,7 @@ export default function TinieCornerPage() {
   <img
     src="/images/logo_web/logo-05.png"
     alt="lighT"
-    className="h-10 w-auto sm:h-12 md:h-14"
+        className=" h-12 w-auto sm:h-14 md:h-15 transition duration-300 hover:scale-105"
   />
 </div>
 
@@ -261,7 +261,7 @@ sm:text-base
 lg:text-lg
 tracking-[.2em]
 sm:tracking-[.25em] text-sky-700">
-                      Tinie
+                      tinie
                     </p>
 
                     <h1

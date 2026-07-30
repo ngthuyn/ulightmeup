@@ -463,7 +463,7 @@ pointer-events-none
 >        
         <p
           className="
-            text-xs
+            text-2sm
             tracking-[0.45em]
             uppercase
             text-[#8b5e3c]
@@ -475,7 +475,7 @@ pointer-events-none
         <h2
           className="
             mt-2
-            text-2xl
+            text-xl
             font-black
             text-[#4b1704]
           "

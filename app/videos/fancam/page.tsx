@@ -43,10 +43,10 @@ const filteredVideos = videos.filter((video) =>
       <img
         src="/images/logo_web/logo-04.png" // đổi sang đường dẫn logo của bạn
         alt="lighT"
-        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+        className=" h-12 w-auto sm:h-14 md:h-15 transition duration-300 hover:scale-105"
       />
   </div>
- <h1 className="mt-3 text-center text-xl font-black">
+        <h1 className="mt-4 text-center text-3xl font-black">
           FANCAM
         </h1>
 <div className="mx-auto mt-10 max-w-xl">

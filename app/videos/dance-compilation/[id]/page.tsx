@@ -42,7 +42,7 @@ console.log(video);
         className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
       />
   </div>
- <h1 className="mt-3 text-center text-xl font-black">
+        <h1 className="mt-4 text-center text-3xl font-black">
           DANCE COMPILATION
         </h1>
 <h3 className="mt-4 text-sm italic font-serif leading-tight">

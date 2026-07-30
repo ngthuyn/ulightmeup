@@ -125,10 +125,10 @@ export default function BehindPage() {
 >
   ← Quay về
 </Link>
-        <div className="mt-24 space-y-24">
+        <div className="mt-15 space-y-24">
           {behindVideos.map((item) => (
             <section key={item.title}>
-              <h2 className="mb-8 text-3xl font-bold">
+              <h2 className="mb-8 text-xl font-bold">
                 {item.title}
               </h2>
 

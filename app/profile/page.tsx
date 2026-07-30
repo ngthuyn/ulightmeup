@@ -8,9 +8,9 @@ export default function ProfilePage() {
   const [page, setPage] = useState(0);
 
   const pages = [
-    "/images/profile1.png",
-    "/images/profile2.png",
-    "/images/profile3.png",
+    "/images/split_images/split_0_0.png",
+    "/images/split_images/split_0_1.png",
+    "/images/split_images/split_0_2.png",
   ];
 
   const nextPage = () => {
@@ -42,7 +42,7 @@ export default function ProfilePage() {
       <img
         src="/images/logo_web/logo-03.png" // đổi sang đường dẫn logo của bạn
         alt="lighT"
-        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+        className=" h-12 w-auto sm:h-14 md:h-15 transition duration-300 hover:scale-105"
       />
   </div>
 <h1

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Project100() {
   return (
@@ -44,8 +45,8 @@ className="space-y-11"    >
           <p>
             <span className="text-sky-300">Tân binh toàn năng (TBTN)</span> - chương trình truyền hình thực tế tìm kiếm
             nhóm nhạc thế hệ mới của Việt Nam - là cột mốc quan trọng trong hành
-            trình nghệ thuật của <span className="text-sky-300"> Minh Tân </span>. Đây không chỉ là chương trình mang tới
-            những sân khấu để <span className="text-sky-300"> Tân </span> có cơ hội thể hiện giọng hát cũng như kỹ năng
+            trình nghệ thuật của <span className="text-sky-300"> Minh Tân</span>. Đây không chỉ là chương trình mang tới
+            những sân khấu để <span className="text-sky-300">Minh Tân </span> có cơ hội thể hiện giọng hát cũng như kỹ năng
             trình diễn, mà còn là trường học thực tế đưa <span className="text-sky-300"> Đỗ Minh Tân </span> đến gần hơn
             với khán giả và ngày càng trưởng thành hơn sau mỗi thử thách.
           </p>
@@ -60,7 +61,7 @@ className="space-y-11"    >
           <p>
             Sau chương trình, <span className="text-sky-300"> Minh Tân </span> chính thức ra mắt truyền thông trong vai
             trò nghệ sĩ độc lập của <span className="text-sky-300">  SYE Holdings </span> (công ty liên doanh giải trí giữa
-            Tập đoàn YeaH1 và Sony Music Entertainment) với nghệ danh <span className="text-sky-300"> lighT </span>, minh
+            Tập đoàn YeaH1 và Sony Music Entertainment) với nghệ danh <span className="text-sky-300"> lighT</span>, minh
             chứng cho tinh thần kiên trì và khát khao cống hiến bền bỉ của nam
             nghệ sĩ.
           </p>
@@ -121,12 +122,12 @@ className="space-y-11"    >
           <p>
             Hành trình chạm tay đến ước mơ nghệ thuật chuyên nghiệp của <span className="text-sky-300"> Minh Tân </span>
             chính thức khởi động với cột mốc ý nghĩa: thử sức tại buổi casting
-            chương trình <span className="text-sky-300"> Tân Binh Toàn Năng </span>.
+            chương trình <span className="text-sky-300"> Tân Binh Toàn Năng</span>.
           </p>
 
           <p>
             Trong buổi casting, <span className="text-sky-300"> Minh Tân </span> lựa chọn thể hiện ca khúc của mentor
-            <span className="text-sky-300"> SOOBIN </span>. Cùng với vũ đạo ấn tượng nhờ quá trình hoạt động với vai trò
+            <span className="text-sky-300"> SOOBIN</span>. Cùng với vũ đạo ấn tượng nhờ quá trình hoạt động với vai trò
             dancer, <span className="text-sky-300"> Minh Tân </span> đã thuyết phục được các vị giám khảo và thành công
             ghi tên mình vào danh sách <b>Top 100</b> của chương trình.
           </p>
@@ -399,8 +400,8 @@ mx-auto
 
           <p>
             Dẫu vậy, sự bền bỉ của <span className="text-sky-300"> Minh Tân </span> không cho phép bạn chùn bước. Ngay
-            sau chấn thương, Tân vẫn tự tin bước vào vòng đối đầu với Top X.
-            Không phụ sự tin tưởng của mentor <span className="text-sky-300"> Kay Trần </span>, <span className="text-sky-300"> Minh Tân </span> đã xuất sắc
+            sau chấn thương, <span className="text-sky-300">Tân</span> vẫn tự tin bước vào vòng đối đầu với Top X.
+            Không phụ sự tin tưởng của mentor <span className="text-sky-300"> Kay Trần</span>, <span className="text-sky-300"> Minh Tân </span> đã xuất sắc
             nhận được trọn vẹn 3/3 phiếu bầu từ ban giám khảo cho lần đầu tiên
             thử sức với màn biểu diễn rap.
           </p>
@@ -442,7 +443,7 @@ mx-auto
           <p>
             Vượt qua những rào cản về cả thể chất lẫn tinh thần, <span className="text-sky-300"> Minh Tân </span> dần
             khẳng định bản thân như một "ngoại lệ" đáng quý của chương trình.
-            Không ồn ào phô trương, Tân chọn cách chinh phục khán giả bằng sự nỗ
+            Không ồn ào phô trương, <span className="text-sky-300">Tân</span> chọn cách chinh phục khán giả bằng sự nỗ
             lực tĩnh lặng nhưng vô cùng bền bỉ.
           </p>
 

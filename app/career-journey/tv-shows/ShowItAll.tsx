@@ -60,7 +60,7 @@ className="space-y-11"    >
         <div className="mt-12 space-y-8 text-lg leading-9 text-white/85">
 
           <p>
-            Sau 100 ngày đào tạo và sát hạch khắt khe, Minh Tân đã chính thức
+            Sau 100 ngày đào tạo và sát hạch khắt khe, <span className="text-sky-300">Minh Tân</span> đã chính thức
             ghi danh vào Top 11 <span className="text-sky-300"> Tân Binh Thăng Cấp</span>. Lựa chọn nghệ danh
             <span className="text-sky-300"> minhtin</span>, <span className="text-sky-300"> Tân </span> bước vào giai đoạn chính thức của
             <span className="text-sky-300"> Tân Binh Toàn Năng</span>, cùng 10 thành viên còn lại cọ xát với các
@@ -166,7 +166,7 @@ className="space-y-11"    >
         </div>
 
 <p className="mt-2 text-center text-sm italic text-white/55">
-Khoảnh khắc <span className="text-sky-300"> minhtin </span> trốn vào góc khóc nấc & bố <span className="text-sky-300"> SOOBIN </span> gục mặt trước kết quả đau lòng của công diễn 3 
+Khoảnh khắc <span className="text-sky-300"> minhtin </span> trốn vào góc khóc nấc và bố <span className="text-sky-300"> SOOBIN </span> gục mặt trước kết quả đau lòng của công diễn 3 
         </p>
 
       </section>
@@ -414,7 +414,9 @@ Khoảnh khắc <span className="text-sky-300"> minhtin </span> trốn vào góc
       <span className="font-semibold text-sky-300">
         {" "}lighT (Đỗ Minh Tân)
       </span>
-      , và hãy tiếp tục đồng hành trên hành trình chinh phục những sân khấu
+      , và hãy tiếp tục đồng hành cùng <span className="font-semibold text-sky-300">
+        lighT
+      </span> trên hành trình chinh phục những sân khấu
       mới trong tương lai.
     </p>
   </div>

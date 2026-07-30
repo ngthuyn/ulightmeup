@@ -16,7 +16,7 @@ const performances = [
 
   },
   {
-    title: "Beautiful Girl - Bạch nguyệt quang của Tinie",
+    title: "Beautiful Girl - Bạch nguyệt quang của tinie",
     video: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1200369431588028&show_text=false",
         keyword: ["dancing"],
   orientation: "landscape",
@@ -96,6 +96,7 @@ export default function HighlightsPage() {
       <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
 
 
+
         <h1 className="mt-4 text-center text-3xl font-black">
           TBTN Highlights
         </h1>
@@ -121,10 +122,10 @@ export default function HighlightsPage() {
 >
   ← Quay về 
 </Link>
-        <div className="mt-24 space-y-24">
+        <div className="mt-15 space-y-24">
           {performances.map((item) => (
             <section key={item.title}>
-              <h2 className="mb-8 text-3xl font-bold">
+              <h2 className="mb-8 text-xl font-bold">
                 {item.title}
               </h2>
 <div

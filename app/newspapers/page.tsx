@@ -57,7 +57,7 @@ export default function NewspaperPage() {
       <img
         src="/images/logo_web/logo-06.png" // đổi sang đường dẫn logo của bạn
         alt="lighT"
-        className=" h-10 w-auto sm:h-12 md:h-13 transition duration-300 hover:scale-105"
+        className=" h-12 w-auto sm:h-14 md:h-15 transition duration-300 hover:scale-105"
       />
   </div>
 
@@ -108,6 +108,7 @@ export default function NewspaperPage() {
     <div className="flex items-center gap-3">
       <span
         className="
+            whitespace-nowrap
           rounded-full
           bg-sky-500/15
           px-3
@@ -122,9 +123,7 @@ export default function NewspaperPage() {
         {item.tag}
       </span>
 
-      <span className="text-xs text-white/50">
-        {item.date}
-      </span>
+    
     </div>
 
     <h2
@@ -141,9 +140,11 @@ export default function NewspaperPage() {
       {item.title}
     </h2>
 
-    <p className="mt-2 text-xs text-white/60 md:text-sm">
-      {item.source}
-    </p>
+   <p className="mt-2 text-xs text-white/60 md:text-sm">
+  {item.source}
+  <span className="mx-2 text-white/30">•</span>
+  <span className="text-white/45">{item.date}</span>
+</p>
 
   </div>
 

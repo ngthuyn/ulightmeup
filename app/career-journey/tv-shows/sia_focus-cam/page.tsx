@@ -30,7 +30,7 @@ export default function FocusCamPage() {
     >
       <section className="mx-auto max-w-6xl px-6 pt-28 pb-24">
 
-        <h1 className="text-center text-xl font-black">
+        <h1 className="mt-4 text-center text-3xl font-black">
   FOCUS CAM
 </h1>
 
@@ -136,7 +136,7 @@ export default function FocusCamPage() {
         <h2
           className="
             mt-3
-            text-4xl
+            text-xl
             font-quote
             italic
           "
