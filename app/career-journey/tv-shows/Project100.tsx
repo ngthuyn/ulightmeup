@@ -140,7 +140,7 @@ className="space-y-11"    >
       <section className="mx-auto max-w-4xl">
 
         <img
-          src="/images/TV Shows/casting.jpg"
+          src="/images/TV Shows/Casting.jpg"
           alt="Casting"
           className="
             w-full

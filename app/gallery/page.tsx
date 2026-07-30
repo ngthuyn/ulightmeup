@@ -494,6 +494,31 @@ const eventItems: MediaItem[] = [
   
     category: "events"
 },
+{
+    src: "/images/lighT_soobinconcert.jpg",
+    alt: "lighT",
+    title: "SOOBIN LIVE CONCERT: ALL-ROUNDER THE FINAL",
+    date: "29.11.2025",
+   type: "CONCERT",
+
+    location: "Hồ Chí Minh",
+
+    description:
+      'Góp mặt tại Concert All Rounder với vai trò khách mời cùng 10 thành viên "Tân Binh Thăng Cấp" là một cột mốc đầy ý nghĩa đối với lighT. Thật sự trân quý và biết ơn mentor SOOBIN vì đã luôn tận tình chỉ bảo, đồng hành và trao cho lighT cơ hội quý giá để cọ xát trên một sân khấu concert lớn chuyên nghiệp.',
+       links: [
+    
+      {
+    label: "do.nathnim",
+      link: "https://www.instagram.com/p/DRrGuEskWzB/?img_index=5&igsh=Ynphc3ExajdsbG1q",
+  },
+  {
+    label: "LighT LighT",
+      link: "https://www.facebook.com/share/p/1K21hM61jp/",
+  },
+       ],
+  
+    category: "shows"
+},
 ];
 /*
 const dailyItems: MediaItem1[] = [

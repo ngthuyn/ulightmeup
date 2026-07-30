@@ -129,7 +129,7 @@ export default function FocusCamPage() {
 
       {/* Text */}
       <div>
-        <p className="uppercase tracking-[0.25em] text-sky-300">
+        <p className=" tracking-[0.25em] text-sky-300">
           {video.event}
         </p>
 

@@ -73,7 +73,7 @@ export const videos = [
      {
     id: "RDZ8UZ3Gx_ONo",
 
-    title: "EM ƠI CỨ VUI",
+    title: "Em ơi cứ vui",
 
     event: "Sát hạch 6",
 
@@ -96,7 +96,7 @@ export const videos = [
   {
     id: "RDCWGVlp3ElNY",
 
-    title: "YÊU 5",
+    title: "Yêu 5",
 
     event: "Sát hạch 5",
 
@@ -117,7 +117,7 @@ export const videos = [
   {
     id: "7506067668160613650",
 
-    title: "BEAUTIFUL GIRL",
+    title: "Beautiful girl",
 
     event: "Sát hạch 4",
 
@@ -138,13 +138,13 @@ export const videos = [
   {
     id: "PLw1bw2NpPQPoLVm5GU2A",
 
-    title: "SERIES 100 NGÀY THĂNG CẤP",
+    title: "Series 100 ngày thăng cấp",
 
     event: "TÂN BINH TOÀN NĂNG",
 
     date: "2025",
 
-    image: "/images/TV Shows/02.3_IMG.JPG",
+    image: "/images/TV Shows/02.3_IMG.jpg",
 
     keywords: [
       "100ngaythangcap"

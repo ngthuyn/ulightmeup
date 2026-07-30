@@ -3,7 +3,7 @@ export const videos = [
 
     id: "RDq2PCbDHgv3I",
 
-    title: "GƯƠNG VỠ LÀM LÀNH",
+    title: "Gương vỡ làm lành",
 
     event: "Công diễn 3",
 
@@ -23,7 +23,7 @@ export const videos = [
     {
     id: "RDX7MOVS13nRU",
 
-    title: "BEAUTIFUL GIRL",
+    title: "Beautiful girl",
 
     event: "Công diễn 2",
 
@@ -44,7 +44,7 @@ export const videos = [
       {
     id: "RDmiAJkfqan2g",
 
-    title: "TAKE A SHOT",
+    title: "Take a shot",
 
     event: "Công diễn 2",
 
@@ -65,7 +65,7 @@ export const videos = [
    {
     id: "RDhteqslGqXEU",
 
-    title: "KHÔNG CẦN NÓI NHIỀU",
+    title: "Không cần nói nhiều",
 
     event: "Công diễn 2",
 
@@ -107,7 +107,7 @@ export const videos = [
        {
     id: "RD7KksCh4qnrk",
 
-    title: "EXPOSURE",
+    title: "Exposure",
 
     event: "Công diễn 1",
 
