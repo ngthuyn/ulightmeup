@@ -59,55 +59,55 @@ cta:"Khám phá ngay!"
 const quotes = [
   {
     text: "Em quý mn nhiều lắm, tại em biết mn phải làm những gì để cố gắng vote cho emmmm, em vui lắmmmmm",
-    source: "07.2025 • IG broadcast “tinie ơi 🐵”",
+    source: "07.2025 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Em biết ơn mn lắm vì đã ủng hộ em cũng như mấy bạn khác trong top 16, đối với ngkhac thì nó nhỏ nhma đối với em nó lớn lắm, rất quý lun ạ. Giờ em chỉ biết nói cảm ơn mọi người rất rất nhiều ạaaaa.",
-    source: "07.2025 • IG broadcast “tinie ơi 🐵”",
+    source: "07.2025 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Mới đây mà đã 5 công diễn rồi, hmmmm, cảm ơn mn đã đồng hành cùng tin, cùng với các anh em. Vẫn câu chuyện cũ thì tin không nghĩ mình sẽ nhận được sự yêu thương và quan tâm của mọi người nhiều đến như vậy, đây sẽ là động lực giúp tin đi tiếp ở con đường này, yêu thương mọi người nhiều ạ",
-    source: "10.2025 • IG broadcast “tinie ơi 🐵”",
+    source: "10.2025 • IG broadcast “tinie ơiii 🐵”",
   },
    {
     text: "Cảm ơn những pj support của mn ạaaa",
-    source: "12.2025 • IG broadcast “tinie ơi 🐵”",
+    source: "12.2025 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Thương nhà mình lémmm, tin tưởng ở tin nhooo 🫂",
-    source: "01.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "01.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Aaaa, cảm ơn tinie nhà mình ạ 🥺🫂",
-    source: "01.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "01.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Mong rằng ở chặng hành trình này Tin vẫn sẽ tiếp tục nhận được sự ủng hộ và yêu thương từ mọi người, từ tinie",
-    source: "01.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "01.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "U lighT ME UPPPPPP",
-    source: "01.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "01.2026 • IG broadcast “tinie ơiii 🐵”",
   },
    {
     text: "tinie ráng chờ tí xíu nữa thoiiii, sắp nổ ròi 💣💥",
-    source: "01.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "01.2026 • IG broadcast “tinie ơiii 🐵”",
   },
  {
     text: "Sắp đc gặp mn rồiiiii",
-    source: "04.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "04.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Nay có led nũa dui qớ, thương nhà mình nhắm nhắm 🥺🥹",
-    source: "04.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "04.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Nói chung hôm ni hạnh phúc lắm, vì mình biết mình còn đc yêu thương 🫂",
-    source: "04.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "04.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   {
     text: "Và cảm ơn mn hôm nay đã đến ủng hộ cho Tin cũng như anh 2 ạaaaa 🫶🫶🫶 luv u mn",
-    source: "4.2026 • IG broadcast “tinie ơi 🐵”",
+    source: "4.2026 • IG broadcast “tinie ơiii 🐵”",
   },
   
   
