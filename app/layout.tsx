@@ -33,7 +33,6 @@ display: "block",
 
 export const metadata: Metadata = {
   title: "lài tì lái ti!",
-  description: "Fanpage profile for lighT",
 };
 
 export default function RootLayout({

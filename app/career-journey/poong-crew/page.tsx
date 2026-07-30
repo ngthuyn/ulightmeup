@@ -219,7 +219,7 @@ Dancer        </p>
 </section>
         {/* Activities */}
 
-        <section className="-mt-75">
+        <section className="-mt-20">
 
           <h2 className="mb-5 text-4xl font-bold">
             Hoạt động

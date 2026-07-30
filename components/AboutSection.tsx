@@ -57,24 +57,62 @@ cta:"Khám phá ngay!"
 
 ];
 const quotes = [
-  "Em quý mn nhiều lắm, tại em biết mn phải làm những gì để cố gắng vote cho emmmm, em vui lắmmmmm",
-  "Em biết ơn mn lắm vì đã ủng hộ em cũng như mấy bạn khác trong top 16, đối với ngkhac thì nó nhỏ nhma đối với em nó lớn lắm, rất quý lun ạ. Giờ em chỉ biết nói cảm ơn mọi người rất rất nhiều ạaaaa.",
-  "Mới đây mà đã 5 công diễn rồi, hmmmm, cảm ơn mn đã đồng hành cùng tin, cùng với các anh em. Vẫn câu chuyện cũ thì tin không nghĩ mình sẽ nhận được sự yêu thương và quan tâm của mọi người nhiều đến như vậy, đây sẽ là động lực giúp tin đi tiếp ở con đường này, yêu thương mọi người nhiều ạ",
-  "Thương nhà mình lémmm, tin tưởng ở tin nhooo 🫂",
-  "Aaaa, cảm ơn tinie nhà mình ạ 🥺🫂",
-  "Cảm ơn những pj support của mn ạaaa",
-  "Nay có led nũa dui qớ, thương nhà mình nhắm nhắm 🥺🥹",
-  "Nói chung hôm ni hạnh phúc lắm, vì mình biết mình còn đc yêu thương 🫂",
-  "Và cảm ơn mn hôm nay đã đến ủng hộ cho Tin cũng như anh 2 ạaaaa 🫶🫶🫶 luv u mn",
-  "Sắp đc gặp mn rồiiiii",
-  "Quà tặng mn bủi tối ạ, ngủ ngoan nhoe mn",
-  "Nhà mình vô nhận quà nhooo",
-  "Nhà mình ngủ ngoan ạaaaa",
-  "Mong rằng ở chặng hành trình này Tin vẫn sẽ tiếp tục nhận được sự ủng hộ và yêu thương từ mọi người, từ tinie",
-  "Đón chờ sản phẩm của nghệ sĩ lighT nheee",
-  "U lighT ME UPPPPPP",
-  "tinie ngủ ngoan nhoo 🫶🥳 thương lắm",
-  "tinie ráng chờ tí xíu nữa thoiiii, sắp nổ ròi 💣💥",
+  {
+    text: "Em quý mn nhiều lắm, tại em biết mn phải làm những gì để cố gắng vote cho emmmm, em vui lắmmmmm",
+    source: "07.2025 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Em biết ơn mn lắm vì đã ủng hộ em cũng như mấy bạn khác trong top 16, đối với ngkhac thì nó nhỏ nhma đối với em nó lớn lắm, rất quý lun ạ. Giờ em chỉ biết nói cảm ơn mọi người rất rất nhiều ạaaaa.",
+    source: "07.2025 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Mới đây mà đã 5 công diễn rồi, hmmmm, cảm ơn mn đã đồng hành cùng tin, cùng với các anh em. Vẫn câu chuyện cũ thì tin không nghĩ mình sẽ nhận được sự yêu thương và quan tâm của mọi người nhiều đến như vậy, đây sẽ là động lực giúp tin đi tiếp ở con đường này, yêu thương mọi người nhiều ạ",
+    source: "10.2025 • “tinie ơi 🐵”",
+  },
+   {
+    text: "Cảm ơn những pj support của mn ạaaa",
+    source: "12.2025 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Thương nhà mình lémmm, tin tưởng ở tin nhooo 🫂",
+    source: "01.2026 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Aaaa, cảm ơn tinie nhà mình ạ 🥺🫂",
+    source: "01.2026 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Mong rằng ở chặng hành trình này Tin vẫn sẽ tiếp tục nhận được sự ủng hộ và yêu thương từ mọi người, từ tinie",
+    source: "01.2026 • “tinie ơi 🐵”",
+  },
+  {
+    text: "U lighT ME UPPPPPP",
+    source: "01.2026 • “tinie ơi 🐵”",
+  },
+   {
+    text: "tinie ráng chờ tí xíu nữa thoiiii, sắp nổ ròi 💣💥",
+    source: "01.2026 • “tinie ơi 🐵”",
+  },
+ {
+    text: "Sắp đc gặp mn rồiiiii",
+    source: "04.2026 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Nay có led nũa dui qớ, thương nhà mình nhắm nhắm 🥺🥹",
+    source: "04.2026 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Nói chung hôm ni hạnh phúc lắm, vì mình biết mình còn đc yêu thương 🫂",
+    source: "04.2026 • “tinie ơi 🐵”",
+  },
+  {
+    text: "Và cảm ơn mn hôm nay đã đến ủng hộ cho Tin cũng như anh 2 ạaaaa 🫶🫶🫶 luv u mn",
+    source: "4.2026 • “tinie ơi 🐵”",
+  },
+  
+  
+  
+ 
 ];
 
 export default function AboutSection({
@@ -140,54 +178,65 @@ className="
 ">               
 <div className="relative flex justify-center">
   <img
-  src="/images/lighT_home.jpg"
-  className="
-    mx-auto
-    w-full
-    h-auto
-    object-contain
-  "
-/>
-                    <button
-                        onClick={onEnableSound}
-                        className="
-   autoplay
-    absolute
-    top-2
-    right-2
-    z-20
-    rounded-full
-    px-4
-    py-2
-    text-white
-    transition
-    hover:bg-white
-    hover:text-black
-  "
-                    >
-                        {soundEnabled ? "🔊 BGM On" : "🔇 BGM Off"}
-                    </button>
+    src="/images/lighT_home.jpg"
+    className="
+      mx-auto
+      w-full
+      h-auto
+      object-contain
+    "
+  />
 
-                </div>
+  <button
+    onClick={onEnableSound}
+    className="
+      absolute
+      top-2
+      right-2
+      z-20
+      rounded-full
+      px-4
+      py-2
+      text-white
+      transition
+      hover:bg-white
+      hover:text-black
+    "
+  >
+    {soundEnabled ? "🔊 BGM On" : "🔇 BGM Off"}
+  </button>
+
+  {/* gradient */}
+  <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/45 to-transparent" />
+
+  {/* quote */}
+  <div className="absolute bottom-20 left-8 right-8 z-20">
+    <motion.p
+      key={quoteIndex}
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+className="text-xs italic leading-[1.6] text-white"      style={{
+        textShadow:
+          "0 2px 10px rgba(0,0,0,.8),0 0 24px rgba(0,0,0,.45)",
+      }}
+    >
+      "{quotes[quoteIndex].text}"
+    </motion.p>
+
+    <motion.p
+      key={`source-${quoteIndex}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+      className="mt-2 text-[11px] tracking-[0.22em] text-white/70"
+    >
+      {quotes[quoteIndex].source}
+    </motion.p>
+  </div>
+</div>
 
 
-                <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-black via-black/45 to-transparent" />
-
-<div className="absolute bottom-20 left-8 right-8">                 
-                    <motion.p
-  key={quoteIndex}
-  initial={{ opacity: 0, y: 12 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="max-w-lg text-sm italic leading-8 text-white"
-  style={{
-    textShadow:
-      "0 2px 10px rgba(0,0,0,.8),0 0 24px rgba(0,0,0,.45)",
-  }}
->
-  "{quotes[quoteIndex]}"
-</motion.p>
-                </div>
             </motion.div>
 
             {/* ================= RIGHT ================= */}
