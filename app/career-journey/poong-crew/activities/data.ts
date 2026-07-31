@@ -259,7 +259,7 @@ Choreography by POONG CREW.`,
 {
   id: "pretty-savage",
 
-  title: "POONG CREW - “𝗣𝗥𝗘𝗧𝗧𝗬 𝗦𝗔𝗩𝗔𝗚𝗘” 𝗘𝗫𝗧𝗘𝗡𝗗𝗘𝗗 𝗩𝗘𝗥𝗦𝗜𝗢𝗡",
+  title: 'POONG CREW - "PRETTY SAVAGE" EXTENDED VERSION', 
 
   category: "Performance",
 
@@ -357,7 +357,7 @@ Choreography by POONG CREW.`,
 
   thumbnail: "/images/poong/cake_banner.jpg",
 
-  description: `CAKE - KARD | Dance Cover by POONG Crew 
+  description: `CAKE - KARD | Dance Cover by POONG CREW 
 `,
 
   member: "POONG CREW",

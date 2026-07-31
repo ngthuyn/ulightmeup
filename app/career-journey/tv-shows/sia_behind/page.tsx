@@ -14,7 +14,7 @@ const behindVideos: BehindVideo[] = [
     orientation: "square",
   },
   {
-    title: "lighT và Thu đợi",
+    title: "minhtin và Thu đợi",
     video: "https://www.facebook.com/reel/922995793482051",
     orientation: "portrait",
   },

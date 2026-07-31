@@ -69,6 +69,10 @@ const eventItems: MediaItem[] = [
     link: "https://www.facebook.com/share/p/18adUrMfuP/",
   },
   {
+    label: "LighT LighT",
+    link: "https://www.facebook.com/share/p/1Bhq8wTaiJ/",
+  },
+  {
     label: "TINcredible",
     link: "https://www.facebook.com/share/p/1EJh6YefoC/",
   },
@@ -175,7 +179,7 @@ const eventItems: MediaItem[] = [
       links: [
   {
     label: "LighT LighT",
-    link: "https://www.facebook.com/share/p/1BpraDWn5F/",
+    link: "https://www.facebook.com/share/p/1Bd7kP7EwF/",
   },
 ],
   category: "shows"

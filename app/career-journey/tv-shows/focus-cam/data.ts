@@ -24,7 +24,7 @@ export const videos = [
     ],
   platform: "YouTube",
 
-          url: "https://www.youtube.com/watch?v=c8J31JN87oM&amp;list=RDc8J31JN87oM&amp;start_radio=1",
+          url: "https://www.youtube.com/watch?v=FmRSe7tKUo0&list=PLAiD0V0uRqh0&index=2",
 
   },
        {
@@ -68,7 +68,7 @@ export const videos = [
 
       platform: "YouTube",
 
-        url: "https://www.youtube.com/watch?v=mGjXudfo9a0&t=11s",
+        url: "https://www.youtube.com/watch?v=mGjXudfo9a0&list=PLAiD0V0uRqh0&index=1",
   },
      {
     id: "RDZ8UZ3Gx_ONo",
@@ -89,7 +89,7 @@ export const videos = [
 
      platform: "YouTube",
 
-        url: "https://www.youtube.com/watch?v=Z8UZ3Gx_ONo&list=RDZ8UZ3Gx_ONo&start_radio=1",
+        url: "https://www.youtube.com/watch?v=Z8UZ3Gx_ONo&list=PLAiD0V0uRqh0&index=3",
       
     
   },
@@ -111,7 +111,7 @@ export const videos = [
     ],
   platform: "YouTube",
 
-           url: "https://www.youtube.com/watch?v=CWGVlp3ElNY&list=RDCWGVlp3ElNY&start_radio=1",
+           url: "https://www.youtube.com/watch?v=CWGVlp3ElNY&list=PLAiD0V0uRqh0&index=4",
 
   },
   {

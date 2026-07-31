@@ -17,7 +17,7 @@ export const videos = [
       "vpop",
       "gvll",
     ],
-        url: "https://www.youtube.com/watch?v=q2PCbDHgv3I&list=RDq2PCbDHgv3I&start_radio=1",
+        url: "https://www.youtube.com/watch?v=ACXsuASFWOs&list=PLAiD0V0uRqh0&index=10",
 
   },
     {
@@ -38,7 +38,7 @@ export const videos = [
     ],
   platform: "YouTube",
 
-          url: "https://www.youtube.com/watch?v=X7MOVS13nRU&list=RDX7MOVS13nRU&start_radio=1",
+          url: "https://www.youtube.com/watch?v=38VPvxMeIiY&list=PLAiD0V0uRqh0&index=7",
 
   },
       {
@@ -59,7 +59,7 @@ export const videos = [
     ],
   platform: "YouTube",
 
-          url: "https://www.youtube.com/watch?v=miAJkfqan2g&list=RDmiAJkfqan2g&start_radio=1",
+          url: "https://www.youtube.com/watch?v=sRNuRrmG9sM&list=PLAiD0V0uRqh0&index=8",
 
   },
    {
@@ -80,7 +80,7 @@ export const videos = [
     ],
   platform: "YouTube",
 
-          url: "https://www.youtube.com/watch?v=hteqslGqXEU&amp;list=RDhteqslGqXEU&amp;start_radio=1",
+          url: "https://www.youtube.com/watch?v=2PJmtihbBsE&list=PLAiD0V0uRqh0&index=9",
 
   },
        {
@@ -101,7 +101,7 @@ export const videos = [
     ],
   platform: "YouTube",
 
-          url: "https://www.youtube.com/watch?v=yFlIQJjHf8M&list=RDyFlIQJjHf8M&start_radio=1",
+          url: "https://www.youtube.com/watch?v=6PduQyzKFF8&list=PLAiD0V0uRqh0&index=5",
 
   },
        {
@@ -122,28 +122,28 @@ export const videos = [
     ],
   platform: "YouTube",
 
-           url: "https://www.youtube.com/watch?v=7KksCh4qnrk&list=RD7KksCh4qnrk&start_radio=1",
+           url: "https://www.youtube.com/watch?v=7KksCh4qnrk&list=PLAiD0V0uRqh0&index=6",
 
   },
     {
     id: "PLAiD0V0uRqh0",
 
-    title: "Tổng hợp Focus Cam",
+    title: "SIA - Recording Behind",
 
-    event: "Tân Binh Toàn Năng",
+    event: "Show It All",
 
     date: "2025",
 
-    image: "/images/focus-cam/7648605809575841031.jpe",
+    image: "/images/recording_behind.png",
 
     keywords: [
-      "focuscam",
-      "vpop",
-      "exposure",
+      "recording",
+      "sia",
+      "minhtin",
     ],
   platform: "YouTube",
 
-           url: "https://www.youtube.com/playlist?list=PLAiD0V0uRqh0",
+           url: "https://www.youtube.com/playlist?list=PLFO13Fb_dEp0",
 
   }
 ]
