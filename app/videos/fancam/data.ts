@@ -107,6 +107,29 @@ export const videos: VideoItem[] = [
       },
     ],
   },
+  {
+    id: "7669231496783219986",
+    title: "Dự báo thời tiết hôm nay mưa",
+    image: "/images/lighT_midnight.jpg",
+
+    keywords: ["MIDNIGHT", "20260731", "lighT"],
+    sources: [
+      {
+        platform: "tiktok",
+        url: "https://www.tiktok.com/@tincredible_allforlight/video/7669231496783219986",
+      },
+/*
+      {
+        platform: "tiktok",
+        url: "https://www.tiktok.com/@tincredible_allforlight/video/7648345317116595474",
+      },
+
+      {
+         platform: "tiktok",
+        url: "https://www.tiktok.com/@mimoon658/video/7648445388176755988",
+      }*/
+    ],
+  },
 {
     id: "7663540006283185416",
     title: "Vacation - Thanh Âm 22",
@@ -173,7 +196,18 @@ export const videos: VideoItem[] = [
     ],
   },
    
-
+{
+    id: "7588970584634084626",
+    title: "Take a shot",
+    image: "/images/lighT_tthssv_takeashot.jpg",
+    keywords: ["HSSV", "20251228", "minhtin"],
+    sources: [
+      {
+        platform: "tiktok",
+        url: "https://www.tiktok.com/@tincredible_allforlight/video/7588970584634084626",
+      },
+    ],
+  },
   {
     id: "7591017738647244052",
     title: "Beautiful girl",
@@ -199,18 +233,7 @@ export const videos: VideoItem[] = [
     ],
   },
 
-  {
-    id: "7588970584634084626",
-    title: "Take a shot",
-    image: "/images/lighT_tthssv_takeashot.jpg",
-    keywords: ["HSSV", "20251228", "minhtin"],
-    sources: [
-      {
-        platform: "tiktok",
-        url: "https://www.tiktok.com/@tincredible_allforlight/video/7588970584634084626",
-      },
-    ],
-  },
+  
 /*
   {
     id: "7587461359969914120",

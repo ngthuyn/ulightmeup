@@ -28,6 +28,31 @@ type MediaItem1 = {
 };
 const eventItems: MediaItem[] = [
    {
+    src: "/images/lighT_midnight.jpg",
+    alt: "lighT",
+    title: "MIDNIGHT",
+    date: "31.07.2026",
+
+    location: "Hà Nội",
+   type: "SHOW",
+    description:
+      'Lần đầu thử thách bản thân với 4 bài ballad hát liên tục, lighT đã chứng tỏ bản lĩnh khi bước qua vùng an toàn và mang đến cho người hâm mộ những khoảnh khắc thật sự sâu lắng, khó quên.',
+      links: [
+  
+  {
+    label: "LighT LighT",
+    link: "https://www.facebook.com/share/p/14jQPVGobbv/?mibextid=wwXIfr",
+  },
+  {
+    label: "do.nathnim",
+    link: "https://www.instagram.com/p/Dbiaj4jiXk6/?igsh=MTQ0Y2JrcTE3NXdtZg==&igsi=MTQ0Y2JrcTE3NXdtZg==",
+  },
+  
+  ],
+    category: "shows"
+
+  },
+   {
     src: "/images/lighT_tcsc.jpg",
     alt: "lighT",
     title: "Lễ khai trương trụ sở chính TCSC",

@@ -17,8 +17,16 @@ export default function TinieCornerPage() {
     >
       <div className="absolute inset-0 bg-black/25" />
 
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-6">
+  <section className="mx-auto max-w-7xl px-6 pt-28 pb-24">
+ <div className=" flex justify-center">
+  <img
+    src="/images/logo_web/logo-05.png"
+    alt="lighT"
+        className=" h-12 w-auto sm:h-14 md:h-15 transition duration-300 hover:scale-105"
+  />
+</div>
 
+<div className=" mt-5 flex justify-center">
         <AnimatePresence mode="wait">
 
           {!opened ? (
@@ -50,13 +58,16 @@ export default function TinieCornerPage() {
                 className="relative cursor-pointer"
               >
 
-                <div className="absolute left-1/2 top-full h-7 w-56 -translate-x-1/2 rounded-full bg-sky-400/30 blur-2xl" />
-
+<div className="absolute left-1/2 top-full h-6 w-40 sm:w-48 lg:w-56" />
                 <div
-                  className="
-                    relative
-                    h-[270px]
-                    w-[420px]
+  className="
+    relative
+    h-[190px]
+    w-[300px]
+    sm:h-[230px]
+    sm:w-[360px]
+    lg:h-[270px]
+    lg:w-[420px]
                     overflow-hidden
                     rounded-xl
                     border
@@ -64,45 +75,70 @@ export default function TinieCornerPage() {
                     bg-gradient-to-b
                     from-[#f8f5ef]
                     to-[#ece5d9]
+                    
                     shadow-[0_0_60px_rgba(150,210,255,.45)]
-                  "
+                 
+                 
+                    "
+                    style={{
+  backgroundImage: `
+    linear-gradient(to bottom,#faf7f1,#ece5d9),
+    radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px)
+  `,
+  backgroundSize: "100% 100%,18px 18px",
+}}
                 >
 
                   {/* flap */}
 
                   <div
-                    className="
-                      absolute
-                      left-0
-                      top-0
-                      h-0
-                      w-0
-                      border-l-[210px]
-                      border-r-[210px]
-                      border-t-[130px]
-                      border-l-transparent
-                      border-r-transparent
-                      border-t-white/90
-                    "
-                  />
+  className="
+    absolute
+    inset-x-0
+    top-0
+    h-[48%]
+    overflow-hidden
+  "
+>
+  <div
+    className="
+      absolute
+      inset-0
+      bg-gradient-to-b
+      from-[#fcfaf6]
+      to-[#efe6d9]
+      border-b
+      border-white/50
+    "
+    style={{
+      clipPath: "polygon(0 0,100% 0,50% 100%)",
+    }}
+  />
+
+  {/* highlight */}
+  <div
+    className="absolute left-1/2 top-2 h-10 w-[2px] -translate-x-1/2 bg-white/40 blur-[1px]"
+  />
+</div>
 
                   {/* bottom */}
 
                   <div
-                    className="
-                      absolute
-                      bottom-0
-                      left-0
-                      h-0
-                      w-0
-                      border-b-[130px]
-                      border-l-[210px]
-                      border-r-[210px]
-                      border-b-[#e7dfd3]
-                      border-l-transparent
-                      border-r-transparent
-                    "
-                  />
+  className="absolute inset-x-0 bottom-0 h-[48%]"
+>
+  <div
+    className="absolute inset-0"
+    style={{
+      clipPath: "polygon(0 100%,50% 0,100% 100%)",
+      background:
+        "linear-gradient(to bottom,#ece4d7,#ddd2c2)",
+    }}
+  />
+
+  <div
+    className="absolute left-1/2 bottom-0 h-full w-px -translate-x-1/2 bg-white/30"
+  />
+</div>
 
                   {/* seal */}
 
@@ -116,8 +152,12 @@ export default function TinieCornerPage() {
                       top-1/2
                       z-20
                       flex
-                      h-16
-                      w-16
+                     h-12
+w-12
+sm:h-14
+sm:w-14
+lg:h-16
+lg:w-16
                       -translate-x-1/2
                       -translate-y-1/2
                       items-center
@@ -131,7 +171,7 @@ bg-[#9fd7ff]/60
                     "
                   >
                     <img
-  src="/images/tinie_1.PNG"
+  src="/images/tinie_1.png"
   alt="Moon Seal"
   className="h-12 w-12 object-contain"
 />
@@ -143,7 +183,7 @@ bg-[#9fd7ff]/60
 
               <p className="mt-12 text-center">
                 <span className="block text-2xl font-semibold">
-                  Một lá thư đang chờ bạn
+                  Một điều đặc biệt đang chờ bạn
                 </span>
 
                 <span className="mt-3 block text-white/60">
@@ -179,8 +219,8 @@ bg-[#9fd7ff]/60
                 className="
                   relative
                   mx-auto
-                  w-[900px]
-                  max-w-[92vw]
+w-[94vw]
+max-w-[900px]                  max-w-[92vw]
                   overflow-hidden
                   rounded-[28px]
                   border
@@ -215,10 +255,13 @@ bg-[#9fd7ff]/60
                     ×
                   </button>
 
-                  <div className="px-14 py-16 text-slate-700">
-
-                    <p className="text-center text-lg tracking-[.35em] text-sky-700 uppercase">
-                      Tinie Corner
+<div className="px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16 text-slate-700">
+                    <p className="text-center text-xs
+sm:text-base
+lg:text-lg
+tracking-[.2em]
+sm:tracking-[.25em] text-sky-700">
+                      tinie
                     </p>
 
                     <h1
@@ -226,8 +269,9 @@ bg-[#9fd7ff]/60
                         mt-10
                         text-center
                         font-serif
-                        text-6xl
-                        italic
+text-3xl
+sm:text-5xl
+lg:text-6xl                        italic
                         font-bold
                         text-slate-900
                       "
@@ -279,7 +323,7 @@ bg-[#9fd7ff]/60
                         "
                       >
                           <img
-  src="/images/tinie_1.PNG"
+  src="/images/tinie_1.png"
   alt="Moon Seal"
   className="h-12 w-12 object-contain"
 />
@@ -302,6 +346,7 @@ bg-[#9fd7ff]/60
           )}
 
         </AnimatePresence>
+      </div>
 
       </section>
     </main>

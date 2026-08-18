@@ -377,7 +377,7 @@ export default function FactCheckPage() {
     <p className="mt-2">
       Trước khi được biết đến rộng rãi,{" "}
       <span className="font-semibold text-sky-300">lighT</span> năm 18 tuổi từng
-      hoạt động trong các nhóm nhảy cover KPOP với nghệ danh{" "}
+      hoạt động trong các nhóm cover KPOP với nghệ danh{" "}
       <span className="font-semibold text-sky-300">KuL</span> hoặc{" "}
       <span className="font-semibold text-sky-300">Ryan</span>.
     </p>
