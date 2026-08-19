@@ -28,7 +28,7 @@ type MediaItem1 = {
 };
 const eventItems: MediaItem[] = [
    {
-    src: "/images/lighT_midnight.jpg",
+    src: "/images/lighT_midnight_.jpg",
     alt: "lighT",
     title: "MIDNIGHT",
     date: "31.07.2026",
