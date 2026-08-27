@@ -12,7 +12,7 @@ export default function Project100() {
 className="space-y-11"    >
       {/* ================= HERO ================= */}
 
-      <section className="mx-auto max-w-5xl text-center">
+<section className="mx-auto max-w-4xl">
 
   
 

@@ -102,7 +102,7 @@ const eventItems: MediaItem[] = [
     link: "https://www.facebook.com/share/p/1EJh6YefoC/",
   },
   {
-    label: "TINcredible (Rehearsal)",
+    label: "TINcredible",
     link: "https://www.facebook.com/share/p/1E1noWv89N/",
   },
   ],
