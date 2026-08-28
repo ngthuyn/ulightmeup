@@ -203,7 +203,22 @@ mx-auto
             Ngay từ buổi sát hạch đầu tiên, tuy chưa được rèn dũa nhiều về thanh
             nhạc nhưng với chất giọng đặc biệt và thế mạnh vũ đạo, <span className="text-sky-300"> Minh Tân </span> đã
             trở thành thí sinh đầu tiên được hội đồng chuyên gia đến từ Hàn Quốc
-            đề xuất cân nhắc thăng lớp từ C lên thẳng lớp A.
+            đề xuất <a
+    href="https://www.facebook.com/reel/897825199123684"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      text-sky-300
+      underline
+      decoration-sky-300/50
+      underline-offset-4
+      transition
+      hover:text-sky-200
+      hover:decoration-sky-200
+    "
+  >
+    cân nhắc thẳng từ lớp C lên lớp A.
+  </a>
           </p>
  {/*<img
           src="/images/TV Shows/02.3_IMG.jpg"
@@ -231,14 +246,14 @@ mx-auto
         <div>
 
           <iframe
-            src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/897825199123684"
+            src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1200369431588028"
           className="aspect-video w-full rounded-[28px] max-w-2xl mx-auto"
           />
 
         </div>
 
         <p className="mt-4 text-center text-sm italic text-white/50">
-          <span className="text-sky-300"> Minh Tân </span> được các thầy Hàn cân nhắc thăng từ lớp C lên thẳng lớp A.
+          "Bạch nguyệt quang" của tinie.
         </p>
 
       </section>

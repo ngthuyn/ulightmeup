@@ -611,22 +611,310 @@ export default function TinieLettersPage() {
           )}
 
         {/* =====================================================
-            LETTER GRID
-            GIỮ NGUYÊN 2 CỘT
+            LETTERS
+            1ST LETTER — ENVELOPE STYLE
+            The paper itself keeps the same letter layout.
+            Only the outer presentation is special.
         ===================================================== */}
 
-        {!loading &&
-          letters.length > 0 && (
-            <div
-              className="
-                mt-14
-                columns-1
-                md:columns-2
-                md:gap-8
-              "
-            >
+        {!loading && letters.length > 0 && (
+          <>
+            {/* =====================================================
+                1ST LETTER
+                Envelope body is behind the letter; the letter has
+                the same typography/content structure as other cards.
+            ===================================================== */}
+            <div className="mt-14 w-full">
+              <div className="w-full">
 
-              {letters.map((item) => (
+{/* The real letter */}
+                <motion.article
+                  key={letters[0].id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="
+                    relative
+                    z-20
+                    mx-auto
+                    w-full
+                    max-w-3xl
+                    sm:w-[82%]
+                    overflow-hidden
+                    rounded-[24px]
+                    border
+                    border-sky-200/40
+                    shadow-[0_14px_40px_rgba(0,0,0,.25)]
+                  "
+                  style={{
+                    backgroundImage: "url('/images/letterbg.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div
+                    className="
+                      relative
+                      z-10
+                      px-5
+                      pb-7
+                      pt-6
+                      sm:px-8
+                      sm:pb-8
+                      sm:pt-7
+                    "
+                  >
+                    
+                    {/* Logo */}
+                    <div className="mb-5 flex justify-center">
+                      <img
+                        src="/images/tinie_1.png"
+                        alt="tinie"
+                        className="
+                          h-10
+                          w-auto
+                          object-contain
+                        "
+                      />
+                    </div>
+
+                    {letters[0].isPrivate ? (
+                      <div
+                        className="
+                          flex
+                          min-h-[220px]
+                          flex-col
+                          items-center
+                          justify-center
+                          text-center
+                        "
+                      >
+                        <div className="mb-4 text-4xl">🔒</div>
+
+                        <button
+                          type="button"
+                          onClick={() =>
+                            openPrivateLetter(letters[0])
+                          }
+                          className="
+                            flex
+                            items-center
+                            gap-2
+                            rounded-full
+                            border
+                            border-[#b58b45]/50
+                            bg-[#fff7df]/80
+                            px-6
+                            py-2.5
+                            text-sm
+                            font-semibold
+                            text-[#6d5634]
+                            shadow-sm
+                            transition
+                            hover:bg-[#fff7df]
+                          "
+                        >
+                          🔒
+                          <span>Mở thư</span>
+                        </button>
+
+                        <p
+                          className="
+                            mt-3
+                            font-serif
+                            text-sm
+                            italic
+                            text-[#806c4e]
+                          "
+                        >
+                          Thư chỉ dành riêng cho lighT
+                        </p>
+
+                        <div
+                          className="
+                            mt-5
+                            flex
+                            w-full
+                            justify-center
+                            border-t
+                            border-[#d7bc7d]/50
+                            pt-3
+                          "
+                        >
+                          <p
+                            className="
+                              text-center
+                              font-serif
+                              text-sm
+                              italic
+                              text-[#806c4e]
+                            "
+                          >
+                            from:{" "}
+                            <span className="font-semibold text-[#59472d]">
+                              {letters[0].name || "TINcredible"}
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        {/* Same message layout as normal letters */}
+                        <div
+                          ref={(element) => {
+                            messageRefs.current[letters[0].id] =
+                              element;
+                          }}
+                          className="
+                            relative
+                          "
+                        >
+                          <PaperMessage>
+                            {letters[0].message}
+                          </PaperMessage>
+                        </div>
+
+                        {letters[0].fanarts &&
+                          letters[0].fanarts.length > 0 && (
+                            <div
+                              className="
+                                relative
+                                z-30
+                                mt-7
+                              "
+                            >
+                              <div
+                                className="
+                                  flex
+                                  flex-wrap
+                                  justify-center
+                                  gap-4
+                                "
+                              >
+                                {letters[0].fanarts.map(
+                                  (art, index) => {
+                                    const isPdf = art
+                                      .split("?")[0]
+                                      .split("#")[0]
+                                      .toLowerCase()
+                                      .endsWith(".pdf");
+
+                                    return (
+                                      <button
+                                        key={`${art}-${index}`}
+                                        type="button"
+                                        onClick={() =>
+                                          setSelectedFanart(art)
+                                        }
+                                        className="
+                                          group
+                                          overflow-hidden
+                                          rounded-xl
+                                        "
+                                      >
+                                        {isPdf ? (
+                                          <div
+                                            className="
+                                              flex
+                                              min-h-[160px]
+                                              flex-col
+                                              items-center
+                                              justify-center
+                                              gap-2
+                                              rounded-xl
+                                              border
+                                              border-white/20
+                                              bg-black/20
+                                            "
+                                          >
+                                            <span className="text-4xl">
+                                              📄
+                                            </span>
+                                            <span
+                                              className="
+                                                text-sm
+                                                font-semibold
+                                                text-[#fff3d6]
+                                              "
+                                            >
+                                              Fan Art PDF
+                                            </span>
+                                          </div>
+                                        ) : (
+                                          <img
+                                            src={art}
+                                            alt={`Fanart ${
+                                              index + 1
+                                            }`}
+                                            loading="lazy"
+                                            decoding="async"
+                                            className="
+                                              max-h-[500px]
+                                              w-full
+                                              object-contain
+                                              transition
+                                              duration-500
+                                              group-hover:scale-105
+                                            "
+                                          />
+                                        )}
+                                      </button>
+                                    );
+                                  }
+                                )}
+                              </div>
+                            </div>
+                          )}
+
+                        {/* from is kept inside the paper */}
+                        <div
+                          className="
+                            mt-6
+                            flex
+                            w-full
+                            justify-center
+                            border-t
+                            border-white/30
+                            pt-4
+                          "
+                        >
+                          <p
+                            className="
+                              text-center
+                              font-serif
+                              text-sm
+                              italic
+                              text-[#e8d9bd]
+                            "
+                          >
+                            from:{" "}
+                            <span className="font-semibold text-[#fff0c7]">
+                              {letters[0].name || "TINcredible"}
+                            </span>
+                          </p>
+                        </div>
+                      </>
+                    )}
+
+                    
+                  </div>
+                </motion.article>
+              </div>
+            </div>
+
+            {/* =====================================================
+                OTHER LETTERS — EXACT OLD LAYOUT
+            ===================================================== */}
+            {letters.length > 1 && (
+              <div
+                className="
+                  mt-10
+                  columns-1
+                  md:columns-2
+                  md:gap-8
+                "
+              >
+                {letters.slice(1).map((item) => (
                 <motion.article
                   key={item.id}
 
@@ -966,11 +1254,11 @@ text-white/70                            "
                     </div>
 
                 </motion.article>
-              ))}
-
-            </div>
-          )}
-
+                ))}
+              </div>
+            )}
+          </>
+        )}
       </section>
 
       {/* =====================================================
